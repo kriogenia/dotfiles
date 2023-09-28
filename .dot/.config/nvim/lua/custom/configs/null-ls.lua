@@ -4,15 +4,27 @@ local b = null_ls.builtins
 
 local sources = {
 
+  b.diagnostics.todo_comments,
+  b.diagnostics.trail_space,
+
   -- webdev stuff
   b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
-  b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
+  b.formatting.prettier.with {
+    filetypes = {
+      "css",
+      "html",
+      "json",
+      "markdown",
+      "yaml",
+    },
+  }, -- so prettier works only on these filetypes
+  b.diagnostics.eslint,
+  b.diagnostics.jsonlint,
 
-  -- Lua
+  -- Sys
   b.formatting.stylua,
-
-  -- cpp
-  b.formatting.clang_format,
+  b.diagnostics.shellcheck,
+  b.diagnostics.markdownlint,
 }
 
 null_ls.setup {
