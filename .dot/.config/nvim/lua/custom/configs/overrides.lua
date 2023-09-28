@@ -33,7 +33,7 @@ M.mason = {
     "stylua",
 
     -- rust
-    "rust_analyzer",
+    "rust-analyzer",
     "codelldb",
 
     -- web dev
