@@ -39,19 +39,27 @@ local plugins = {
   },
 
   {
+    "hrsh7th/nvim-cmp",
+    opts = {
+      formatting = {
+        format = function(_, item)
+          local icons = require "nvchad.icons.lspkind"
+          item.kind = " " .. icons[item.kind] .. " "
+          return item
+        end
+      },
+      experimental = {
+        ghost_text = true
+      },
+    },
+  },
+
+  {
+    "hrsh7th/cmp-nvim-lsp-signature-help",
+  },
+
+  {
     "simrat39/rust-tools.nvim",
-    config = function()
-      require("rust-tools").setup({
-        server = {
-          on_attach = function(_, bufnr)
-            -- Hover actions
-            vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-            -- Code action groups
-            vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-          end,
-        },
-      })
-    end,
   },
 
   -- Install a plugin

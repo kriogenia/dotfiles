@@ -10,6 +10,10 @@ M.ui = {
 
   hl_override = highlights.override,
   hl_add = highlights.add,
+
+  cmp = {
+    style = "flat_light",
+  },
 }
 
 M.plugins = "custom.plugins"
