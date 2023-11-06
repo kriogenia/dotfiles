@@ -12,20 +12,20 @@
 #SHORTCUTS
 aoc=~/Projects/Advent\ of\ Code
 learning=~/Projects/Learning
+notes=~/.notable/notes/
 portfolio=~/Projects/Web/sotoestevezdev
 rust=~/Projects/Rust
-todoc=~/Documents/TODO.md
+todo=~/.notable/notes/TODO.md
 zshcustom=~/.oh-my-zsh/custom
 
 #ALIASES
 alias clr="clear"
 alias nv="nvim"
-alias todo="bat ~/Documents/TODO.md"
-alias todo-open="vim ~/Documents/TODO.md"
+alias todo="bat ~/.notable/notes/TODO.md"
 
 ##BINS
 alias astudio="/usr/local/android-studio/bin/studio.sh"
-alias idea="intellij-idea-ultimate"
+alias idea="intellij-idea-community"
 
 ##GIT
 alias gcfu="git commit --fixup HEAD"

@@ -81,7 +81,7 @@ local plugins = {
     ft = "rust",
     dependencies = "neovim/nvim-lspconfig",
     opts = function ()
-      return require "custom.configs.rust-tools"
+      return require("custom.configs.rust-tools")
     end,
     config = function (_, opts)
       require("rust-tools").setup(opts)
@@ -96,7 +96,7 @@ local plugins = {
       crates.setup(opts)
       crates.show()
     end
-  }
+  },
 
   -- To make a plugin not be loaded
   -- {

@@ -8,9 +8,10 @@ local sources = {
   b.diagnostics.trail_space,
 
   -- webdev stuff
-  b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
   b.formatting.prettier.with {
     filetypes = {
+      "javascript",
+      "typescript",
       "css",
       "html",
       "json",
@@ -24,7 +25,6 @@ local sources = {
   -- Sys
   b.formatting.stylua,
   b.diagnostics.shellcheck,
-  b.diagnostics.markdownlint,
 }
 
 null_ls.setup {
