@@ -5,6 +5,7 @@
 "du-dust 0.8.3 (registry+https://github.com/rust-lang/crates.io-index)" = ["dust"]
 "exa 0.10.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["exa"]
 "mdbook 0.4.21 (registry+https://github.com/rust-lang/crates.io-index)" = ["mdbook"]
+"navi 2.20.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["navi"]
 "ripgrep 13.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["rg"]
 "tauri-cli 1.0.0-rc.10 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-tauri"]
 "trunk 0.15.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["trunk"]
