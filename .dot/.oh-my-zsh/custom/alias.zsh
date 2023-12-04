@@ -6,5 +6,6 @@ rust=~/Projects/rust
 
 # Shorthands
 alias clr="clear"
+alias exat="exa --tree --icons"
 alias idea="intellij-idea-community"
 alias nv="nvim"
