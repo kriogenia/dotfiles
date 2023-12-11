@@ -6,9 +6,6 @@ git config --global user.name <name>
 # Set global git user email
 git config --global user.email <email>
 
-# Initializes a git repository
-git init
-
 # Clone a git repository
 git clone -b <branch_name> <repository> <clone_directory>
 
@@ -41,31 +38,8 @@ git remote rename <old_remote_name> <new_remote_name>
 # Remove a remote for a git repository
 git remote remove <remote_name>
 
-# Checkout to branch
-git checkout <branch>
-
-# Displays the current status of a git repository
-git status
-
-# Displays unstaged changes for file
-cd <toplevel_directory>; \
-    git diff <unstaged_files>
-
-# Stage single or multiple files
-cd <toplevel_directory>; \
-    git add <changed_files>;
-
-# Stage all files in project
-git add -A
-
-# Create commit for staged files
-git commit -m "<commit_description>"
-
 # Create backdated commit for staged files
 git commit --date="<number_of_days_ago> days ago" -m "<commit_description>"
-
-# Pushes committed changes to remote repository
-git push -u <remote_name> <branch_name>
 
 # Pushes changes to a remote repository overwriting another branch
 git push <remote_name> <branch>:<branch_to_overwrite>
@@ -90,9 +64,6 @@ git log --all --decorate --oneline --graph
 
 # Clear everything
 git clean -dxf
-
-# Sign all commits in a branch based on master
-git rebase master -S -f
 
 # See all open pull requests of a user on Github
 navi fn url::open 'https://github.com/pulls?&q=author:<user>+is:open+is:pr'
