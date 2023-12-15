@@ -88,6 +88,7 @@ plugins=(
   web-search
   zoxide
   zsh-autosuggestions
+  zsh-cargo-completion
   zsh-syntax-highlighting
 )
 

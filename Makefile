@@ -13,6 +13,7 @@ dot_ohmyzsh:
 	rm -rf $(DOT_ROOT)/$(OHMYZSH_CUSTOM)
 	mkdir -p $(DOT_ROOT)/$(OHMYZSH_CUSTOM)
 	cp -r $(HOME)/$(OHMYZSH_CUSTOM)/*.* $(DOT_ROOT)/$(OHMYZSH_CUSTOM)
+	rm $(DOT_ROOT)/$(OHMYZSH_CUSTOM)/example.zsh
 
 dot_copy:
 	cd $(HOME)
