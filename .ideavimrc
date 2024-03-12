@@ -1,0 +1,47 @@
+" --- Vim settings
+
+" Use space as leader
+let mapleader = " "
+
+set visualbell          " no sound
+set ideastatusicon=gray " set idea-vim icon gray
+
+" Show a few lines of context around the cursor.
+set scrolloff=5
+
+" Search
+set incsearch       " show search results while typing
+set hlsearch        " highlight search matches
+set ignorecase      " ignore case...
+set smartcase       " unless specific uppercase
+
+" Integrate with system clipboard
+set clipboard=unnamedplus,unnamed,ideaput
+
+" --- IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+" -- WIP
+
+" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+
+nmap    <leader>d   <Action>(Debug)
+nmap    <leader>f   <Action>(ReformatCode)
+nmap    <leader>r   <Action>(RenameElement)
+nmap    <F4>        <Action>(Run)
+
+" -- Tab navigation
+nmap    <tab>       <Action>(NextTab)
+nmap    <S-tab>     <Action>(PreviousTab)
+
+" g for go to definition, u for usages, c for toggle comment?
+
+" -- Set handler for each shortcut
+sethandler  <C+A>   a:ide
+sethandler  <C+C>   a:ide
+sethandler  <C+Z>   a:ide
+sethandler  <F4>    a:vim
+" -- WIP
