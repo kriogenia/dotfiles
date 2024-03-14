@@ -14,6 +14,7 @@ set incsearch       " show search results while typing
 set hlsearch        " highlight search matches
 set ignorecase      " ignore case...
 set smartcase       " unless specific uppercase
+set wrapscan        " search wraps around at the end of file
 
 " Integrate with system clipboard
 set clipboard=unnamedplus,unnamed,ideaput
@@ -24,6 +25,10 @@ set clipboard=unnamedplus,unnamed,ideaput
 Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
+" Fast navigation
+Plug 'easymotion/vim-easymotion'
+" Paragraph motion working with whitespaces
+Plug 'dbakker/vim-paragraph-motion'
 " -- WIP
 
 " -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
@@ -33,11 +38,8 @@ nmap    <leader>f   <Action>(ReformatCode)
 nmap    <leader>r   <Action>(RenameElement)
 nmap    <F4>        <Action>(Run)
 
-" -- Tab navigation
-nmap    <tab>       <Action>(NextTab)
-nmap    <S-tab>     <Action>(PreviousTab)
-
 " g for go to definition, u for usages, c for toggle comment?
+" ShowErrorDescription, OptimizeImports
 
 " -- Set handler for each shortcut
 sethandler  <C+A>   a:ide
