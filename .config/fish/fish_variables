@@ -1,10 +1,11 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR THEME_EDEN_PROMPT_CHAR:\u262d
 SETUVAR __fish_initialized:3400
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_metrofish_2F_metrofish_files:\x7e/\x2econfig/fish/functions/_metro_duration\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_ahead\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_is_detached_head\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_is_dirty\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_is_empty\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_is_repo\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_is_staged\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_is_stashed\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_is_tag\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_is_touched\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_repository_root\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_git_untracked_files\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_host_info\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_pwd_info\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_pwd_is_home\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_segment\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_segment_close\x2efish\x1e\x7e/\x2econfig/fish/functions/_metro_segment_right\x2efish\x1e\x7e/\x2econfig/fish/functions/fish_prompt\x2efish\x1e\x7e/\x2econfig/fish/functions/fish_right_prompt\x2efish\x1e\x7e/\x2econfig/fish/functions/set_color_custom\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1emetrofish/metrofish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eoh\x2dmy\x2dfish/theme\x2deden
 SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR --export confish:/home/sotoestevez/\x2econfig/fish/
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue
@@ -27,6 +28,7 @@ SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrbl
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_greeting:\x1d
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:yellow\x1e\x2di
