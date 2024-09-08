@@ -45,7 +45,8 @@
         "editor.detectIndentation" : false,
         "editor.insertSpaces": false,
 		"editor.tabSize": 4,
-		"editor.formatOnType": true
+		"editor.formatOnType": true,
+		"editor.defaultFormatter": "ms-python.black-formatter"
 	},
 	"security.workspace.trust.untrustedFiles": "open",
 	"editor.unicodeHighlight.nonBasicASCII": false,

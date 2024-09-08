@@ -36,6 +36,7 @@ Plug 'dbakker/vim-paragraph-motion'
 nmap    <leader>d   <Action>(Debug)
 nmap    <leader>f   <Action>(ReformatCode)
 nmap    <leader>r   <Action>(RenameElement)
+nmap    <leader>i   <Action>(OptimizeImports)
 nmap    <F4>        <Action>(Run)
 
 " g for go to definition, u for usages, c for toggle comment?

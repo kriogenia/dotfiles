@@ -1,8 +1,9 @@
 . "$HOME/.cargo/env"
 . "$HOME/go/.env"
 
-export BROWSER=w3m
+export PATH="$HOME/.local/bin:$PATH"
+
+# export BROWSER=w3m
 export EDITOR=nvim
 
 export OCKAM_DEV=/home/sotoestevez/Projects/Rust/ockam/target/debug/ockam.d
-export BATS_LIB=$NVM_DIR/versions/node/v18.17.1/lib/node_modules

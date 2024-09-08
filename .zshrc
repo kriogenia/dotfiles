@@ -82,7 +82,6 @@ plugins=(
   docker-compose
   git
   httpie
-  ripgrep
   rust
   sudo
   web-search
