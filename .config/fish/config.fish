@@ -5,10 +5,13 @@ end
 # Basic
 abbr -a -- clr clear
 abbr -a -- nv nvim
+abbr -a -- tre 'exa --tree --icons'
 
 # Git
 abbr -a -- ga 'git add'
 abbr -a -- gcmsg 'git commit -m'
+abbr -a -- gcfu 'git commit --fixup HEAD'
+abbr -a -- grfu 'git rebase -i --autosquash HEAD^^'
 abbr -a -- gs 'git status'
 abbr -a -- gss 'git status --short'
 abbr -a -- gdot '/usr/bin/git --git-dir=/home/sotoestevez/.dotfiles/ --work-tree=/home/sotoestevez'

@@ -12,6 +12,8 @@ SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eoh\x2dmy\x2dfish/theme\x2deden\x1
 SETUVAR _fisher_reitzig_2F_sdkman_2D_for_2D_fish_files:\x7e/\x2econfig/fish/functions/sdk\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/sdk\x2efish\x1e\x7e/\x2econfig/fish/completions/sdk\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR --export confish:/home/sotoestevez/\x2econfig/fish/
+SETUVAR --export docs:/home/sotoestevez/Documents/
+SETUVAR --export dwn:/home/sotoestevez/Downloads/
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue
@@ -41,4 +43,8 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR --export learning:/home/sotoestevez/Projects//my_learnings/
+SETUVAR --export notes:/home/sotoestevez/\x2enotable/notes/
+SETUVAR --export nvswap:/home/sotoestevez/\x2elocal/state/nvim/swap/
+SETUVAR --export projects:/home/sotoestevez/Projects/
 SETUVAR --export todo:/home/sotoestevez/\x2enotable/notes/TODO\x2emd
