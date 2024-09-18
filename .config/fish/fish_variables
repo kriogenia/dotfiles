@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export DOCKER_VOLS:/home/sotoestevez/Projects/\x2edocker/volumes
 SETUVAR --export SDKMAN_DIR:/home/sotoestevez/\x2esdkman/
 SETUVAR THEME_EDEN_PROMPT_CHAR:\u262d
 SETUVAR __fish_initialized:3400
@@ -44,6 +45,7 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/home/sotoestevez/go/bin
 SETUVAR --export learning:/home/sotoestevez/Projects//my_learnings/
 SETUVAR --export notes:/home/sotoestevez/\x2enotable/notes/
 SETUVAR --export nvswap:/home/sotoestevez/\x2elocal/state/nvim/swap/
