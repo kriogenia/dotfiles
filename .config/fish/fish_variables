@@ -3,7 +3,22 @@
 SETUVAR --export DOCKER_VOLS:/home/sotoestevez/Projects/\x2edocker/volumes
 SETUVAR --export SDKMAN_DIR:/home/sotoestevez/\x2esdkman/
 SETUVAR THEME_EDEN_PROMPT_CHAR:\u262d
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_abbrsave:abbr\x20\x7c\x20tail\x20\x2d1\x20\x3e\x3e\x20\x7e/\x2econfig/fish/config\x2efish
+SETUVAR _fish_abbr_clr:clear
+SETUVAR _fish_abbr_ga:git\x20add
+SETUVAR _fish_abbr_gca:git\x20commit\x20\x2d\x2damend
+SETUVAR _fish_abbr_gcfu:git\x20commit\x20\x2d\x2dfixup\x20HEAD
+SETUVAR _fish_abbr_gcmsg:git\x20commit\x20\x2dm
+SETUVAR _fish_abbr_gdot:/usr/bin/git\x20\x2d\x2dgit\x2ddir\x3d/home/sotoestevez/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d/home/sotoestevez
+SETUVAR _fish_abbr_gp:git\x20push
+SETUVAR _fish_abbr_gpf:git\x20push\x20\x2d\x2dforce
+SETUVAR _fish_abbr_grfu:git\x20rebase\x20\x2di\x20\x2d\x2dautosquash\x20HEAD\x5e\x5e
+SETUVAR _fish_abbr_gs:git\x20status
+SETUVAR _fish_abbr_gss:git\x20status\x20\x2d\x2dshort
+SETUVAR _fish_abbr_nv:nvim
+SETUVAR _fish_abbr_tre:exa\x20\x2d\x2dtree\x20\x2d\x2dicons
+SETUVAR _fish_abbr_vpip:pyenv\x20exec\x20pip
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
@@ -46,8 +61,7 @@ SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_user_paths:/home/sotoestevez/go/bin
-SETUVAR --export learning:/home/sotoestevez/Projects//my_learnings/
-SETUVAR --export notes:/home/sotoestevez/\x2enotable/notes/
+SETUVAR --export learning:/home/sotoestevez/Projects/my_learnings/
 SETUVAR --export nvswap:/home/sotoestevez/\x2elocal/state/nvim/swap/
 SETUVAR --export projects:/home/sotoestevez/Projects/
 SETUVAR --export todo:/home/sotoestevez/\x2enotable/notes/TODO\x2emd

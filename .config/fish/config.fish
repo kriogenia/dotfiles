@@ -2,6 +2,15 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+if test -d /mnt/c/
+    set current_os win
+else
+    set current_os fedora
+end
+
+source $HOME/.config/fish/$current_os.fish
+
+
 # Basic
 abbr -a -- clr clear
 abbr -a -- nv nvim
