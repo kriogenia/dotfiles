@@ -21,3 +21,4 @@ abbr -a -- abbrsave 'abbr | tail -1 >> ~/.config/fish/abbr.fish'
 abbr -a -- vpip 'pyenv exec pip'
 
 # Last
+abbr -a -U -- vpip 'pyenv exec pip'

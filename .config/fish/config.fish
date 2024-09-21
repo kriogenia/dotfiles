@@ -9,3 +9,4 @@ source $HOME/.config/fish/abbr.fish
 source $HOME/.config/fish/env_vars.fish
 
 pyenv init - | source
+status --is-interactive; and source (pyenv virtualenv-init -|psub)
