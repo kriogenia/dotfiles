@@ -7,3 +7,5 @@ end
 source $HOME/.config/fish/$current_os.fish
 source $HOME/.config/fish/abbr.fish
 source $HOME/.config/fish/env_vars.fish
+
+pyenv init - | source
