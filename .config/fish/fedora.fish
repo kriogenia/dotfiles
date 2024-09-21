@@ -1,5 +1,5 @@
 # Fedora
-
+set -g BROWSER firefox
 set -g DOCKER_VOLS /home/sotoestevez/Projects/.docker/volumes
 
 
