@@ -18,9 +18,6 @@ abbr -a -- gss 'git status --short'
 # Fish
 abbr -a -- abbrsave 'abbr | tail -1 >> ~/.config/fish/abbr.fish'
 
-# Latex
-abbr -a -- tex latexmk
-
 # Python
 abbr -a -- vpip 'pyenv exec pip'
 
