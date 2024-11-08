@@ -18,6 +18,7 @@ SETUVAR _fish_abbr_grfu:git\x20rebase\x20\x2di\x20\x2d\x2dautosquash\x20HEAD\x5e
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_gss:git\x20status\x20\x2d\x2dshort
 SETUVAR _fish_abbr_nv:nvim
+SETUVAR _fish_abbr_tex:latexmk
 SETUVAR _fish_abbr_tre:exa\x20\x2d\x2dtree\x20\x2d\x2dicons
 SETUVAR _fish_abbr_vpip:pyenv\x20exec\x20pip
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
