@@ -18,7 +18,6 @@ SETUVAR _fish_abbr_grfu:git\x20rebase\x20\x2di\x20\x2d\x2dautosquash\x20HEAD\x5e
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_gss:git\x20status\x20\x2d\x2dshort
 SETUVAR _fish_abbr_nv:nvim
-SETUVAR _fish_abbr_tex:latexmk
 SETUVAR _fish_abbr_tre:exa\x20\x2d\x2dtree\x20\x2d\x2dicons
 SETUVAR _fish_abbr_vpip:pyenv\x20exec\x20pip
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
@@ -58,6 +57,6 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/home/sotoestevez/\x2ecargo/bin\x1e/home/sotoestevez/\x2epyenv/bin\x1e/home/sotoestevez/go/bin
+SETUVAR fish_user_paths:/usr/local/texlive/2024/bin/x86_64\x2dlinux\x1e/home/sotoestevez/\x2ecargo/bin\x1e/home/sotoestevez/\x2epyenv/bin\x1e/home/sotoestevez/go/bin
 SETUVAR nvm_default_version:v20\x2e17\x2e0
 SETUVAR nvswap:/home/sotoestevez/\x2elocal/state/nvim/swap/
