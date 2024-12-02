@@ -1,11 +1,11 @@
-local DOTFILES = os.getenv("dotfiles")
+local HOME = os.getenv("HOME")
 return {
   "mfussenegger/nvim-lint",
   optional = true,
   opts = {
     linters = {
       ["markdownlint-cli2"] = {
-        args = { "--config", DOTFILES .. "/lint/.markdownlint-cli2.yaml", "--" },
+        args = { "--config", HOME .. "/dotfiles/lint/.markdownlint-cli2.yaml", "--" },
       },
     },
   },
