@@ -1,3 +1,5 @@
 [user]
 	email = ricardo@sotoestevez.dev
 	name = SotoEstevez
+[core]
+	editor = nvim
