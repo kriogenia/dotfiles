@@ -3,7 +3,7 @@
 SETUVAR PYENV_ROOT:/home/sotoestevez/\x2epyenv
 SETUVAR SDKMAN_DIR:/home/sotoestevez/\x2esdkman/
 SETUVAR THEME_EDEN_PROMPT_CHAR:\u262d
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_abbrsave:abbr\x20\x7c\x20tail\x20\x2d1\x20\x3e\x3e\x20\x7e/\x2econfig/fish/abbr\x2efish
 SETUVAR _fish_abbr_clr:clear
 SETUVAR _fish_abbr_ga:git\x20add
@@ -20,12 +20,13 @@ SETUVAR _fish_abbr_gss:git\x20status\x20\x2d\x2dshort
 SETUVAR _fish_abbr_nv:nvim
 SETUVAR _fish_abbr_tre:exa\x20\x2d\x2dtree\x20\x2d\x2dicons
 SETUVAR _fish_abbr_vpip:pyenv\x20exec\x20pip
+SETUVAR _fisher_budimanjojo_2F_tmux_2E_fish_files:\x7e/\x2econfig/fish/conf\x2ed/tmux\x2eextra\x2econf\x1e\x7e/\x2econfig/fish/conf\x2ed/tmux\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/tmux\x2eonly\x2econf
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
 SETUVAR _fisher_kidonng_2F_zoxide_2E_fish_files:\x7e/\x2econfig/fish/functions/__zoxide_cd\x2efish\x1e\x7e/\x2econfig/fish/functions/__zoxide_pwd\x2efish\x1e\x7e/\x2econfig/fish/functions/__zoxide_z\x2efish\x1e\x7e/\x2econfig/fish/functions/__zoxide_z_complete\x2efish\x1e\x7e/\x2econfig/fish/functions/__zoxide_zi\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/zoxide\x2efish
 SETUVAR _fisher_oh_2D_my_2D_fish_2F_plugin_2D_pbcopy_files:\x7e/\x2econfig/fish/functions/pbcopy\x2efish\x1e\x7e/\x2econfig/fish/functions/pbpaste\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eoh\x2dmy\x2dfish/theme\x2deden\x1ejorgebucaran/autopair\x2efish\x1ejorgebucaran/nvm\x2efish\x1ereitzig/sdkman\x2dfor\x2dfish\x1eoh\x2dmy\x2dfish/plugin\x2dpbcopy\x1ekidonng/zoxide\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eoh\x2dmy\x2dfish/theme\x2deden\x1ejorgebucaran/autopair\x2efish\x1ejorgebucaran/nvm\x2efish\x1ereitzig/sdkman\x2dfor\x2dfish\x1eoh\x2dmy\x2dfish/plugin\x2dpbcopy\x1ekidonng/zoxide\x2efish\x1ebudimanjojo/tmux\x2efish
 SETUVAR _fisher_reitzig_2F_sdkman_2D_for_2D_fish_files:\x7e/\x2econfig/fish/functions/sdk\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/sdk\x2efish\x1e\x7e/\x2econfig/fish/completions/sdk\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:brblack
