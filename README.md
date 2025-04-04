@@ -21,6 +21,6 @@ _TODO_
 My personal bindings, theming and workflow. Depends on some scripts that require execution permissions.
 
 ```sh
-chmod +x $dotfiles/.config/tmux/*.fish
+chmod +x $dotfiles/.config/tmux/scripts/*.fish
 ln -s $dotfiles/.config/tmux ~/.config/tmux
 ```
