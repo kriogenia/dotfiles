@@ -18,9 +18,11 @@ _TODO_
 
 ## tmux
 
-My personal bindings, theming and workflow. Depends on some scripts that require execution permissions.
+My personal bindings, theming and workflow. Depends on some scripts that require execution permissions. It also uses TPM to handle plugins.
 
 ```sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 chmod +x $dotfiles/.config/tmux/scripts/*.fish
 ln -s $dotfiles/.config/tmux ~/.config/tmux
+tmux # uses preffix I afterwards to load the plugins
 ```
