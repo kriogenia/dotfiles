@@ -10,7 +10,13 @@ some `fish` scripts.
 
 ## fish
 
-_TODO_
+To easily handle fish plugins I make use of fisher. So the use of these dotfiles requires installing it and them pulling those into the local. The `$fisher_path` variable is set to `./local/share/fish/plugins`, where all the plugins (fisher included) will be stored.
+
+```sh
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher install (cat $__fish_config_dir/fish_plugins)
+source $__fish_config_dir/config.fish
+```
 
 ## nvim
 
