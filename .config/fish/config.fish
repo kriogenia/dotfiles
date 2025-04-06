@@ -6,6 +6,8 @@ source $__fish_config_dir/abbr.fish
 pyenv init - | source
 status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
+fzf --fish | source
+
 # tmux
 status is-interactive; and begin
     set fish_tmux_autoquit false
