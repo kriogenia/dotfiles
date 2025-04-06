@@ -8,6 +8,8 @@ status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
 fzf --fish | source
 
+set -x MANPAGER "nvim +Man!"
+
 # tmux
 status is-interactive; and begin
     set fish_tmux_autoquit false
