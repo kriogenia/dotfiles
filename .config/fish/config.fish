@@ -2,6 +2,7 @@ test -d /mnt/c/ && set current_os win || set current_os fedora
 
 source $__fish_config_dir/$current_os.fish
 source $__fish_config_dir/abbr.fish
+source $__fish_config_dir/alias.fish
 
 pyenv init - | source
 status --is-interactive; and source (pyenv virtualenv-init -|psub)
