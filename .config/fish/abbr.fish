@@ -14,11 +14,3 @@ abbr -a -- gpf 'git push --force'
 abbr -a -- grfu 'git rebase -i --autosquash HEAD^^'
 abbr -a -- gs 'git status'
 abbr -a -- gss 'git status --short'
-
-# Fish
-abbr -a -- abbrsave 'abbr | tail -1 >> ~/.config/fish/abbr.fish'
-
-# Python
-abbr -a -- vpip 'pyenv exec pip'
-
-# Last
