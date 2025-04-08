@@ -10,11 +10,14 @@ some `fish` scripts.
 
 ## fish
 
-To easily handle fish plugins I make use of fisher. So the use of these dotfiles requires installing it and them pulling those into the local. The `$fisher_path` variable is set to `./local/share/fish/plugins`, where all the plugins (fisher included) will be stored.
+To easily handle fish plugins I make use of fisher. So the use of these dotfiles requires installing it and them pulling those into the local. The `$fisher_path` variable is set to `./local/share/fish/plugins`, where all the plugins (fisher included) will be stored. The theme uses my own [fork](https://github.com/kriogenia/pure) of [Pure](https://github.com/pure-fish/pure), it is also installed using fisher.
 
 ```sh
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 fisher install (cat $__fish_config_dir/fish_plugins)
+rm $__fish_config_dir/functions/fish_{prompt,title}.fish
+ln -s $fisher_path/functions/fish_prompt.fish $__fish_config_dir/functions/fish_prompt.fish
+ln -s $fisher_path/functions/fish_title.fish $__fish_config_dir/functions/fish_title.fish
 source $__fish_config_dir/config.fish
 ```
 

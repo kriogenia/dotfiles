@@ -1,11 +1,14 @@
 # Fedora
 set -g BROWSER firefox
-set -g DOCKER_VOLS /home/sotoestevez/Projects/.docker/volumes
+set -g docs $HOME/Documents
+set -g dwn $HOME/Downloads
+set -g projects $HOME/Projects
+set -g notes $HOME/.notable/notes
 
+set -g DOCKER_VOLS $projects/.docker/volumes
+set -g learning $projects/my_learnings
+set -g todo $notes/TODO.md
 
-# directories
-set -g docs /home/sotoestevez/Documents
-set -g dwn /home/sotoestevez/Downloads
-set -g learning /home/sotoestevez/Projects/my_learnings
-set -g notes /home/sotoestevez/.notable/notes
-set -g projects /home/sotoestevez/Projects
+set -g PYENV_ROOT $HOME/.pyenv
+set -g SDKMAN_DIR $HOME/.sdkman
+set -g XDG_CONFIG_HOME $HOME/.config
