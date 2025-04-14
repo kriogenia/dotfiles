@@ -1,7 +1,10 @@
 [user]
 	email = ricardo@sotoestevez.dev
 	name = SotoEstevez
+	signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK7tozqyoLGt7MlcZtF0u0TQ2BJ7fIjwfmIF3FMdX6jL
 [core]
 	editor = nvim
 [init]
 	defaultBranch = main
+[gpg]
+	format = ssh
