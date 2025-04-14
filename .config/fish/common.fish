@@ -1,7 +1,7 @@
 function set_if_unset \
     -d "Sets the variable only if not previously set" \
     -a var val
-    set -q $var; or set_if_unset $var $val
+    set -q $var; or set -g $var $val
 end
 
 set_if_unset BROWSER firefox
