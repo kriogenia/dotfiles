@@ -22,7 +22,14 @@ fisher install (cat $__fish_config_dir/fish_plugins)
 
 ## nvim
 
-_TODO_
+Requires `npm` working to allow Mason to install all the required linters, language servers... Also the markdown linter.
+
+```sh
+nvm install lts
+pacman -S markdownlint-cli2
+ln -s (pwd)/.config/nvim $HOME/.config/nvim
+nvim
+```
 
 ## tmux
 
