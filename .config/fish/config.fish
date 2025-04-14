@@ -4,8 +4,8 @@ function read_os
         || cat /etc/os-release | rg "^ID=" | sed 's/ID=//'
 end
 
-source $__fish_config_dir/default.fish
 source $__fish_config_dir/(read_os).fish
+source $__fish_config_dir/common.fish
 source $__fish_config_dir/abbr.fish
 source $__fish_config_dir/alias.fish
 

@@ -1,5 +1,6 @@
 # WSL
 set -g notes $HOME/notes/
+set -g projects $HOME/projects
 
 set -g firefox /mnt/c/Program\x20Files/Mozilla\x20Firefox/firefox.exe
 set -g BROWSER $firefox
