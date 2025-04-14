@@ -1,6 +1,11 @@
-test -d /mnt/c/ && set current_os win || set current_os fedora
+function read_os
+    test -d /mnt/c/ \
+        && echo win \
+        || cat /etc/os-release | rg "^ID=" | sed 's/ID=//'
+end
 
-source $__fish_config_dir/$current_os.fish
+source $__fish_config_dir/default.fish
+source $__fish_config_dir/(read_os).fish
 source $__fish_config_dir/abbr.fish
 source $__fish_config_dir/alias.fish
 
@@ -16,3 +21,5 @@ status is-interactive; and begin
     set fish_tmux_autoquit false
     set fish_tmux_autostart true
 end
+
+set PATH $PATH $HOME/.local/bin
