@@ -30,4 +30,5 @@ vim
 vlc
 xsel
 yq
+zen-browser-bin # AUR
 zip
