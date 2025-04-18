@@ -13,7 +13,7 @@ pyenv init - | source
 status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
 fzf --fish | source
-thefuck --alias | source
+test -e thefuck; and thefuck --alias | source
 
 set -x MANPAGER "nvim +Man!"
 
