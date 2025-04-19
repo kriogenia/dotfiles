@@ -1,7 +1,6 @@
 # Basic
 abbr -a -- clr clear
 abbr -a -- nv nvim
-abbr -a -- tre 'exa --tree --icons'
 
 # Git
 abbr -a -- ga 'git add'

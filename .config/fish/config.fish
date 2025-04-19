@@ -6,21 +6,27 @@ end
 
 source $__fish_config_dir/(read_os).fish
 source $__fish_config_dir/common.fish
-source $__fish_config_dir/abbr.fish
-source $__fish_config_dir/alias.fish
 
 pyenv init - | source
-status --is-interactive; and source (pyenv virtualenv-init -|psub)
 
-fzf --fish | source
-test -e thefuck; and thefuck --alias | source
-
-set -x MANPAGER "nvim +Man!"
-
-# tmux
 status is-interactive; and begin
+
+    source $__fish_config_dir/alias.fish
+    source $__fish_config_dir/abbr.fish
+    set -x MANPAGER "nvim +Man!"
+
+    source (pyenv virtualenv-init -|psub)
+
+    # CTRL-t = fzf select
+    # CTRL-r = fzf history
+    # ALT-c  = fzf cd
+    fzf --fish | source
+
+    test -e /usr/bin/thefuck; and thefuck --alias | source
+
     set fish_tmux_autoquit false
     set fish_tmux_autostart true
+
 end
 
-set PATH $PATH $HOME/.local/bin
+# set PATH $PATH $HOME/.local/bin
