@@ -1,0 +1,5 @@
+eza
+fish
+fzf
+pyenv
+tmux
