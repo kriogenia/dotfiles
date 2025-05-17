@@ -5,3 +5,4 @@ markdownlint-cli2
 nvm
 pyenv
 tmux
+yq

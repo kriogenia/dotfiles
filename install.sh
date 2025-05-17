@@ -25,3 +25,6 @@ chmod +x "$HOME/config/tmux/scripts/*.fish"
 echo "Setting up other configs"
 mkdir "$HOME/.ssh" && ln -s "$(pwd)/.ssh/config" "$HOME/.ssh"
 ln -s "$(pwd)/.gitconfig" "$HOME/"
+
+echo "Installing SDKMAN"
+curl -s "https://get.sdkman.io" | bash
