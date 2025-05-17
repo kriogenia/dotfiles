@@ -39,5 +39,5 @@ My personal bindings, theming and workflow. Depends on some scripts that require
 git clone https://github.com/tmux-plugins/tpm ~/.local/share/tmux/plugins/tpm
 chmod +x $dotfiles/.config/tmux/scripts/*.fish
 ln -s $dotfiles/.config/tmux ~/.config/tmux
-tmux # use preffix I afterwards to load the plugins
+tmux # use prefix I afterwards to load the plugins
 ```
