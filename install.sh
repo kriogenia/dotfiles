@@ -8,7 +8,7 @@ while read -r pkg; do
 done <"./requirements.txt"
 
 echo "Overriding old configurations"
-for conf in fish tmux nvim; do
+for conf in fish tmux nvim eza kitty gh; do
   rm -rf "$HOME/.config/$conf"
   ln -s "$(pwd)/.config/$conf" "$HOME/.config"
 done
