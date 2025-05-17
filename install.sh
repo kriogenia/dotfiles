@@ -21,3 +21,7 @@ tpm_path="$HOME/.local/share/tmux/plugins/tpm"
 git clone https://github.com/tmux-plugins/tpm "$tpm_path"
 chmod +x "$HOME/config/tmux/scripts/*.fish"
 "$tpm_path/bin/install_plugins.sh"
+
+echo "Setting up other configs"
+mkdir "$HOME/.ssh" && ln -s "$(pwd)/.ssh/config" "$HOME/.ssh"
+ln -s "$(pwd)/.gitconfig" "$HOME/"
