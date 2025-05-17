@@ -1,5 +1,7 @@
 eza
 fish
 fzf
+markdownlint-cli2
+nvm
 pyenv
 tmux
