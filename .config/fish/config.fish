@@ -4,7 +4,8 @@ function read_os
         || cat /etc/os-release | rg "^ID=" | sed 's/ID=//'
 end
 
-source $__fish_config_dir/(read_os).fish
+set -f os_config $__fish_config_dir/(read_os).fish
+test -f $os_config; and source $os_config
 source $__fish_config_dir/common.fish
 
 pyenv init - | source
