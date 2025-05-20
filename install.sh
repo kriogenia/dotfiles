@@ -9,7 +9,7 @@ done <"./requirements.txt"
 
 config=${XDG_CONFIG_HOME:-$HOME/.config}
 echo "Overriding old configurations"
-for conf in fish tmux nvim eza kitty gh; do
+for conf in bat fish tmux nvim eza kitty gh; do
   rm -rf "$config/${conf:?}"
   ln -s "$(pwd)/.config/$conf" "$HOME/.config"
 done
