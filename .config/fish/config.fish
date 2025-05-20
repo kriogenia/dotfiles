@@ -16,7 +16,7 @@ status is-interactive; and begin
     source $__fish_config_dir/abbr.fish
     set -x MANPAGER "nvim +Man!"
 
-    pyenv virtualenv-init - 2>/dev/null
+    pyenv virtualenv-init - &>/dev/null
     test $status = 0; and source (pyenv virtualenv-init -|psub)
 
     # CTRL-t = fzf select
