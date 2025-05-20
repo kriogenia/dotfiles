@@ -2,6 +2,10 @@
 abbr -a -- clr clear
 abbr -a -- nv nvim
 
+# Bat
+abbr -a --position anywhere -- --help '--help | bat -plhelp'
+abbr -a --position anywhere -- -h '-h | bat -plhelp'
+
 # Git
 abbr -a -- ga 'git add'
 abbr -a -- gcmsg 'git commit -m'
