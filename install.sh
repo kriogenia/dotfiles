@@ -41,6 +41,7 @@ for app in ssh rustup; do
   done
 done
 
+echo "> gitconfig"
 ln -s "$(pwd)/.gitconfig" "$HOME/"
 
 echo "Dotfiles installed"
