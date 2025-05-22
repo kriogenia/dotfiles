@@ -29,6 +29,9 @@ status is-interactive; and begin
     set fish_tmux_autoquit false
     set fish_tmux_autostart true
 
+    # always start a notes session in the background
+    source "$TMUX_WORKSPACES/notes.fish" -d
+
 end
 
 # set PATH $PATH $HOME/.local/bin
