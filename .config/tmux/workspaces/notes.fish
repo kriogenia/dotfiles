@@ -2,11 +2,10 @@
 
 set -l session " notes"
 
-argparse d/detached -- $argv
+argparse d/detach -- $argv
 set -ql _flag_d; or set -l switch "tmux switch -t '$session'"
 
-tmux list-sessions | rg $session &>/dev/null
-if test $status -eq 0
+if _mux_check $session
     eval $switch
     return
 end
