@@ -9,7 +9,8 @@ set -l session " $project"
 _mux_switch $session; and return
 
 tmux new-session -d -s $session -n $session -c $path "$EDITOR ."
-tmux split-window -ht $session:1.1 -c $path bacon
-tmux split-window -vbt $session:1.2 -c $path # replace with something printing a rust ASCII
+tmux split-window -ht $session:1.1 -c $path
+tmux send-keys -t $session:1.2 "cat $ASCII_ARTS/rust.txt" Enter
+tmux split-window -vt $session:1.2 -c $path bacon
 tmux switch -t $session
 tmux select-pane -t $session:1.1

@@ -41,3 +41,7 @@ chmod +x $dotfiles/.config/tmux/scripts/*.fish
 ln -s $dotfiles/.config/tmux ~/.config/tmux
 tmux # use prefix I afterwards to load the plugins
 ```
+
+## Acknowledgments
+
+All ASCII art was generated with: [jp2a](https://github.com/cslarsen/jp2a)
