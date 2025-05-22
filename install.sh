@@ -17,9 +17,10 @@ for app in bat fish tmux nvim eza kitty gh; do
   ln -s "$dotfiles/.config/$app" "$config"
 done
 
-# TODO improve this
-echo "Installing SDKMAN"
-curl -s "https://get.sdkman.io" | bash
+if [[ ! -d "$HOME/.sdkman" ]]; then
+  echo "Installing SDKMAN"
+  curl -s "https://get.sdkman.io" | bash
+fi
 
 echo "Installing fish plugins"
 fish_plugins=$(tr '\n' ' ' <"$config/fish/fish_plugins")
