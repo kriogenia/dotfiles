@@ -11,3 +11,5 @@ set_if_unset SDKMAN_DIR $HOME/.sdkman
 set_if_unset XDG_CONFIG_HOME $HOME/.config
 
 set_if_unset learning $projects/my_learnings/
+
+set_if_unset TMUX_WORKSPACES $XDG_CONFIG_HOME/tmux/workspaces
