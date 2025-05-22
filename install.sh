@@ -33,7 +33,7 @@ chmod +x "$config"/tmux/scripts/*.fish
 "$tpm_path/bin/install_plugins"
 
 echo "Copying other configs"
-for app in ssh rustup; do
+for app in cargo rustup ssh; do
   echo "> $app"
   mkdir -p "$HOME/.$app"
   for file in "$dotfiles"/".$app"/*; do
