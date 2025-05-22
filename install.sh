@@ -29,7 +29,8 @@ fish -c "fisher install $fish_plugins)"
 echo "Installing tpm plugins"
 tpm_path="$HOME/.local/share/tmux/plugins/tpm"
 git clone https://github.com/tmux-plugins/tpm "$tpm_path"
-chmod +x "$config"/tmux/scripts/*.fish
+chmod -R +x "$config"/tmux/scripts
+chmod -R +x "$config"/tmux/workspaces
 "$tpm_path/bin/install_plugins"
 
 echo "Copying other configs"
