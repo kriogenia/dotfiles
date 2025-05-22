@@ -2,7 +2,7 @@
 
 set -l session " notes"
 
-argparse d/detach -- $argv
+argparse d/detach -- $argv; or return
 set -ql _flag_d; or set -l switch "tmux switch -t '$session'"
 
 if _mux_check $session

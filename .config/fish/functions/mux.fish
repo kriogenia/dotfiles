@@ -6,5 +6,7 @@ function mux \
             source "$TMUX_WORKSPACES/notes.fish"
         case ""
             tmux switch -t 0
+        case "*"
+            source "$TMUX_WORKSPACES/$workspace.fish" $path
     end
 end
