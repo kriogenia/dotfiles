@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+dotfiles="$(dirname "$(realpath "$0")")"
+
 echo "Checking all required packages are installed"
 while read -r pkg; do
   which "$pkg"
@@ -9,11 +11,13 @@ done <"./requirements.txt"
 
 config=${XDG_CONFIG_HOME:-$HOME/.config}
 echo "Overriding old configurations"
-for conf in bat fish tmux nvim eza kitty gh; do
-  rm -rf "$config/${conf:?}"
-  ln -s "$(pwd)/.config/$conf" "$HOME/.config"
+for app in bat fish tmux nvim eza kitty gh; do
+  echo "> $app"
+  rm -rf "$config/${app:?}"
+  ln -s "$dotfiles/.config/$app" "$config"
 done
 
+# TODO improve this
 echo "Installing SDKMAN"
 curl -s "https://get.sdkman.io" | bash
 
@@ -27,8 +31,15 @@ git clone https://github.com/tmux-plugins/tpm "$tpm_path"
 chmod +x "$config"/tmux/scripts/*.fish
 "$tpm_path/bin/install_plugins"
 
-echo "Setting up other configs"
-mkdir "$HOME/.ssh" && ln -s "$(pwd)/.ssh/config" "$HOME/.ssh"
+echo "Copying other configs"
+for app in ssh rustup; do
+  echo "> $app"
+  mkdir -p "$HOME/.$app"
+  for file in "$dotfiles"/".$app"/*; do
+    ln -s "$file" "$HOME/.$app"
+  done
+done
+
 ln -s "$(pwd)/.gitconfig" "$HOME/"
 
 echo "Dotfiles installed"
