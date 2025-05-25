@@ -33,9 +33,9 @@ echo "Installing fish plugins"
 fish_plugins=$(tr '\n' ' ' <"$config/fish/fish_plugins")
 fish -c "fisher_path=$user_home/.local/share/fish/plugins fisher install $fish_plugins"
 
-if [ ! -d "$user_home/.sdkman" ] && [ -z "$USER_HOME" ]; then
+if [[ ! -d "$user_home/.sdkman" ]]; then
   echo "Installing SDKMAN"
-  curl -s "https://get.sdkman.io" | bash
+  fish -c "yes | sdk"
 fi
 
 echo "Installing tpm plugins"
