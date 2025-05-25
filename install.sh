@@ -24,7 +24,7 @@ fi
 
 echo "Installing fish plugins"
 fish_plugins=$(tr '\n' ' ' <"$config/fish/fish_plugins")
-fish -c "fisher install $fish_plugins)"
+fish -c "fisher install $fish_plugins"
 
 echo "Installing tpm plugins"
 tpm_path="$HOME/.local/share/tmux/plugins/tpm"
