@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-set -euo pipefail
+set -euxo pipefail
 
 dotfiles="$(dirname "$(realpath "$0")")"
 
@@ -19,25 +19,6 @@ for app in bat fish tmux nvim eza kitty gh; do
   rm -rf "$config/${app:?}"
   ln -s "$dotfiles/.config/$app" "$config"
 done
-
-if [[ ! -d "$user_home/.sdkman" ]]; then
-  echo "Installing SDKMAN"
-  curl -s "https://get.sdkman.io" | bash
-fi
-
-echo "Installing fish plugins"
-fish_plugins=$(tr '\n' ' ' <"$config/fish/fish_plugins")
-fish -c "fisher install $fish_plugins"
-
-echo "Installing tpm plugins"
-TMUX_PLUGIN_MANAGER_PATH="$user_home/.local/share/tmux/plugins"
-tpm_path="$TMUX_PLUGIN_MANAGER_PATH/tpm"
-git clone https://github.com/tmux-plugins/tpm "$tpm_path"
-chmod -R +x "$config"/tmux/scripts
-chmod -R +x "$config"/tmux/workspaces
-"$tpm_path/bin/install_plugins"
-
-echo "Copying other configs"
 for app in cargo rustup ssh; do
   echo "> $app"
   mkdir -p "$user_home/.$app"
@@ -45,8 +26,24 @@ for app in cargo rustup ssh; do
     ln -s "$file" "$user_home/.$app"
   done
 done
-
 echo "> gitconfig"
 ln -s "$dotfiles/.gitconfig" "$user_home/"
+
+echo "Installing fish plugins"
+fish_plugins=$(tr '\n' ' ' <"$config/fish/fish_plugins")
+fish -c "fisher_path=$user_home/.local/share/fish/plugins fisher install $fish_plugins"
+
+if [ ! -d "$user_home/.sdkman" ] && [ -z "$USER_HOME" ]; then
+  echo "Installing SDKMAN"
+  curl -s "https://get.sdkman.io" | bash
+fi
+
+echo "Installing tpm plugins"
+export TMUX_PLUGIN_MANAGER_PATH="$user_home/.local/share/tmux/plugins"
+tpm_path="$TMUX_PLUGIN_MANAGER_PATH/tpm"
+git clone https://github.com/tmux-plugins/tpm "$tpm_path"
+chmod -R +x "$config"/tmux/scripts
+chmod -R +x "$config"/tmux/workspaces
+"$tpm_path/bin/install_plugins"
 
 echo "Dotfiles installed"
