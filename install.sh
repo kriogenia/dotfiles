@@ -43,6 +43,6 @@ for app in cargo rustup ssh; do
 done
 
 echo "> gitconfig"
-ln -s "$(pwd)/.gitconfig" "$HOME/"
+ln -s "$dotfiles/.gitconfig" "$HOME/"
 
 echo "Dotfiles installed"
