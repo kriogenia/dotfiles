@@ -7,9 +7,10 @@ dotfiles="$(dirname "$(realpath "$0")")"
 echo "Checking all required packages are installed"
 while read -r pkg; do
   which "$pkg"
-done <"./requirements.txt"
+done <"$dotfiles/requirements.txt"
 
-config=${XDG_CONFIG_HOME:-$HOME/.config}
+user_home=${USER_HOME:-$HOME}
+config=${XDG_CONFIG_HOME:-$user_home/.config}
 mkdir -p "$config"
 
 echo "Overriding old configurations"
