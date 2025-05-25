@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-set -euxo pipefail
+set -euo pipefail
 
 dotfiles="$(dirname "$(realpath "$0")")"
 
@@ -14,7 +14,7 @@ config=${XDG_CONFIG_HOME:-$user_home/.config}
 mkdir -p "$config"
 
 echo "Overriding old configurations"
-for app in bat fish tmux nvim eza kitty gh; do
+for app in bat eza fish gh hypr kitty nvim tmux; do
   echo "> $app"
   rm -rf "$config/${app:?}"
   ln -s "$dotfiles/.config/$app" "$config"
