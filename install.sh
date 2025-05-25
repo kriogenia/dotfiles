@@ -20,7 +20,7 @@ for app in bat fish tmux nvim eza kitty gh; do
   ln -s "$dotfiles/.config/$app" "$config"
 done
 
-if [[ ! -d "$HOME/.sdkman" ]]; then
+if [[ ! -d "$user_home/.sdkman" ]]; then
   echo "Installing SDKMAN"
   curl -s "https://get.sdkman.io" | bash
 fi
@@ -30,7 +30,7 @@ fish_plugins=$(tr '\n' ' ' <"$config/fish/fish_plugins")
 fish -c "fisher install $fish_plugins"
 
 echo "Installing tpm plugins"
-TMUX_PLUGIN_MANAGER_PATH="$HOME/.local/share/tmux/plugins"
+TMUX_PLUGIN_MANAGER_PATH="$user_home/.local/share/tmux/plugins"
 tpm_path="$TMUX_PLUGIN_MANAGER_PATH/tpm"
 git clone https://github.com/tmux-plugins/tpm "$tpm_path"
 chmod -R +x "$config"/tmux/scripts
@@ -40,13 +40,13 @@ chmod -R +x "$config"/tmux/workspaces
 echo "Copying other configs"
 for app in cargo rustup ssh; do
   echo "> $app"
-  mkdir -p "$HOME/.$app"
+  mkdir -p "$user_home/.$app"
   for file in "$dotfiles"/".$app"/*; do
-    ln -s "$file" "$HOME/.$app"
+    ln -s "$file" "$user_home/.$app"
   done
 done
 
 echo "> gitconfig"
-ln -s "$dotfiles/.gitconfig" "$HOME/"
+ln -s "$dotfiles/.gitconfig" "$user_home/"
 
 echo "Dotfiles installed"
