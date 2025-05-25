@@ -10,6 +10,8 @@ while read -r pkg; do
 done <"./requirements.txt"
 
 config=${XDG_CONFIG_HOME:-$HOME/.config}
+mkdir -p "$config"
+
 echo "Overriding old configurations"
 for app in bat fish tmux nvim eza kitty gh; do
   echo "> $app"
