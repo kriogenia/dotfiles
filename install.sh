@@ -38,12 +38,4 @@ if [[ ! -d "$user_home/.sdkman" ]]; then
   fish -c "yes | sdk"
 fi
 
-echo "Installing tpm plugins"
-export TMUX_PLUGIN_MANAGER_PATH="$user_home/.local/share/tmux/plugins"
-tpm_path="$TMUX_PLUGIN_MANAGER_PATH/tpm"
-git clone https://github.com/tmux-plugins/tpm "$tpm_path"
-chmod -R +x "$config"/tmux/scripts
-chmod -R +x "$config"/tmux/workspaces
-"$tpm_path/bin/install_plugins"
-
 echo "Dotfiles installed"
