@@ -10,5 +10,8 @@ alias ll="eza -l $EZA_OPTIONS"
 alias lt="eza -aT $EZA_OPTIONS"
 alias l..="eza -al $EZA_OPTIONS ../"
 
+# rg
+alias rg="rg -p"
+
 # reload fish
 alias fishr="source $__fish_config_dir/config.fish"
