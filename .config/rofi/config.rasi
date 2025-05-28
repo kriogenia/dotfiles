@@ -1,12 +1,21 @@
 // Base Config //
+
 configuration {
-    show-icons:                  true;
-    font:                        "FiraCode Nerd 10";
-    // icon-theme:                  "Tela-circle-dracula";
+    modi:                   [drun,filebrowser,window,run];
+    show-icons:             true;
+    font:                   "FiraCode Nerd Font Mono 10";
+    display-drun:           " ";
+    display-run:            " ";
+    display-filebrowser:    " ";
+    display-window:         " ";
+    drun-display-format:    "{name}";
+    window-format:          "{w}{t}";
+    // icon-theme:          "Tela-circle-dracula";
 }
 
 // Current Theme, loaded from the symlink
-@theme "./current_theme.rasi"
+@theme "./themes/current.rasi"
 
 // Default configuration, loaded from the symlink
-@import "./default_config.rasi"
+// @import "./default_config.rasi"
+@import "./list_bg.rasi"

@@ -1,0 +1,87 @@
+/**
+ * Modification of the following Rofi theme:
+ * https://github.com/newmanls/rofi-themes-collection/blob/master/themes/nord.rasi
+ *
+ * ROFI VERTICAL THEME USING THE NORD COLOR PALETTE
+ * Author: Newman Sanchez (https://github.com/newmanls) 
+ **/
+
+
+* {
+    background-color:   transparent;
+    text-color:         @text;
+    accent-color:       @sapphire;
+
+    margin:     0em;
+    padding:    0em;
+    spacing:    0em;
+}
+
+window {
+    background-color:   @main-bg;
+    border-color:       @main-br;
+    location:           center;
+    width:              25em;
+    border:             2px;
+    border-radius:      10px;
+}
+
+inputbar, element {
+    padding:    0.5em;
+    spacing:    0.5em;
+}
+  
+inputbar {
+    children:   [ prompt, entry ];
+}
+
+prompt, entry, element-text, element-icon {
+    vertical-align: 0.5;
+}
+
+prompt {
+    text-color: @accent-color;
+}
+
+listview {
+    lines:          10;
+    columns:        1;
+    fixed-height:   false;
+}
+
+element normal urgent {
+    text-color: @yellow;
+}
+
+element normal active {
+    text-color: @accent-color;
+    // bold
+}
+
+element alternate active {
+    text-color: @accent-color;
+}
+
+element selected {
+    text-color: @crust;
+}
+
+element selected normal {
+    background-color:   @accent-color;
+}
+
+element selected urgent {
+    background-color:   @yellow;
+}
+
+element selected active {
+    background-color:   @sky;
+}
+
+element-icon {
+    size:   1em;
+}
+
+element-text {
+    text-color: inherit;
+}

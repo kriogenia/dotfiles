@@ -1,34 +1,14 @@
-// https://github.com/HyDE-Project/HyDE/blob/master/Configs/.local/share/hyde/rofi/themes/style_10.rasi
-
 /**
  * Modification of the following HyDE style:
- * https://github.com/HyDE-Project/HyDE/blob/master/Configs/.local/share/hyde/rofi/themes/style_10.rasi
- *
- *
- * ROFI Layout
- *
- * Style 10: Vertical layout with a compact background section.
- * Attribute: rofilaunch,launcher
- * User: The HyDE Project [ CompactPanel ]
+ * https://github.com/HyDE-Project/HyDE/blob/master/Configs/.local/share/hyde/rofi/themes/style_4.rasi
  * Copyright: https://github.com/prasanthrangan/hyprdots/
  */
-
-// Config //
-configuration {
-    modi:                        "drun,filebrowser,window,run";
-    display-drun:                " ";
-    display-run:                 " ";
-    display-filebrowser:         " ";
-    display-window:              " ";
-    drun-display-format:         "{name}";
-    window-format:               "{w}{t}";
-}
 
 // Main //
 
 window {
-    height:                      34em;
-    width:                       25em;
+    height:                      30em;
+    width:                       50em;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -38,28 +18,26 @@ window {
     border-color:                @main-br;
     background-color:            @main-bg;
     border:                      2px;
-    border-radius:               10px;
+    border-radius:               2em;
 }
 
 mainbox { // 1*4 + 1*28.25 + 2*0.5 = 33.25em
     enabled:                     true;
     spacing:                     0em;
-    padding:                     0.5em;
-    orientation:                 vertical;
-    children:                    [ "mode-switcher", "inputbar", "listbox" ];
+    padding:                     0em;
+    orientation:                 horizontal;
+    children:                    [ inputbar, mode-switcher, listbox ];
     background-color:            transparent;
+    background-image:            url("~/.cache/hypr/ow_campfire.jpg", height);
 }
 
-// TODO: enable after sorting out wallpaper logic
 // Inputs //
+
 inputbar {
     enabled:                     true;
     spacing:                     0em;
     children:                    [ "entry" ];
-    background-color:            @main-bg;
-    // background-image:            url("~/.cache/hyde/wall.thmb", width);
-    // padding:                     4em;
-    // border-radius:               1em 1em 0em 0em;
+    background-color:            transparent;
 }
 entry {
     enabled:                     false;
@@ -68,20 +46,21 @@ entry {
 
 // Modes //
 
-mode-switcher { // height: 1*2 + 2*1 = 4em
-  orientation:      horizontal;
+mode-switcher {
+  orientation:      vertical;
   enabled:          true;
-  padding:          1em 2em;
+  width:            4em;
+  padding:          3.4em 1em;
   spacing:          1em;
   background-color: transparent;
 }
 
-button { // height: 1em + 2*0.5em = 2em 
+button {
   cursor:           pointer;
   padding:          0.5em;
   spacing:          0em;
   border-radius:    1em;
-  background-color: transparent;
+  background-color: @main-bg;
   text-color:       @sky;
 }
 
@@ -92,16 +71,15 @@ button selected {
 
 // Lists //
 
-listbox { // height: 10*2.5 + 9*0.25 + 2*1 = 28.25em
+listbox {
     spacing:                     0em;
-    padding:                     0em;
+    padding:                     0.5em;
     // children:                    [ "dummyt" , "listview" , "dummyb" ];
     children:                    [  "listview"  ];
-    background-color:            @main-bg;
-    border-radius:               1em 1em 1em 1em;
+    background-color:            transparent;
 }
 
-listview { // height: 10*2.5 + 9*0.25 + 2*1 = 28.25em
+listview {
     enabled:                     true;
     spacing:                     0.25em;
     padding:                     1em;
@@ -118,31 +96,19 @@ listview { // height: 10*2.5 + 9*0.25 + 2*1 = 28.25em
     cursor:                      "default";
     background-color:            @main-bg;
     text-color:                  @main-fg;
+    border-radius:               1.5em;
 }
-
-// dummyt {
-//     spacing:                     0em;
-//     padding:                     0em;
-//     background-color:            @main-bg;
-// }
-//
-// dummyb {
-//     spacing:                     0em;
-//     padding:                     0em;
-//     background-color:            @main-bg;
-//     border-radius:               0em 0em 1em 1em;
-// }
 
 // Elements //
 
-element { // height: 2 + 2*0.25 = 2.5em
+element {
     enabled:                     true;
     spacing:                     0.5em;
-    padding:                     0.25em 0.25em 0.25em 1.0em;
+    padding:                     0.25em 0.25em 0.25em 1em;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @main-fg;
-    border-radius:               6px;
+    border-radius:               1em;
 }
 
 element selected.normal {
@@ -171,7 +137,7 @@ error-message {
     text-color:                  @main-fg;
     background-color:            @main-bg;
     text-transform:              capitalize;
-    children:                    [ "textbox" ];
+    children:                    [ textbox ];
 }
 
 textbox {
