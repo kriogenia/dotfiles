@@ -11,7 +11,7 @@
 * {
   rosewater: #f5e0dc;
   flamingo: #f2cdcd;
-  pink: #f5c2e7;
+  pink: #ff77ff;
   mauve: #cba6f7;
   red: #f38ba8;
   maroon: #eba0ac;
@@ -44,8 +44,9 @@
 * {
   main-bg:            @surface0tr;
   main-fg:            @text;
-  main-br:            @blue;
+  main-br:            @sapphire;
   main-ex:            @rosewater;
+  accent:             @pink;
   select-bg:          @blue;
   select-fg:          @crust;
   error-bg:           @maroon;

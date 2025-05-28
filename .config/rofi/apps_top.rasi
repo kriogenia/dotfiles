@@ -1,0 +1,126 @@
+/**
+ * Modification of the following Rofi theme:
+ * https://github.com/adi1090x/rofi/blob/master/files/launchers/type-2/style-3.rasi
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ **/
+
+@import "./base.rasi"
+@theme "./themes/current.rasi"
+
+configuration {
+	modi:                "drun";
+}
+
+window {
+    transparency:                "real";
+    location:                    north;
+    anchor:                      center;
+    width:                       99%;
+    enabled:                     true;
+    margin:                      0.25em 0em;
+    border:                      2px solid;
+    border-radius:               1em 1em 2em 2em;
+    border-color:                @main-br;
+    background-color:            @main-bg;
+    cursor:                      "default";
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     0.5em;
+    padding:                     0.5em;
+    background-color:            transparent;
+    children:                    [ inputbar, listview ];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     0.5em;
+    background-color:            transparent;
+    children:                    [ prompt, entry ];
+}
+
+prompt {
+    enabled:                     true;
+    padding:                     0.4em 0.75em;
+    border-radius:               5em;
+    background-color:            @accent;
+    text-color:                  @select-fg;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+entry {
+    enabled:                     true;
+    expand:                      false;
+    width:                       calc(100% - 1em);
+    padding:                     0.5em 1em;
+    border-radius:               1em;
+    background-color:            @mantle;
+    text-color:                  @text;
+    cursor:                      text;
+    placeholder:                 "Applications";
+    placeholder-color:           inherit;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     10;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    spacing:                     0.5em;
+    padding:                     0.5em;
+    border-radius:               1em;
+    background-color:            @main-bg;
+    text-color:                  @main-fg;
+    orientation:                 vertical;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            @main-bg;
+    text-color:                  @main-fg;
+}
+element selected.normal {
+    background-color:            @main-bg;
+    text-color:                  @main-fg;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        3em;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+error-message {
+    padding:                     2em;
+    background-color:            @main-bg;
+    text-color:                  @main-fg;
+}
+textbox {
+    background-color:            @main-bg;
+    text-color:                  @main-fg;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
+}

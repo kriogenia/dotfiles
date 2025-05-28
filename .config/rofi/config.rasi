@@ -1,21 +1,10 @@
 // Base Config //
 
-configuration {
-    modi:                   [drun,filebrowser,window,run];
-    show-icons:             true;
-    font:                   "FiraCode Nerd Font Mono 10";
-    display-drun:           " ";
-    display-run:            " ";
-    display-filebrowser:    " ";
-    display-window:         " ";
-    drun-display-format:    "{name}";
-    window-format:          "{w}{t}";
-    // icon-theme:          "Tela-circle-dracula";
-}
+@import "./base.rasi"
 
 // Current Theme, loaded from the symlink
 @theme "./themes/current.rasi"
 
 // Default configuration, loaded from the symlink
-// @import "./default_config.rasi"
 @import "./list_bg.rasi"
+// @import "./apps_top.rasi"
