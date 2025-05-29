@@ -1,0 +1,24 @@
+// Common style for all windows
+
+window {
+    transparency:                "real";
+
+    margin:                      0.25em 0.5em;
+    padding:                     0.25em;
+
+    border-radius:               1.25em;
+
+    background-color:            @window-bg;
+    // background-image:            linear-gradient(#74c7ec, #a6e3a1);
+}
+
+mainbox {
+    enabled:                     true;
+
+    padding:                     0.5em;
+    spacing:                     1em;
+
+    border-radius:               1em;
+
+    background-color:            @main-bg;
+}

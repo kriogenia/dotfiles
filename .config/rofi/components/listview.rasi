@@ -1,0 +1,57 @@
+// Common style for inputbars
+
+listview {
+    cursor:                      "default";
+    cycle:                       true;
+    dynamic:                     true;
+    enabled:                     true;
+    fixed-columns:               true;
+    reverse:                     false;
+    scrollbar:                   false;
+
+    spacing:                     0.25em;
+
+    border-radius:               0.5em;
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+
+element {
+    cursor:                      pointer;
+    enabled:                     true;
+
+    border-radius:               0.5em;
+
+    background-color:            transparent;
+    text-color:                  @main-fg;
+}
+
+element normal.urgent {
+    text-color:                  @warn-bg;
+}
+element selected.normal {
+    background-color:            @select-bg;
+    text-color:                  @select-fg;
+}
+element selected.urgent {
+    background-color:            @warn-bg;
+    text-color:                  @warn-fg;
+}
+element selected.active {
+    background-color:            @select-bg;
+    text-color:                  @select-fg;
+}
+element alternate.urgent {
+    background-color:            @warn-bg;
+    text-color:                  @warn-fg;
+}
+
+element-text {
+    highlight:                   inherit;
+    cursor:                      inherit;
+
+    background-color:            transparent;
+    text-color:                  inherit;
+
+    vertical-align:              0.5;
+}

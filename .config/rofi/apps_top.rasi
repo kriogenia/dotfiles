@@ -14,103 +14,56 @@ configuration {
   show-icons:          true;
 }
 
-window {
-    transparency:                "real";
-    location:                    north;
-    anchor:                      center;
-    width:                       calc(100% - 1em);
-    enabled:                     true;
-    margin:                      0.25em 0em;
-    border:                      2px solid;
-    border-radius:               1em 1em 2em 2em;
-    border-color:                @border;
-    background-color:            @main-bg;
-    cursor:                      "default";
-}
+@import "./components/window.rasi"
 
+window {
+    anchor:                     center;
+    location:                   north;
+    width:                      calc(100% - 0.5em);
+}
 mainbox {
-    enabled:                     true;
-    spacing:                     0.5em;
-    padding:                     0.5em;
-    background-color:            transparent;
     children:                    [ inputbar, listview ];
 }
 
-inputbar {
-    enabled:                     true;
-    spacing:                     0.5em;
-    background-color:            transparent;
-    children:                    [ prompt, entry ];
-}
+@import "./components/inputbar.rasi"
 
 prompt {
-    enabled:                     true;
-    padding:                     0.4em 0.75em;
-    border-radius:               5em;
-    background-color:            @accent-bg;
-    text-color:                  @accent-fg;
-    vertical-align:              0.5;
-    horizontal-align:            0.5;
+    padding:                     0.4em 0.9em;
 }
 
 entry {
-    enabled:                     true;
-    expand:                      false;
-    width:                       calc(100% - 1em);
-    padding:                     0.5em 1em;
-    border-radius:               1em;
-    background-color:            @mantle;
-    text-color:                  @main-fg;
-    cursor:                      text;
+    expand:                      true;
     placeholder:                 "/exec";
-    placeholder-color:           @subtext0;
 }
 
+@import "./components/listview.rasi"
+
 listview {
-    enabled:                     true;
     columns:                     10;
-    lines:                       1;
-    cycle:                       true;
-    dynamic:                     true;
-    scrollbar:                   false;
-    layout:                      vertical;
-    reverse:                     false;
     fixed-height:                true;
-    fixed-columns:               true;
+    layout:                      vertical;
+    lines:                       1;
+
     background-color:            transparent;
-    cursor:                      "default";
 }
 
 element {
-    enabled:                     true;
+    orientation:                 vertical;
+
     spacing:                     0.5em;
     padding:                     0.5em;
+
     border-radius:               1em;
-    background-color:            @main-bg;
-    text-color:                  @main-fg;
-    orientation:                 vertical;
-    cursor:                      pointer;
 }
-element normal.normal {
-    background-color:            @main-bg;
-    text-color:                  @main-fg;
-}
-element selected.normal {
-    background-color:            @main-bg;
-    text-color:                  @main-fg;
-}
+
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
     size:                        3em;
     cursor:                      inherit;
 }
+
 element-text {
-    background-color:            transparent;
-    text-color:                  inherit;
-    highlight:                   inherit;
-    cursor:                      inherit;
-    vertical-align:              0.5;
     horizontal-align:            0.5;
 }
 
