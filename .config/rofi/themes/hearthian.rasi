@@ -13,6 +13,7 @@
   orange:   #ff7d25;
   brown:    #734434;
   red:      #8c301b;
+  white:    #f5efd5;
 }
 
 * {
