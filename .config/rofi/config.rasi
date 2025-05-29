@@ -5,6 +5,5 @@
 // Current Theme, loaded from the symlink
 @theme "./themes/current.rasi"
 
-// Default configuration, loaded from the symlink
+// Default configuration
 @import "./list_bg.rasi"
-// @import "./apps_top.rasi"

@@ -11,13 +11,14 @@
 
 configuration {
 	modi:                "drun";
+  show-icons:          true;
 }
 
 window {
     transparency:                "real";
     location:                    north;
     anchor:                      center;
-    width:                       99%;
+    width:                       calc(100% - 1em);
     enabled:                     true;
     margin:                      0.25em 0em;
     border:                      2px solid;
@@ -60,8 +61,8 @@ entry {
     background-color:            @mantle;
     text-color:                  @text;
     cursor:                      text;
-    placeholder:                 "Applications";
-    placeholder-color:           inherit;
+    placeholder:                 "/exec";
+    placeholder-color:           @subtext0;
 }
 
 listview {

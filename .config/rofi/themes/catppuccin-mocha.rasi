@@ -38,16 +38,18 @@
 }
 
 * {
+  sapphiretr: #74c7ecc0;
   surface0tr: #181825c0;
 }
 
 * {
   main-bg:            @surface0tr;
+  main-bg-p:          @mantle;
   main-fg:            @text;
-  main-br:            @sapphire;
+  main-br:            @sapphiretr;
   main-ex:            @rosewater;
   accent:             @pink;
-  select-bg:          @blue;
+  select-bg:          @sapphire;
   select-fg:          @crust;
   error-bg:           @maroon;
   error-bg:           @main-fg;
