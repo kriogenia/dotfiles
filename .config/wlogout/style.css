@@ -1,0 +1,93 @@
+/* https://github.com/HyDE-Project/HyDE/blob/master/Configs/.config/wlogout/style_2.css */
+
+/* TODO: extract to shared location */
+@define-color bar-bg rgba(0, 0, 0, 0);
+@define-color main-bg #11111b;
+@define-color main-fg #cdd6f4;
+@define-color wb-act-bg #a6adc8;
+@define-color wb-act-fg #313244;
+@define-color wb-hvr-bg #f5c2e7;
+@define-color wb-hvr-fg #313244;
+
+* {
+    background-image: none;
+    font-size: 9px;
+}
+
+window {
+    background-color: transparent;
+}
+
+button {
+    color: @main-fg;
+    background-color: @main-bg;
+    outline-style: none;
+    border: none;
+    border-width: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+    border-radius: 0px;
+    box-shadow: none;
+    text-shadow: none;
+    animation: gradient_f 20s ease-in infinite;
+}
+
+button:focus {
+    background-color: @wb-act-bg;
+    background-size: 20%;
+}
+
+button:hover {
+    background-color: @wb-hvr-bg;
+    background-size: 25%;
+    border-radius: ${_border_radius}px;
+    border-radius: 50px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+}
+
+button:hover#suspend {
+    border-radius: ${_border_radius}px ${_border_radius}px 0px ${_border_radius}px;
+    margin: ${_height_hover_margin}px 0px 0px ${_width_hover_margin}px;
+}
+
+button:hover#logout {
+    border-radius: ${_border_radius}px 0px ${_border_radius}px ${_border_radius}px;
+    margin: 0px 0px ${_height_hover_margin}px ${_width_hover_margin}px;
+}
+
+button:hover#shutdown {
+    border-radius: ${_border_radius}px ${_border_radius}px ${_border_radius}px 0px;
+    margin: ${_height_hover_margin}px ${_width_hover_margin}px 0px 0px;
+}
+
+button:hover#reboot {
+    border-radius: 0px ${_border_radius}px ${_border_radius}px ${_border_radius}px;
+    margin: 0px ${_width_hover_margin}px ${_height_hover_margin}px 0px;
+}
+
+#suspend {
+    background-image: image(url("$HOME/.config/wlogout/icons/lock.png"), url("/usr/share/wlogout/icons/lock.png"));
+    border-radius: ${_icon_border_radius}px 0px 0px 0px;
+    margin: ${_height_icon_margin}px 0px 0px ${_width_icon_margin}px;
+}
+
+#logout {
+    background-image: image(url("$HOME/.config/wlogout/icons/logout.png"), url("/usr/share/wlogout/icons/logout.png"));
+    border-radius: 0px 0px 0px ${_icon_border_radius}px;
+    margin: 0px 0px ${_height_icon_margin}px ${_width_icon_margin}px;
+}
+
+#shutdown {
+    background-image: image(url("$HOME/.config/wlogout/icons/shutdown.png"), url("/usr/share/wlogout/icons/shutdown.png"));
+    border-radius: 0px ${_icon_border_radius}px 0px 0px;
+    margin: ${_height_icon_margin}px ${_width_icon_margin}px 0px 0px;
+}
+
+#reboot {
+    background-image: image(url("$HOME/.config/wlogout/icons/reboot.png"), url("/usr/share/wlogout/icons/reboot.png"));
+    border-radius: 0px 0px ${_icon_border_radius}px 0px;
+    margin: 0px ${_width_icon_margin}px ${_height_icon_margin}px 0px;
+}
+
