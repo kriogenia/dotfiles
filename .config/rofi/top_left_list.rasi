@@ -15,59 +15,76 @@ configuration {
 }
 
 window {
-    transparency:                "real";
-    location:                    north west;
     anchor:                      west;
-    fullscreen:                  false;
-    width:                       30em;
-    margin:                      0.25em 0.5em;
-
-    /* properties for all widgets */
-    enabled:                     true;
-    padding:                     0px;
-    border:                      2px solid;
-    border-radius:               1em;
-    border-color:                @main-br;
     cursor:                      "default";
-    background-color:            @main-bg;
+    enabled:                     true;
+    fullscreen:                  false;
+    location:                    north west;
+    transparency:                "real";
+
+    width:                       30em;
+
+    margin:                      0.25em 0.5em;
+    padding:                     0.25em;
+
+    border-radius:               1.25em;
+
+    background-color:            @window-bg;
     // background-image:            linear-gradient(#74c7ec, #a6e3a1);
 }
 
 mainbox {
     enabled:                     true;
-    spacing:                     0.5em;
-    padding:                     0.5em;
-    border-color:                @main-br;
-    background-color:            transparent;
     children:                    [ inputbar, message, listview, mode-switcher ];
+
+    padding:                     0.5em;
+    spacing:                     1em;
+
+    border-radius:               1em;
+
+    background-color:            @main-bg;
 }
 
 inputbar {
     enabled:                     true;
-    spacing:                     0.5em;
-    background-color:            transparent;
     children:                    [ prompt, entry ];
+
+    spacing:                     0.5em;
+    padding:                     0em 0em 0.1em 0em;
+
+    background-color:            transparent;
 }
 
 prompt {
     enabled:                     true;
-    padding:                     0.4em 0.75em;
-    border-radius:               5em;
-    background-color:            @accent;
-    text-color:                  @select-fg;
+
+    padding:                     0.4em 0.85em;
+
+    border-radius:               5em 5em;
+
+    background-color:            @accent-bg;
+    text-color:                  @accent-fg;
+
     vertical-align:              0.5;
     horizontal-align:            0.5;
 }
 
 entry {
     enabled:                     true;
+    cursor:                      text;
     expand:                      false;
+
     width:                       25em;
-    padding:                     0.5em 1em;
-    border-radius:               1em;
+
+    padding:                     0.5em 0.5em;
+ 
+    border:                      2px;
+    border-color:                @border;
+    border-radius:               0.5em;
+
     background-color:            @mantle;
     text-color:                  @text;
-    cursor:                      text;
+
     placeholder:                 "/search";
     placeholder-color:           @subtext0;
 }
@@ -102,104 +119,116 @@ case-indicator {
 
 listview {
     enabled:                     true;
+
     columns:                     1;
     lines:                       15;
+
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   false;
     layout:                      vertical;
     reverse:                     false;
+    scrollbar:                   false;
+
     fixed-height:                false;
     fixed-columns:               true;
+
+    // margin: 10px;
     spacing:                     0.25em;
+
     border-radius:               0.5em;
-    background-color:            @main-bg-p;
+    background-color:            transparent;
     text-color:                  @main-fg;
     cursor:                      "default";
 }
 
 element {
     enabled:                     true;
+    cursor:                      pointer;
+
     padding:                     0.5em;
+
     border:                      0px solid;
+    border-color:                @border;
     border-radius:               0.5em;
-    border-color:                @main-br;
+
     background-color:            transparent;
     text-color:                  @main-fg;
-    cursor:                      pointer;
 }
+
 element normal.urgent {
-    background-color:            @yellow;
-    text-color:                  @main-bg-p;
-}
-element normal.active {
-    text-color:                  @mauve;
+    text-color:                  @warn-bg;
 }
 element selected.normal {
     background-color:            @select-bg;
     text-color:                  @select-fg;
 }
 element selected.urgent {
-    background-color:            @peach;
-    text-color:                  @select-fg;
+    background-color:            @warn-bg;
+    text-color:                  @warn-fg;
 }
 element selected.active {
     background-color:            @select-bg;
     text-color:                  @select-fg;
 }
 element alternate.urgent {
-    background-color:            @yellow;
-    text-color:                  @main-bg-p;
+    background-color:            @warn-bg;
+    text-color:                  @warn-fg;
 }
+
 element-text {
-    background-color:            transparent;
-    text-color:                  inherit;
     highlight:                   inherit;
     cursor:                      inherit;
+
+    background-color:            transparent;
+    text-color:                  inherit;
+
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }
 
 mode-switcher{
     enabled:                     true;
-    spacing:                     1em;
-    padding:                     0em 1em;
-    border-radius:               4px;
+
+    border-radius:               1em;
+
     background-color:            transparent;
     text-color:                  @main-fg;
 }
 
 button {
-    padding:                     8px;
-    border:                      0px solid;
-    border-radius:               4px;
-    border-color:                @main-br;
-    background-color:            @base;
-    text-color:                  inherit;
     cursor:                      pointer;
+
+    padding: 0.25em;
+
+    background-color:            @mantle;
+    text-color:                  inherit;
 }
 
 button selected {
-    background-color:            @accent;
-    text-color:                  @select-fg;
+    background-color:            @accent-bg;
+    text-color:                  @accent-fg;
 }
 
 message {
     enabled:                     true;
+
     background-color:            transparent;
 }
 
 textbox {
-    padding:                     1.5em 1em;
-    border-radius:               4px;
-    background-color:            @main-bg-p;
-    text-color:                  @yellow;
-    placeholder-color:           @peach;
     blink:                       true;
     markup:                      true;
+
+    padding:                     1.5em 1em;
+
+    border-radius:               4px;
+
+    background-color:            transparent;
+    text-color:                  @warn-text;
+    placeholder-color:           @warn-alt;
 }
 
 error-message {
-    background-color:            @maroon;
-    text-color:                  @main-fg;
+    background-color:            @error-bg;
+    text-color:                  @error-fg;
 }

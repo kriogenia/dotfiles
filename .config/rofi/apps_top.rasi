@@ -23,7 +23,7 @@ window {
     margin:                      0.25em 0em;
     border:                      2px solid;
     border-radius:               1em 1em 2em 2em;
-    border-color:                @main-br;
+    border-color:                @border;
     background-color:            @main-bg;
     cursor:                      "default";
 }
@@ -47,11 +47,12 @@ prompt {
     enabled:                     true;
     padding:                     0.4em 0.75em;
     border-radius:               5em;
-    background-color:            @accent;
-    text-color:                  @select-fg;
+    background-color:            @accent-bg;
+    text-color:                  @accent-fg;
     vertical-align:              0.5;
     horizontal-align:            0.5;
 }
+
 entry {
     enabled:                     true;
     expand:                      false;
@@ -59,7 +60,7 @@ entry {
     padding:                     0.5em 1em;
     border-radius:               1em;
     background-color:            @mantle;
-    text-color:                  @text;
+    text-color:                  @main-fg;
     cursor:                      text;
     placeholder:                 "/exec";
     placeholder-color:           @subtext0;

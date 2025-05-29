@@ -1,17 +1,12 @@
-// Copied from HyDE: 
-// https://github.com/HyDE-Project/HyDE/blob/master/Configs/.config/rofi/theme.rasi
-
 /*
- *
  * Catppuccin Mocha
  * https://github.com/catppuccin/rofi/blob/main/themes/catppuccin-mocha.rasi
- *
  */
 
 * {
   rosewater: #f5e0dc;
   flamingo: #f2cdcd;
-  pink: #ff77ff;
+  pink: #f5c2e7;
   mauve: #cba6f7;
   red: #f38ba8;
   maroon: #eba0ac;
@@ -43,17 +38,19 @@
 }
 
 * {
-  main-bg:            @surface0tr;
-  main-bg-p:          @mantle;
+  window-bg:          @surface0tr;
+  main-bg:            @base;
   main-fg:            @text;
-  main-br:            @sapphiretr;
-  main-ex:            @rosewater;
-  accent:             @pink;
+  accent-bg:          @green;
+  accent-fg:          @mantle;
   select-bg:          @sapphire;
   select-fg:          @crust;
   error-bg:           @maroon;
-  error-bg:           @main-fg;
-  separatorcolor:     transparent;
-  border-color:       transparent;
+  error-fg:           @crust;
+  warn-bg:            @peach;
+  warn-fg:            @mantle;
+  warn-text:          @yellow;
+  warn-alt:           @peach;
+  border:             @sapphire;
 }
 
