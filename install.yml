@@ -15,6 +15,19 @@
     - thefuck
     - tmux
     - yq
+    configurations:
+      dotconfig:
+      - bat
+      - eza
+      - fish
+      - gh
+      - hypr
+      - kitty
+      - lazygit
+      - nvim
+      - qutebrowser
+      - tmux
+      - wlogout
 
   tasks:
   - name: Install required packages
@@ -35,3 +48,21 @@
     shell: |
         curl -s "https://get.sdkman.io" | bash
     when: not sdkman.stat.exists
+  - name: Check .config directory
+    become_user: "{{ user }}"
+    file:
+      name: "/home/{{ user }}/.config"
+      state: directory
+  - name: Remove old .config configurations
+    become_user: "{{ user }}"
+    file:
+      name: "/home/{{ user }}/.config/{{ item }}"
+      state: absent
+    loop: '{{ configurations["dotconfig"] }}'
+  - name: Copy .config configurations
+    become_user: "{{ user }}"
+    file:
+      src: "/home/{{ user }}/dotfiles/.config/{{ item }}"
+      dest: "/home/{{ user }}/.config/{{ item }}"
+      state: link
+    loop: '{{ configurations["dotconfig"] }}'
