@@ -5,7 +5,7 @@ hypr_border_radius() {
 }
 
 focus_monitor_info() {
-  hyprctl -j monitors | jq '.[] | select(.focused=true)'
+  hyprctl -j monitors | jq '.[] | select(.focused)'
 }
 
 monitor_width=$(focus_monitor_info | jq '.width')
