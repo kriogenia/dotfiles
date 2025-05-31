@@ -4,6 +4,16 @@ set -euo pipefail
 
 dotfiles="$(dirname "$(realpath "$0")")"
 
+if which pacman &>/dev/null; then
+  echo "Checking all required packages are installed"
+  while read -r pkg; do
+    if ! pacman -Q "$pkg"; then
+      echo "Missing $pkg, installing:"
+      yes | pacman -S "$pkg"
+    fi
+  done <"$dotfiles/requirements.txt"
+fi
+
 echo "Checking all required packages are installed"
 while read -r pkg; do
   which "$pkg"
