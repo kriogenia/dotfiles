@@ -22,3 +22,16 @@
       name: "{{ packages }}"
       state: present
       update_cache: yes
+  - name: Check for SDKMAN
+    stat:
+      path: "/home/{{ user }}/.sdkman"
+    register: sdkman
+    when: '"fish" in packages'
+  - name:
+    debug:
+      msg: "{{ sdkman }}"
+  - name: Install SDKMAN
+    become_user: "{{ user }}"
+    shell: |
+        curl -s "https://get.sdkman.io" | bash
+    when: not sdkman.stat.exists
