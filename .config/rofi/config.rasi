@@ -1,9 +1,0 @@
-// Base Config //
-
-@import "./base.rasi"
-
-// Current Theme, loaded from the symlink
-@theme "./themes/current.rasi"
-
-// Default configuration
-@import "./list_bg.rasi"

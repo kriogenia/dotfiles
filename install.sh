@@ -14,17 +14,12 @@ if which pacman &>/dev/null; then
   done <"$dotfiles/requirements.txt"
 fi
 
-echo "Checking all required packages are installed"
-while read -r pkg; do
-  which "$pkg"
-done <"$dotfiles/requirements.txt"
-
 user_home=${USER_HOME:-$HOME}
 config=${XDG_CONFIG_HOME:-$user_home/.config}
 mkdir -p "$config"
 
 echo "Overriding old configurations"
-for app in bat eza fish gh hypr kitty nvim tmux; do
+for app in bat eza fish gh hypr kitty lazygit nvim qutebrowser tmux wlogout; do
   echo "> $app"
   rm -rf "$config/${app:?}"
   ln -s "$dotfiles/.config/$app" "$config"
