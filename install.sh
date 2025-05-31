@@ -27,11 +27,16 @@ done
 for app in cargo rustup ssh; do
   echo "> $app"
   mkdir -p "$user_home/.$app"
-  for file in "$dotfiles"/".$app"/*; do
-    ln -s "$file" "$user_home/.$app"
+  for item in "$dotfiles"/".$app"/**/*; do
+    if [[ -d "$item" ]]; then
+      mkdir -p "$item"
+    else
+      ln -s "$item" "$user_home/.$app"
+    fi
   done
 done
 echo "> gitconfig"
+rm "$user_home/.gitconfig"
 ln -s "$dotfiles/.gitconfig" "$user_home/"
 
 echo "Installing fish plugins"
