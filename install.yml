@@ -1,0 +1,24 @@
+---
+- name: Install dotfiles
+  hosts: localhost
+  become: true
+  vars:
+    user: sotoestevez
+    packages:
+    - bat
+    - eza
+    - fish
+    - fzf
+    - markdownlint-cli2
+    - nvim
+    - pyenv
+    - thefuck
+    - tmux
+    - yq
+
+  tasks:
+  - name: Install required packages
+    pacman:
+      name: "{{ packages }}"
+      state: present
+      update_cache: yes
