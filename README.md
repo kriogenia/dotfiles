@@ -11,7 +11,11 @@ There's also some "path hardcoding" that assumes that these dotfiles will be pla
 
 There's a way to install the majority of these dotfiles automatically with symlinking using the `install.sh`; but again, it's based on my common home directory configuration and is specially designed to be applied to my Arch fresh installs.
 
-I'm also trying to work in a Ansible playbook that should enable better configuration.
+Another way is using ansible:
+
+```sh
+ansible-playbook install.yml -e user=youruser
+```
 
 ## Acknowledgments
 

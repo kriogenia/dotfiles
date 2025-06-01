@@ -1,0 +1,56 @@
+packages: # divide require and additional, also pacman vs yay
+  - bat
+  - eza
+  - fish
+  - fisher
+  - fzf
+  - markdownlint-cli2
+  - nvim
+  - pyenv
+  - thefuck
+  - tmux
+  - yq
+configurations:
+  - name: bat
+    type: folder
+  - name: cargo
+    type: nested
+    files:
+      - .crates.toml
+      - config.toml
+  - name: eza
+    type: folder
+  - name: fish
+    type: folder
+  - name: gh
+    type: folder
+  - name: git
+    type: file
+    src: .gitconfig
+    dest: .gitconfig
+  - name: hypr
+    type: folder
+  - name: kitty
+    type: folder
+  - name: lazygit
+    type: folder
+  - name: nvim
+    type: folder
+  - name: qutebrowser
+    type: folder
+  - name: rustup
+    type: nested
+    files:
+      - settings.toml
+  - name: ssh
+    type: nested
+    files:
+      - config
+    folders:
+      - config.d
+  - name: tmux
+    type: folder
+  - name: wlogout
+    type: folder
+
+
