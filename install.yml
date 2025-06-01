@@ -17,28 +17,28 @@
     - yq
     configurations:
       - name: bat
-        type: .config
+        type: folder
       - name: cargo
         type: nested
         files:
           - .crates.toml
           - config.toml
       - name: eza
-        type: .config
+        type: folder
       - name: fish
-        type: .config
+        type: folder
       - name: gh
-        type: .config
+        type: folder
       - name: hypr
-        type: .config
+        type: folder
       - name: kitty
-        type: .config
+        type: folder
       - name: lazygit
-        type: .config
+        type: folder
       - name: nvim
-        type: .config
+        type: folder
       - name: qutebrowser
-        type: .config
+        type: folder
       - name: rustup
         type: nested
         files:
@@ -50,9 +50,9 @@
         folders:
           - config.d
       - name: tmux
-        type: .config
+        type: folder
       - name: wlogout
-        type: .config
+        type: folder
 
   tasks:
   - name: Install required packages
@@ -73,26 +73,19 @@
     shell: |
         curl -s "https://get.sdkman.io" | bash
     when: not sdkman.stat.exists
-      # todo extract to playbook
   - name: Check .config directory
     become_user: "{{ user }}"
     file:
       name: "/home/{{ user }}/.config"
       state: directory
-  - name: Remove old .config configurations
-    become_user: "{{ user }}"
-    file:
-      name: "/home/{{ user }}/.config/{{ item['name'] }}" #map to name?
-      state: absent
-    loop: '{{ configurations | selectattr("type","equalto",".config") }}'
-  - name: Link .config configurations
-    become_user: "{{ user }}"
-    file:
-      src: "/home/{{ user }}/dotfiles/.config/{{ item['name'] }}"
-      dest: "/home/{{ user }}/.config/{{ item['name'] }}"
-      state: link
-    loop: '{{ configurations | selectattr("type","equalto",".config") }}'
-  - name: Symlink by items
+  - name: Symlink by folders
+    include_tasks:
+      file: playbooks/folder_symlink.yml
+    loop: '{{ configurations | selectattr("type","equalto","folder") }}'
+    loop_control:
+      loop_var: configuration
+      label: "{{ configuration.name }}"
+  - name: Symlink by files
     include_tasks:
       file: playbooks/nested_symlink.yml
     loop: '{{ configurations | selectattr("type","equalto","nested") }}'
