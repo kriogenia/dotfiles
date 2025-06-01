@@ -12,13 +12,20 @@ packages: # divide require and additional, also pacman vs yay
   - tmux
   - yq
 configurations:
+  # - name: libs
+  #   type: files
+  #   files:
+  #     - src: bin/logout.sh
+  #       dest: .local/share/dotfiles/logout.sh
   - name: bat
     type: folder
   - name: cargo
     type: nested
+    folders:
+      - .cargo
     files:
-      - .crates.toml
-      - config.toml
+      - .cargo/.crates.toml
+      - .cargo/config.toml
   - name: eza
     type: folder
   - name: fish
@@ -41,14 +48,17 @@ configurations:
     type: folder
   - name: rustup
     type: nested
+    folders:
+      - .rustup
     files:
-      - settings.toml
+      - .rustup/settings.toml
   - name: ssh
     type: nested
-    files:
-      - config
     folders:
-      - config.d
+      - .ssh
+      - .ssh/config.d
+    files:
+      - .ssh/config
   - name: tmux
     type: folder
   - name: wlogout
