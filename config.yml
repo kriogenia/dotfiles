@@ -4,6 +4,7 @@ packages: # divide require and additional, also pacman vs yay
   - fish
   - fisher
   - fzf
+  - git
   - markdownlint-cli2
   - nvim
   - pyenv

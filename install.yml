@@ -3,13 +3,13 @@
   hosts: localhost
   become: true
   vars:
-    user: sotoestevez
     fish_plugins: "{{ lookup('file', './.config/fish/fish_plugins') | split | join(' ') }}"
+    user: sotoestevez
   vars_files:
     - config.yml
 
   tasks:
-    # TODO:install fisher plugins, install yay, install yay packages
+    # TODO:install yay, install yay packages
   - name: Install required packages
     pacman:
       name: "{{ packages }}"
