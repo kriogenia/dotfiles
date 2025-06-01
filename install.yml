@@ -4,10 +4,11 @@
   become: true
   vars:
     user: sotoestevez
-    packages:
+    packages: # divide require and additional, also pacman vs yay
     - bat
     - eza
     - fish
+    - fisher
     - fzf
     - markdownlint-cli2
     - nvim
@@ -29,6 +30,10 @@
         type: folder
       - name: gh
         type: folder
+      - name: git
+        type: file
+        src: .gitconfig
+        dest: .gitconfig
       - name: hypr
         type: folder
       - name: kitty
@@ -55,24 +60,24 @@
         type: folder
 
   tasks:
+
   - name: Install required packages
     pacman:
       name: "{{ packages }}"
       state: present
       update_cache: yes
+
   - name: Check for SDKMAN
     stat:
       path: "/home/{{ user }}/.sdkman"
     register: sdkman
     when: '"fish" in packages'
-  - name:
-    debug:
-      msg: "{{ sdkman }}"
   - name: Install SDKMAN
     become_user: "{{ user }}"
     shell: |
         curl -s "https://get.sdkman.io" | bash
     when: not sdkman.stat.exists
+
   - name: Check .config directory
     become_user: "{{ user }}"
     file:
@@ -85,6 +90,7 @@
     loop_control:
       loop_var: configuration
       label: "{{ configuration.name }}"
+
   - name: Symlink by files
     include_tasks:
       file: playbooks/nested_symlink.yml
@@ -92,4 +98,11 @@
     loop_control:
       loop_var: configuration
       label: "{{ configuration.name }}"
+
+  - name: Symlink by files
+    include_tasks:
+      file: playbooks/file_symlink.yml
+    loop: '{{ configurations | selectattr("type","equalto","file") }}'
+    loop_control:
+      label: "{{ item.name }}"
 

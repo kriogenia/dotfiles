@@ -1,0 +1,9 @@
+- name: Remove old file
+  file:
+    name: "/home/{{ user }}/{{ item.dest }}"
+    state: absent
+- name: Symlink file
+  file:
+    src: "/home/{{ user }}/dotfiles/{{ item.src }}"
+    dest: "/home/{{ user }}/{{ item.dest }}"
+    state: link
