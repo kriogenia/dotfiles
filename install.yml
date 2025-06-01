@@ -4,12 +4,12 @@
   become: true
   vars:
     user: sotoestevez
+    fish_plugins: "{{ lookup('file', './.config/fish/fish_plugins') | split | join(' ') }}"
   vars_files:
     - config.yml
 
   tasks:
     # TODO:install fisher plugins, install yay, install yay packages
-
   - name: Install required packages
     pacman:
       name: "{{ packages }}"
@@ -20,7 +20,7 @@
     stat:
       path: "/home/{{ user }}/.sdkman"
     register: sdkman
-    when: '"fish" in packages'
+    when: '"fish" in configurations | map(attribute="name")'
   - name: Install SDKMAN
     become_user: "{{ user }}"
     shell: |
@@ -54,3 +54,9 @@
     loop: '{{ configurations | selectattr("type","equalto","file") }}'
     loop_control:
       label: "{{ item.name }}"
+
+  - name: Install fish plugins
+    become_user: "{{ user }}"
+    shell:
+      'fish -c "fisher_path=$HOME/.local/share/fish/plugins fisher install {{ fish_plugins }}"'
+    when: '"fish" in configurations | map(attribute="name")'
