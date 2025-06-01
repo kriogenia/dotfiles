@@ -1,9 +1,11 @@
 - name: Remove old file
+  become_user: "{{ user }}"
   file:
-    name: "/home/{{ user }}/{{ item.dest }}"
+    name: "$HOME/{{ item.dest }}"
     state: absent
 - name: Symlink file
+  become_user: "{{ user }}"
   file:
-    src: "/home/{{ user }}/dotfiles/{{ item.src }}"
-    dest: "/home/{{ user }}/{{ item.dest }}"
+    src: "$HOME/dotfiles/{{ item.src }}"
+    dest: "$HOME/{{ item.dest }}"
     state: link

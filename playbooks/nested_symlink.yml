@@ -1,24 +1,24 @@
 - name: Check folder
   become_user: "{{ user }}"
   file:
-    name: "/home/{{ user }}/.{{ configuration.name }}"
+    name: "$HOME/.{{ configuration.name }}"
     state: directory
 - name: Check inner folders
   become_user: "{{ user }}"
   file:
-    name: "/home/{{ user }}/.{{ configuration.name }}/{{ item }}"
+    name: "$HOME/.{{ configuration.name }}/{{ item }}"
     state: directory
   loop: "{{ configuration.folders | default([]) }}"
 - name: Remove old files
   become_user: "{{ user }}"
   file:
-    name: "/home/{{ user }}/.{{configuration.name }}/{{ item }}"
+    name: "$HOME/.{{configuration.name }}/{{ item }}"
     state: absent
   loop: '{{ configuration.files }}'
 - name: Symlink files
   become_user: "{{ user }}"
   file:
-    src: "/home/{{ user }}/dotfiles/.{{configuration.name }}/{{ item }}"
-    dest: "/home/{{ user }}/.{{ configuration.name }}/{{ item }}"
+    src: "$HOME/dotfiles/.{{configuration.name }}/{{ item }}"
+    dest: "$HOME/.{{ configuration.name }}/{{ item }}"
     state: link
   loop: '{{ configuration.files }}'

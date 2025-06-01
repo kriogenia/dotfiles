@@ -30,9 +30,9 @@
   - name: Check .config directory
     become_user: "{{ user }}"
     file:
-      name: "/home/{{ user }}/.config"
+      name: "$HOME/.config"
       state: directory
-  - name: Symlink by folders
+  - name: Symlink .config folders
     include_tasks:
       file: playbooks/folder_symlink.yml
     loop: '{{ configurations | selectattr("type","equalto","folder") }}'
@@ -40,7 +40,7 @@
       loop_var: configuration
       label: "{{ configuration.name }}"
 
-  - name: Symlink by files
+  - name: Symlink nested files in HOME
     include_tasks:
       file: playbooks/nested_symlink.yml
     loop: '{{ configurations | selectattr("type","equalto","nested") }}'
@@ -48,10 +48,9 @@
       loop_var: configuration
       label: "{{ configuration.name }}"
 
-  - name: Symlink by files
+  - name: Symlink specific files
     include_tasks:
       file: playbooks/file_symlink.yml
     loop: '{{ configurations | selectattr("type","equalto","file") }}'
     loop_control:
       label: "{{ item.name }}"
-

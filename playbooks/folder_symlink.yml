@@ -1,11 +1,11 @@
 - name: Remove old .config folder
   become_user: "{{ user }}"
   file:
-    name: "/home/{{ user }}/.config/{{ configuration.name }}"
+    name: "$HOME/.config/{{ configuration.name }}"
     state: absent
 - name: Link .config configurations
   become_user: "{{ user }}"
   file:
-    src: "/home/{{ user }}/dotfiles/.config/{{ configuration.name }}"
-    dest: "/home/{{ user }}/.config/{{ configuration.name }}"
+    src: "$HOME/dotfiles/.config/{{ configuration.name }}"
+    dest: "$HOME/.config/{{ configuration.name }}"
     state: link
