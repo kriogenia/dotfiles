@@ -16,18 +16,43 @@
     - tmux
     - yq
     configurations:
-      dotconfig:
-      - bat
-      - eza
-      - fish
-      - gh
-      - hypr
-      - kitty
-      - lazygit
-      - nvim
-      - qutebrowser
-      - tmux
-      - wlogout
+      - name: bat
+        type: .config
+      - name: cargo
+        type: nested
+        files:
+          - .crates.toml
+          - config.toml
+      - name: eza
+        type: .config
+      - name: fish
+        type: .config
+      - name: gh
+        type: .config
+      - name: hypr
+        type: .config
+      - name: kitty
+        type: .config
+      - name: lazygit
+        type: .config
+      - name: nvim
+        type: .config
+      - name: qutebrowser
+        type: .config
+      - name: rustup
+        type: nested
+        files:
+          - settings.toml
+      - name: ssh
+        type: nested
+        files:
+          - config
+        folders:
+          - config.d
+      - name: tmux
+        type: .config
+      - name: wlogout
+        type: .config
 
   tasks:
   - name: Install required packages
@@ -48,6 +73,7 @@
     shell: |
         curl -s "https://get.sdkman.io" | bash
     when: not sdkman.stat.exists
+      # todo extract to playbook
   - name: Check .config directory
     become_user: "{{ user }}"
     file:
@@ -56,13 +82,21 @@
   - name: Remove old .config configurations
     become_user: "{{ user }}"
     file:
-      name: "/home/{{ user }}/.config/{{ item }}"
+      name: "/home/{{ user }}/.config/{{ item['name'] }}" #map to name?
       state: absent
-    loop: '{{ configurations["dotconfig"] }}'
-  - name: Copy .config configurations
+    loop: '{{ configurations | selectattr("type","equalto",".config") }}'
+  - name: Link .config configurations
     become_user: "{{ user }}"
     file:
-      src: "/home/{{ user }}/dotfiles/.config/{{ item }}"
-      dest: "/home/{{ user }}/.config/{{ item }}"
+      src: "/home/{{ user }}/dotfiles/.config/{{ item['name'] }}"
+      dest: "/home/{{ user }}/.config/{{ item['name'] }}"
       state: link
-    loop: '{{ configurations["dotconfig"] }}'
+    loop: '{{ configurations | selectattr("type","equalto",".config") }}'
+  - name: Symlink by items
+    include_tasks:
+      file: playbooks/nested_symlink.yml
+    loop: '{{ configurations | selectattr("type","equalto","nested") }}'
+    loop_control:
+      loop_var: configuration
+      label: "{{ configuration.name }}"
+
