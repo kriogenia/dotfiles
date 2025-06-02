@@ -1,24 +1,24 @@
-- name: Install required packages
+- name: "Install {{ config.key }} required packages"
   pacman:
-    name: "{{ config.value.packages }}"
+    name: "{{ config.value.packages | default([]) }}"
     state: present
     update_cache: yes
-- name: Check folders
+- name: "Check {{ config.key }} folders"
   become_user: "{{ user }}"
   file:
     name: "$HOME/{{ item }}"
     state: directory
-  loop: "{{ config.value.folders }}"
-- name: Remove old configurations
+  loop: "{{ config.value.folders | default([]) }}"
+- name: "Remove {{ config.key }} old configuration"
   become_user: "{{ user }}"
   file:
     name: "$HOME/{{ item }}"
     state: absent
-  loop: "{{ config.value.links }}"
-- name: Link new configuration
+  loop: "{{ config.value.links | default([]) }}"
+- name: "Link {{ config.key }} new configuration"
   become_user: "{{ user }}"
   file:
     src: "$HOME/dotfiles/{{ item }}"
     dest: "$HOME/{{ item }}"
     state: link
-  loop: "{{ config.value.links }}"
+  loop: "{{ config.value.links | default([]) }}"

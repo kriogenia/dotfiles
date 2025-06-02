@@ -30,7 +30,7 @@ configurations:
       - hyprlock
       - kitty
       - brightnessctl
-      - rofi
+      - rofi-wayland
       - wireplumber
       - wlogout
   kitty:

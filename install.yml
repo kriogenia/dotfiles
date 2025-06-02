@@ -20,7 +20,7 @@
         file: playbooks/configure.yml
       loop: "{{ lookup('dict', configurations) }}" # filter dict by active var
       loop_control:
-        label: "{{ item.key }}"
+        label: "{{ config.key }}"
         loop_var: config
     - name: Install SDKMAN
       include_tasks:
