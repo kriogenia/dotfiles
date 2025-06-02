@@ -1,67 +1,74 @@
-packages: # divide require and additional, also pacman vs yay
-  - bat
-  - eza
-  - fish
-  - fisher
-  - fzf
-  - git
-  - markdownlint-cli2
-  - nvim
-  - pyenv
-  - thefuck
-  - tmux
-  - yq
 configurations:
-  # - name: libs
-  #   type: files
-  #   files:
-  #     - src: bin/logout.sh
-  #       dest: .local/share/dotfiles/logout.sh
-  - name: bat
-    type: folder
-  - name: cargo
-    type: nested
+  bat:
+    packages: [bat]
+    links: [.config/bat]
+  eza:
+    packages: [eza]
+    links: [.config/eza]
+  fish:
+    links: [.config/fish]
+    packages:
+      - fish
+      - fisher
+      - bat
+      - eza
+      - fzf
+      - pyenv
+      - thefuck
+      - tmux
+      - yq
+  github:
+    packages: [github-cli]
+    links: [.config/gh]
+  git:
+    packages: [git]
+    links: [.gitconfig]
+  hypr:
+    links: [.config/hypr]
+    packages:
+      - hyprland
+      - hyprlock
+      - kitty
+      - brightnessctl
+      - rofi
+      - wireplumber
+      - wlogout
+  kitty:
+    packages: [kitty]
+    links: [.config/kitty]
+  lazygit:
+    packages: [lazygit]
+    links: [.config/lazygit]
+  nvim:
+    packages:
+      - nvim
+      - gcc
+      - lazygit
+      - markdownlint-cli2
+    links: [.config/nvim]
+  qutebrowser:
+    packages: [qutebrowser]
+    links: [.config/qutebrowser]
+  rustup:
+    packages: [rustup]
     folders:
       - .cargo
-    files:
+      - .rustup
+    links:
       - .cargo/.crates.toml
       - .cargo/config.toml
-  - name: eza
-    type: folder
-  - name: fish
-    type: folder
-  - name: gh
-    type: folder
-  - name: git
-    type: file
-    src: .gitconfig
-    dest: .gitconfig
-  - name: hypr
-    type: folder
-  - name: kitty
-    type: folder
-  - name: lazygit
-    type: folder
-  - name: nvim
-    type: folder
-  - name: qutebrowser
-    type: folder
-  - name: rustup
-    type: nested
-    folders:
-      - .rustup
-    files:
       - .rustup/settings.toml
-  - name: ssh
-    type: nested
+  sdkman:
+    packages: [unzip, zip]
+  ssh:
+    packages: [openssh]
     folders:
       - .ssh
       - .ssh/config.d
-    files:
+    links:
       - .ssh/config
-  - name: tmux
-    type: folder
-  - name: wlogout
-    type: folder
-
-
+  tmux:
+    packages: [tmux]
+    links: [.config/tmux]
+  wlogout: # TODO: AUR
+    links: [.config/wlogout]

@@ -10,53 +10,23 @@
 
   tasks:
     # TODO:install yay, install yay packages
-  - name: Install required packages
-    pacman:
-      name: "{{ packages }}"
-      state: present
-      update_cache: yes
-
-  - name: Check for SDKMAN
-    stat:
-      path: "/home/{{ user }}/.sdkman"
-    register: sdkman
-    when: '"fish" in configurations | map(attribute="name")'
-  - name: Install SDKMAN
-    become_user: "{{ user }}"
-    shell: |
-        curl -s "https://get.sdkman.io" | bash
-    when: not sdkman.stat.exists
-
-  - name: Check .config directory
-    become_user: "{{ user }}"
-    file:
-      name: "$HOME/.config"
-      state: directory
-  - name: Symlink .config folders
-    include_tasks:
-      file: playbooks/folder_symlink.yml
-    loop: '{{ configurations | selectattr("type","equalto","folder") }}'
-    loop_control:
-      loop_var: configuration
-      label: "{{ configuration.name }}"
-
-  - name: Symlink nested files in HOME
-    include_tasks:
-      file: playbooks/nested_symlink.yml
-    loop: '{{ configurations | selectattr("type","equalto","nested") }}'
-    loop_control:
-      loop_var: configuration
-      label: "{{ configuration.name }}"
-
-  - name: Symlink specific files
-    include_tasks:
-      file: playbooks/file_symlink.yml
-    loop: '{{ configurations | selectattr("type","equalto","file") }}'
-    loop_control:
-      label: "{{ item.name }}"
-
-  - name: Install fish plugins
-    become_user: "{{ user }}"
-    shell:
-      'fish -c "fisher_path=$HOME/.local/share/fish/plugins fisher install {{ fish_plugins }}"'
-    when: '"fish" in configurations | map(attribute="name")'
+    - name: Check .config directory
+      become_user: "{{ user }}"
+      file:
+        name: "$HOME/.config"
+        state: directory
+    - name: Copy configurations
+      include_tasks:
+        file: playbooks/configure.yml
+      loop: "{{ lookup('dict', configurations) }}" # filter dict by active var
+      loop_control:
+        label: "{{ item.key }}"
+        loop_var: config
+    - name: Install SDKMAN
+      include_tasks:
+        file: playbooks/sdkman.yml
+      when: '"fish" in configurations.keys()'
+    - name: Install fish plugins
+      become_user: "{{ user }}"
+      shell: 'fish -c "fisher_path=$HOME/.local/share/fish/plugins fisher install {{ fish_plugins }}"'
+      when: '"fish" in configurations.keys()'

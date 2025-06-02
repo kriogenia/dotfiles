@@ -1,19 +1,24 @@
+- name: Install required packages
+  pacman:
+    name: "{{ config.value.packages }}"
+    state: present
+    update_cache: yes
 - name: Check folders
   become_user: "{{ user }}"
   file:
     name: "$HOME/{{ item }}"
     state: directory
-  loop: "{{ configuration.folders }}"
-- name: Remove old files
+  loop: "{{ config.value.folders }}"
+- name: Remove old configurations
   become_user: "{{ user }}"
   file:
     name: "$HOME/{{ item }}"
     state: absent
-  loop: '{{ configuration.files }}'
-- name: Symlink files
+  loop: "{{ config.value.links }}"
+- name: Link new configuration
   become_user: "{{ user }}"
   file:
     src: "$HOME/dotfiles/{{ item }}"
     dest: "$HOME/{{ item }}"
     state: link
-  loop: '{{ configuration.files }}'
+  loop: "{{ config.value.links }}"
