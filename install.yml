@@ -2,11 +2,12 @@
 - name: Install dotfiles
   hosts: localhost
   become: true
-  vars:
-    fish_plugins: "{{ lookup('file', './.config/fish/fish_plugins') | split | join(' ') }}"
-    user: sotoestevez
   vars_files:
     - config.yml
+  vars:
+    install: "{{ default_installs | join(',' ) }}"
+    fish_plugins: "{{ lookup('file', './.config/fish/fish_plugins') | split | join(' ') }}"
+    user: sotoestevez
 
   tasks:
     # TODO:install yay, install yay packages
@@ -18,9 +19,8 @@
     - name: Copy configurations
       include_tasks:
         file: playbooks/configure.yml
-      loop: "{{ lookup('dict', configurations) }}" # filter dict by active var
+      loop: "{{ install | split(',') | map('extract', configurations) }}"
       loop_control:
-        label: "{{ config.key }}"
         loop_var: config
     - name: Install SDKMAN
       include_tasks:

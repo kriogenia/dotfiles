@@ -79,3 +79,19 @@ configurations:
     links: [.config/tmux]
   wlogout: # TODO: AUR
     links: [.config/wlogout]
+default_installs:
+- bat
+- eza
+- fish
+- github
+- hypr
+- kitty
+- lazygit
+- nvim
+- qutebrowser
+- rustup
+- sdkman
+- ssh
+- tmux
+- wlogout
+

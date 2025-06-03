@@ -9,15 +9,27 @@ in `sh` is more portable, but I'll take the risk of having to rewrite them if I 
 some `fish` scripts.
 There's also some "path hardcoding" that assumes that these dotfiles will be placed where I always have them, in $HOME/dotfiles. Whenever I can I use envvars or relative paths, but it's not always possible.
 
-There's a way to install the majority of these dotfiles automatically with symlinking using the `install.sh`; but again, it's based on my common home directory configuration and is specially designed to be applied to my Arch fresh installs.
-
-Another way is using ansible:
+A good way to install these dotfiles is using the Ansible playbook. It's idempotent, so it also serves to update them, but it's destructive, so it's not really recommended. Once installed the different configuration folders will be symlinks so `git pull` should enough to update.
 
 ```sh
 ansible-playbook install.yml -e user=youruser
 ```
 
+As not every environment is interested in the same dotfiles, a partial list of dotfile configurations can be installed passing the comma-separated list as `install`. For example, this is what I install when pulling the dotfiles into a WSL where I only set-up the CLI tools:
+
+```sh
+ansible-playbook install.yml -e user=yourser -e install=bat,eza,fish,github,lazygit,nvim,tmux
+```
+
+## Extending
+
+I have some configurations that are machine-dependent, so I have set-up ways to extend part of the behavior that are not tracked by git:
+
+- `fish`, best way is to add your files to the `/.local/share/fish/plugins`.
+- `kitty`, its configuration imports the `.config/kitty/override.conf` file that it's git ignored.
+- `ssh`, any file in `$HOME/.ssh/config.d` is automatically imported.
+
 ## Acknowledgments
 
-* All ASCII art was generated with [jp2a](https://github.com/cslarsen/jp2a)
-* A big part of the Hyprland configurations are based on [HyDE](https://github.com/HyDE-Project/HyDE)
+- All ASCII art was generated with [jp2a](https://github.com/cslarsen/jp2a)
+- A big part of the Hyprland configurations are based on [HyDE](https://github.com/HyDE-Project/HyDE)
