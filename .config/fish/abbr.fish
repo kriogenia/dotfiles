@@ -8,7 +8,7 @@ abbr -a --position anywhere -- -h '-h | bat -plhelp'
 
 # Git
 abbr -a -- ga 'git add'
-abbr -a -- gcmsg 'git commit -m'
+abbr -a --set-cursor=% -- gcmsg 'git commit -m "%"'
 abbr -a -- gca 'git commit --amend'
 abbr -a -- gcfu 'git commit --fixup HEAD'
 abbr -a -- gco 'git checkout'
