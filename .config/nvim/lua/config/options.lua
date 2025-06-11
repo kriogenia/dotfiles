@@ -7,5 +7,5 @@ vim.g.lazyvim_python_ruff = "ruff"
 
 -- Providers
 vim.g.loaded_perl_provider = 0
-vim.g.python_host_prog = "/home/sotoestevez/.pyenv/versions/nvim/bin/python"
-vim.g.python3_host_prog = "/home/sotoestevez/.pyenv/versions/nvim/bin/python"
+-- vim.g.python_host_prog = "/home/sotoestevez/.pyenv/versions/nvim/bin/python"
+-- vim.g.python3_host_prog = "/home/sotoestevez/.pyenv/versions/nvim/bin/python"

@@ -50,6 +50,7 @@ configurations:
       - luarocks
       - markdownlint-cli2
       - npm
+      - python-neovim
       - python-pip
     links: [.config/nvim]
   qutebrowser:
