@@ -42,9 +42,15 @@ configurations:
   nvim:
     packages:
       - nvim
+      - ast-grep
+      - fd
       - gcc
+      - jdk21-openjdk
       - lazygit
+      - luarocks
       - markdownlint-cli2
+      - npm
+      - python-pip
     links: [.config/nvim]
   qutebrowser:
     packages: [qutebrowser]
