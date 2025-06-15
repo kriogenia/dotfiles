@@ -42,7 +42,7 @@ configurations:
   nvim:
     packages:
       - nvim
-      - ast-grep
+      # - ast-grep
       - fd
       - gcc
       - jdk21-openjdk
