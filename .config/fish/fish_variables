@@ -60,6 +60,7 @@ SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_user_paths:/usr/local/texlive/2024/bin/x86_64\x2dlinux\x1e/home/sotoestevez/\x2ecargo/bin\x1e/home/sotoestevez/\x2epyenv/bin\x1e/home/sotoestevez/go/bin\x1e/home/sotoestevez/\x2efzf/bin
+SETUVAR fisher_path:/home/sotoestevez/\x2elocal/share/fish/plugins
 SETUVAR nvswap:/home/sotoestevez/\x2elocal/state/nvim/swap/
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_color_at_sign:pure_color_mute
