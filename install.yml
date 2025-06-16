@@ -5,12 +5,17 @@
   vars_files:
     - config.yml
   vars:
+    fresh_install: false
     install: "{{ default_installs | join(',' ) }}"
     fish_plugins: "{{ lookup('file', './.config/fish/fish_plugins') | split | join(' ') }}"
     user: sotoestevez
 
   tasks:
-    # TODO:install yay, install yay packages
+    # TODO:install yay packages
+    - name: Install yay
+      include_tasks:
+        file: playbooks/yay.yml
+      when: "{{ fresh_install }}"
     - name: Check .config directory
       become_user: "{{ user }}"
       file:

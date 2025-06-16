@@ -1,0 +1,24 @@
+- name: Ensure yay dependencies are installed
+  ansible.builtin.pacman:
+    name:
+      - base-devel
+      - git
+    state: present
+- name: Clone yay repository from AUR
+  become_user: "{{ user }}"
+  ansible.builtin.git:
+    repo: "https://aur.archlinux.org/yay.git"
+    dest: "$HOME/yay"
+    clone: yes
+    update: yes
+- name: Install yay from AUR
+  become_user: "{{ user }}"
+  ansible.builtin.command:
+    cmd: makepkg -si --noconfirm
+    chdir: "$HOME/yay"
+    creates: "/usr/bin/yay"
+- name: Clean up yay build directory
+  become_user: "{{ user }}"
+  ansible.builtin.file:
+    path: "$HOME/yay"
+    state: absent
