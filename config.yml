@@ -32,7 +32,7 @@ configurations:
       - brightnessctl
       - rofi-wayland
       - wireplumber
-      - wlogout
+      # - wlogout
   kitty:
     packages: [kitty]
     links: [.config/kitty]
