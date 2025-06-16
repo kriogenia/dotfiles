@@ -14,5 +14,3 @@ set_if_unset learning $projects/my_learnings/
 
 set_if_unset TMUX_WORKSPACES $XDG_CONFIG_HOME/tmux/workspaces
 set_if_unset ASCII_ARTS $HOME/dotfiles/ascii
-
-set_if_unset fisher_path $HOME/.local/share/fish/plugins
