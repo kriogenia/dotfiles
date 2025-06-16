@@ -25,7 +25,7 @@
     - name: Install SDKMAN
       include_tasks:
         file: playbooks/sdkman.yml
-      when: '"fish" in configurations.keys()'
+      when: '"sdkman" in install'
     - name: Install fish plugins
       become_user: "{{ user }}"
       shell: 'fish -c "fisher_path=$HOME/.local/share/fish/plugins fisher install {{ fish_plugins }}"'

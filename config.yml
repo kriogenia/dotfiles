@@ -31,6 +31,8 @@ configurations:
       - kitty
       - brightnessctl
       - rofi-wayland
+      - sddm
+      - uwsm
       - wireplumber
       # - wlogout
   kitty:
@@ -80,18 +82,17 @@ configurations:
   wlogout: # TODO: AUR
     links: [.config/wlogout]
 default_installs:
-- bat
-- eza
-- fish
-- github
-- hypr
-- kitty
-- lazygit
-- nvim
-- qutebrowser
-- rustup
-- sdkman
-- ssh
-- tmux
-- wlogout
-
+  - bat
+  - eza
+  - fish
+  - github
+  # - hypr
+  - kitty
+  - lazygit
+  - nvim
+  - qutebrowser
+  - rustup
+  - sdkman
+  - ssh
+  - tmux
+  # - wlogout
