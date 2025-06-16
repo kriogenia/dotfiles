@@ -85,8 +85,9 @@ default_installs:
   - bat
   - eza
   - fish
+  - git
   - github
-  # - hypr
+  - hypr
   - kitty
   - lazygit
   - nvim
