@@ -86,6 +86,10 @@ profiles:
     symlinks:
       - src: .config/kitty/__lenovo27.conf
         dest: .config/kitty/override.conf
+  laptop:
+    symlinks:
+      - src: .config/kitty/__lenovo_laptop.conf
+        dest: .config/kitty/override.conf
 default_installs:
   - bat
   - eza
