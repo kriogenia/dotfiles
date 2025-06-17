@@ -86,10 +86,14 @@ profiles:
     symlinks:
       - src: .config/kitty/__lenovo27.conf
         dest: .config/kitty/override.conf
+      - src: .config/hypr/profiles/nvidia.conf
+        dest: .config/hypr/envs.conf
   laptop:
     symlinks:
       - src: .config/kitty/__lenovo_laptop.conf
         dest: .config/kitty/override.conf
+      - src: .config/hypr/profiles/dummy.conf
+        dest: .config/hypr/envs.conf
 default_installs:
   - bat
   - eza
