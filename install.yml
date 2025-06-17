@@ -8,6 +8,7 @@
     fresh_install: false
     install: "{{ default_installs | join(',' ) }}"
     fish_plugins: "{{ lookup('file', './.config/fish/fish_plugins') | split | join(' ') }}"
+    profile: desktop
     user: sotoestevez
 
   tasks:
@@ -27,6 +28,13 @@
       loop: "{{ install | split(',') | map('extract', configurations) }}"
       loop_control:
         loop_var: config
+    - name: Link profile specific configurations
+      become_user: "{{ user }}"
+      file:
+        src: "$HOME/{{ item.src }}"
+        dest: "$HOME/{{ item.dest }}"
+        state: link
+      loop: "{{ profiles[profile].symlinks }}"
     - name: Install SDKMAN
       include_tasks:
         file: playbooks/sdkman.yml

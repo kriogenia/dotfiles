@@ -81,6 +81,11 @@ configurations:
     links: [.config/tmux]
   wlogout: # TODO: AUR
     links: [.config/wlogout]
+profiles:
+  desktop:
+    symlinks:
+      - src: .config/kitty/__lenovo27.conf
+        dest: .config/kitty/override.conf
 default_installs:
   - bat
   - eza
