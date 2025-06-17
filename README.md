@@ -21,6 +21,8 @@ As not every environment is interested in the same dotfiles, a partial list of d
 ansible-playbook install.yml -e user=yourser -e install=bat,eza,fish,github,lazygit,nvim,tmux
 ```
 
+Right now the playbooks only install the required dependencies but I'm planning to add the installation of a whole package suite that, to be fair, I always use. This would also include flatpaks.
+
 ## Extending
 
 I have some configurations that are machine-dependent, so I have set-up ways to extend part of the behavior that are not tracked by git:
