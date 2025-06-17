@@ -16,7 +16,7 @@
     - name: Install yay
       include_tasks:
         file: playbooks/yay.yml
-      when: "{{ fresh_install }}"
+      when: fresh_install
     - name: Check .config directory
       become_user: "{{ user }}"
       file:
@@ -42,4 +42,4 @@
     - name: Install fish plugins
       become_user: "{{ user }}"
       shell: 'fish -c "fisher_path=$HOME/.local/share/fish/plugins fisher install {{ fish_plugins }}"'
-      when: '"fish" in configurations.keys()'
+      when: '"fish" in install'

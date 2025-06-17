@@ -1,13 +1,13 @@
 configurations:
   bat:
-    packages: [bat]
+    pacman: [bat]
     links: [.config/bat]
   eza:
-    packages: [eza]
+    pacman: [eza]
     links: [.config/eza]
   fish:
     links: [.config/fish]
-    packages:
+    pacman:
       - fish
       - fisher
       - bat
@@ -18,14 +18,14 @@ configurations:
       - tmux
       - yq
   github:
-    packages: [github-cli]
+    pacman: [github-cli]
     links: [.config/gh]
   git:
-    packages: [git]
+    pacman: [git]
     links: [.gitconfig]
   hypr:
     links: [.config/hypr]
-    packages:
+    pacman:
       - hyprland
       - hyprlock
       - kitty
@@ -34,17 +34,16 @@ configurations:
       - sddm
       - uwsm
       - wireplumber
-      # - wlogout
+    aur: [wlogout]
   kitty:
-    packages: [kitty]
+    pacman: [kitty]
     links: [.config/kitty]
   lazygit:
-    packages: [lazygit]
+    pacman: [lazygit]
     links: [.config/lazygit]
   nvim:
-    packages:
+    pacman:
       - nvim
-      # - ast-grep
       - fd
       - gcc
       - jdk21-openjdk
@@ -54,12 +53,13 @@ configurations:
       - npm
       - python-neovim
       - python-pip
+    aur: [ast-grep]
     links: [.config/nvim]
   qutebrowser:
-    packages: [qutebrowser]
+    pacman: [qutebrowser]
     links: [.config/qutebrowser]
   rustup:
-    packages: [rustup]
+    pacman: [rustup]
     folders:
       - .cargo
       - .rustup
@@ -68,18 +68,19 @@ configurations:
       - .cargo/config.toml
       - .rustup/settings.toml
   sdkman:
-    packages: [unzip, zip]
+    pacman: [unzip, zip]
   ssh:
-    packages: [openssh]
+    pacman: [openssh]
     folders:
       - .ssh
       - .ssh/config.d
     links:
       - .ssh/config
   tmux:
-    packages: [tmux]
+    pacman: [tmux]
     links: [.config/tmux]
-  wlogout: # TODO: AUR
+  wlogout:
+    aur: [wlogout]
     links: [.config/wlogout]
 profiles:
   desktop:
