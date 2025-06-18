@@ -2,6 +2,9 @@ configurations:
   bat:
     pacman: [bat]
     links: [.config/bat]
+  dunst:
+    pacman: [dunst]
+    links: [.config/dunstg]
   eza:
     pacman: [eza]
     links: [.config/eza]
@@ -28,6 +31,7 @@ configurations:
     pacman:
       - hyprland
       - hyprlock
+      - dunst
       - kitty
       - brightnessctl
       - rofi-wayland
@@ -90,14 +94,18 @@ profiles:
         dest: .config/kitty/override.conf
       - src: .config/hypr/profiles/nvidia.conf
         dest: .config/hypr/envs.conf
+      - src: .config/dunst/__lenovo27.conf
+        dest: .config/dunst/dunstrc
   laptop:
     symlinks:
       - src: .config/kitty/__lenovo_laptop.conf
         dest: .config/kitty/override.conf
       - src: .config/hypr/profiles/dummy.conf
         dest: .config/hypr/envs.conf
+        # TODO: dunst
 default_installs:
   - bat
+  - dunst
   - eza
   - fish
   - git
