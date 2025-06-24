@@ -1,8 +1,0 @@
-bat
-eza
-fish
-fzf
-markdownlint-cli2
-pyenv
-tmux
-yq
