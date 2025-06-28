@@ -7,3 +7,6 @@ yadm remote set-url origin "git@github.com:kriogenia/dotfiles.git"
 
 echo "Building bat cache"
 bat cache --build
+
+echo "Installing fish plugins"
+fish -c "cat $HOME/.config/fish/fish_plugins | fisher install -"
