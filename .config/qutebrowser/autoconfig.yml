@@ -6,6 +6,9 @@
 
 config_version: 2
 settings:
+  content.javascript.clipboard:
+    https://github.com: access-paste
+    https://wiki.hypr.land: access-paste
   url.searchengines:
     global:
       DEFAULT: https://duckduckgo.com/?q={}
