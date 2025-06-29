@@ -1,8 +1,10 @@
+import "config/"
 import "modules/"
 import Quickshell
 
 ShellRoot {
-  Background {}
+  // Background {}
+  Drawers {}
   // Time {}
 }
 

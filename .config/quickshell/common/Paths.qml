@@ -12,6 +12,7 @@ Singleton {
     readonly property string key: "dotfiles"
     readonly property url state: `${StandardPaths.standardLocations(StandardPaths.GenericStateLocation)[0]}/${key}`
     readonly property url cache: `${StandardPaths.standardLocations(StandardPaths.GenericCacheLocation)[0]}/${key}`
+    readonly property url config: `${StandardPaths.standardLocations(StandardPaths.GenericConfigLocation)[0]}/quickshell`
 
     readonly property url imagecache: `${cache}/imagecache`
 
