@@ -1,5 +1,3 @@
-import "root:/utils"
-import "root:/config"
 import Quickshell
 import Quickshell.Wayland
 
