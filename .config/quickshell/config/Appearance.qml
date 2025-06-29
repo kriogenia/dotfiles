@@ -6,9 +6,18 @@ import QtQuick
 Singleton {
     id: root
 
+    readonly property Rounding rounding: Rounding {}
     readonly property Spacing spacing: Spacing {}
+    readonly property Padding padding: Padding {}
     readonly property Font font: Font {}
     readonly property Anim anim: Anim {}
+
+    component Rounding: QtObject {
+        readonly property int small: 12
+        readonly property int normal: 17
+        readonly property int large: 25
+        readonly property int full: 1000
+    }
 
     component Spacing: QtObject {
         readonly property int small: 7
@@ -16,6 +25,14 @@ Singleton {
         readonly property int normal: 12
         readonly property int larger: 15
         readonly property int large: 20
+    }
+
+    component Padding: QtObject {
+        readonly property int small: 5
+        readonly property int smaller: 7
+        readonly property int normal: 10
+        readonly property int larger: 12
+        readonly property int large: 15
     }
 
     component FontFamily: QtObject {
