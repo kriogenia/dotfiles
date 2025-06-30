@@ -31,7 +31,7 @@ Item {
         readonly property string occupiedLabel: Config.bar.workspaces.occupiedLabel || label
         readonly property string activeLabel: root.isOccupied ? occupiedLabel : label
 
-        animate: false
+        animate: true
         text: root.isActive ? activeLabel : root.isOccupied ? occupiedLabel : label
         color: root.isActive ? Colours.palette.primary : root.isOccupied ? Colours.palette.on_surface : Colours.palette.outline_variant
         horizontalAlignment: StyledText.AlignHCenter
