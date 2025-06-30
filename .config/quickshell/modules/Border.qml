@@ -1,6 +1,7 @@
 import "root:/common"
 import "root:/components"
 import "root:/config"
+import "root:/services"
 
 import Quickshell
 import QtQuick
@@ -17,8 +18,7 @@ Item {
         id: rect
 
         anchors.fill: parent
-        color: "#141318"
-        // color: Palette.surface # FIXME
+        color: Colours.palette.surface
         visible: false
     }
 

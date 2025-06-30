@@ -33,8 +33,7 @@ Item {
 
         animate: false
         text: root.isActive ? activeLabel : root.isOccupied ? occupiedLabel : label
-        // color: root.isActive ? Palette.primary : root.isOccupied ? Palette.on_surface : Palette.outline_variant // FIXME
-        color: root.isActive ? "#C8BFFF" : root.isOccupied ? "#E5E1E9" : "#48454E"
+        color: root.isActive ? Colours.palette.primary : root.isOccupied ? Colours.palette.on_surface : Colours.palette.outline_variant
         horizontalAlignment: StyledText.AlignHCenter
         verticalAlignment: StyledText.AlignVCenter
 
@@ -85,8 +84,7 @@ Item {
 
                     grade: 0
                     text: "terminal" // TODO: icon based on window type
-                    color: "#C9C5D0"
-                    // color: Palette.on_surface_variant //FIXME
+                    color: Colours.palette.on_surface_variant
                 }
             }
         }}

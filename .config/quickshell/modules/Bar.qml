@@ -1,5 +1,6 @@
 import "root:/components"
 import "root:/config"
+import "root:/services"
 import Quickshell
 import QtQuick
 
@@ -39,8 +40,7 @@ Item {
             anchors.topMargin: Appearance.spacing.normal
 
             radius: Appearance.rounding.full
-            color: "#201F25"
-            // color: Palette.surface_container // FIXME
+            color: Colours.palette.surface_container
 
             implicitWidth: workspacesInner.implicitWidth + Appearance.padding.small * 2
             implicitHeight: workspacesInner.implicitHeight + Appearance.padding.small * 2
