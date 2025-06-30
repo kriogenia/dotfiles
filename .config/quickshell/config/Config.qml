@@ -9,6 +9,7 @@ Singleton {
 
     property alias bar: adapter.bar
     property alias border: adapter.border
+    property alias session: adapter.session
 
     FileView {
         path: `${Paths.config}/config.json`
@@ -21,6 +22,7 @@ Singleton {
 
             property JsonObject bar: BarConfig {}
             property JsonObject border: BorderConfig {}
+            property JsonObject session: SessionConfig {}
         }
     }
 
@@ -46,6 +48,14 @@ Singleton {
             property bool showWindows: true
             property string label: "  "
             property string occupiedLabel: "󰮯 "
+        }
+    }
+
+    component SessionConfig: JsonObject {
+        property int dragThreshold: 30
+
+        property JsonObject sizes: JsonObject {
+            property int button: 80
         }
     }
 }

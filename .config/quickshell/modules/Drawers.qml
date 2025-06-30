@@ -4,7 +4,6 @@ import "root:/config"
 import "root:/components"
 import "root:/modules"
 import "root:/services"
-import "drawers"
 import Quickshell
 import Quickshell.Wayland
 import Quickshell.Hyprland
@@ -49,6 +48,8 @@ Variants {
             Variants {
                 id: regions
 
+                model: panels.children
+
                 Region {
                     required property Item modelData
 
@@ -86,6 +87,7 @@ Variants {
 
                 Boxes {
                     bar: bar
+                    panels: panels
                 }
             }
 
@@ -97,9 +99,33 @@ Variants {
                 shadowColor: Qt.alpha(Palette.shadow, 0.7)
             }
 
+            PersistentProperties {
+                id: visibilities
+
+                property bool session
+
+                Component.onCompleted: Visibilities.screens[scope.modelData] = this
+            }
+
+            Interactions {
+                screen: scope.modelData
+                visibilities: visibilities
+                panels: panels
+                bar: bar
+
+                Panels {
+                    id: panels
+
+                    screen: scope.modelData
+                    visibilities: visibilities
+                    bar: bar
+                }
+            }
+
+
             Bar {
                 id: bar
-                
+
                 screen: scope.modelData
             }
         }

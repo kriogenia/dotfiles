@@ -61,6 +61,9 @@ Singleton {
         property color primary: "#C8BFFF"
         property color on_primary: "#30285F"
 
+        property color secondary_container: "#484459"
+        property color on_secondary_container: "#E5DFF9"
+
         property color tertiary: "#976A7D"
 
         property color surface: "#141318"
