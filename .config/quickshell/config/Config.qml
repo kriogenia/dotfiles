@@ -7,10 +7,11 @@ import Quickshell.Io
 Singleton {
     id: root
 
+    property alias bar: adapter.bar
     property alias border: adapter.border
 
     FileView {
-        path: `${Paths.config}/shell.json`
+        path: `${Paths.config}/config.json`
         watchChanges: true
         onFileChanged: reload()
         onAdapterUpdated: writeAdapter()
@@ -18,6 +19,7 @@ Singleton {
         JsonAdapter {
             id: adapter
 
+            property JsonObject bar: BarConfig {}
             property JsonObject border: BorderConfig {}
         }
     }
@@ -27,4 +29,24 @@ Singleton {
         property int rounding: Appearance.rounding.large
     }
 
+    component BarConfig: JsonObject {
+        property JsonObject sizes: JsonObject {
+            property int innerHeight: 30
+            property int windowPreviewSize: 400
+            property int trayMenuWidth: 300
+            property int batteryWidth: 250
+        }
+
+        property JsonObject workspaces: JsonObject {
+            property int shown: 5
+            property bool rounded: true
+            property bool activeIndicator: true
+            property bool occupiedBg: false
+            property bool showWindows: true
+            property bool activeTrail: false
+            property string label: "  "
+            property string occupiedLabel: "󰮯 "
+            property string activeLabel: "󰮯 "
+        }
+    }
 }
