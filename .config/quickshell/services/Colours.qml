@@ -69,6 +69,8 @@ Singleton {
         property color on_surface: "#E5E1E9"
         property color on_surface_variant: "#C9C5D0"
 
+        property color error: "#EA8DC1"
+
         property color outline_variant: "#48454E"
 
         property color scrim: "#000000"

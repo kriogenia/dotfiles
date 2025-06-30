@@ -1,6 +1,7 @@
 import "root:/components"
 import "root:/config"
 import "root:/services"
+import "root:/widgets"
 import Quickshell
 import QtQuick
 
@@ -23,7 +24,7 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
 
         implicitWidth: Math.max(osIcon.implicitWidth, workspaces.implicitWidth)
-        
+ 
         OsIcon {
             id: osIcon
 
@@ -52,6 +53,15 @@ Item {
             }
         }
 
+        // TODO: add other components
+
+        Power {
+            id: power
+
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: Appearance.padding.large
+        }
     }
 
 }
