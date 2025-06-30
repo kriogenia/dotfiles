@@ -17,34 +17,79 @@ Item {
     readonly property real size: childrenRect.height + (hasWindows ? Appearance.padding.smaller : 0)
 
     readonly property int ws: groupOffset + index + 1
+    readonly property bool isActive: Hyprland.activeWsId === ws
     readonly property bool isOccupied: occupied[ws] ?? false
     readonly property bool hasWindows: isOccupied && Config.bar.workspaces.showWindows
 
     Layout.preferredWidth: childrenRect.width
     Layout.preferredHeight: size
 
-    function isActive(): bool {
-      console.log(this.ws);
-      console.log(Hyprland.activeWsId);
-      return Hyprland.activeWsId === root.ws
-    }
-
     StyledText {
         id: indicator
 
         readonly property string label: Config.bar.workspaces.label || root.ws
         readonly property string occupiedLabel: Config.bar.workspaces.occupiedLabel || label
-        readonly property string activeLabel: Config.bar.workspaces.activeLabel || (root.isOccupied ? occupiedLabel : label)
+        readonly property string activeLabel: root.isOccupied ? occupiedLabel : label
 
         animate: false
-        text: Hyprland.activeWsId === root.ws ? activeLabel : root.isOccupied ? occupiedLabel : label
-        color: Config.bar.workspaces.occupiedBg || root.isOccupied || Hyprland.activeWsId === root.ws ? "#E5E1E9" : "#48454E"
-        // color: Config.bar.workspaces.occupiedBg || root.isOccupied || Hyprland.activeWsId === root.ws ? Palette.on_surface : Palette.outlineVariant // TODO
+        text: root.isActive ? activeLabel : root.isOccupied ? occupiedLabel : label
+        // color: root.isActive ? Palette.primary : root.isOccupied ? Palette.on_surface : Palette.outline_variant // FIXME
+        color: root.isActive ? "#C8BFFF" : root.isOccupied ? "#E5E1E9" : "#48454E"
         horizontalAlignment: StyledText.AlignHCenter
         verticalAlignment: StyledText.AlignVCenter
 
         width: Config.bar.sizes.innerHeight
         height: Config.bar.sizes.innerHeight
+    }
+
+    Loader {
+        id: windows
+
+        active: Config.bar.workspaces.showWindows
+        asynchronous: false // TODO: check why this is not working
+
+        anchors.horizontalCenter: indicator.horizontalCenter
+        anchors.top: indicator.bottom
+        anchors.topMargin: -Config.bar.sizes.innerHeight / 10
+
+        sourceComponent: Component { Column {
+            spacing: 0
+
+            add: Transition {
+                Anim {
+                    properties: "scale"
+                    from: 0
+                    to: 1
+                    easing.bezierCurve: Appearance.anim.curves.standardDecel
+                }
+            }
+
+            move: Transition {
+                Anim {
+                    properties: "scale"
+                    to: 1
+                    easing.bezierCurve: Appearance.anim.curves.standardDecel
+                }
+                Anim {
+                    properties: "x,y"
+                }
+            }
+
+            Repeater {
+                model: ScriptModel {
+                    values: Hyprland.toplevels.values.filter(c => c.workspace?.id === root.ws)
+                }
+
+                MaterialIcon {
+                    required property var modelData
+
+                    grade: 0
+                    text: "terminal" // TODO: icon based on window type
+                    color: "#C9C5D0"
+                    // color: Palette.on_surface_variant //FIXME
+                }
+            }
+        }}
     }
 
     Behavior on Layout.preferredWidth {

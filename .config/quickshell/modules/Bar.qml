@@ -40,7 +40,7 @@ Item {
 
             radius: Appearance.rounding.full
             color: "#201F25"
-            // color: Palette.surfaceContainer //TODO
+            // color: Palette.surface_container // FIXME
 
             implicitWidth: workspacesInner.implicitWidth + Appearance.padding.small * 2
             implicitHeight: workspacesInner.implicitHeight + Appearance.padding.small * 2
