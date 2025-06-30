@@ -17,8 +17,8 @@ Item {
         id: rect
 
         anchors.fill: parent
-        color: Colours.alpha("#141318", false)
-        // color: Colours.alpha(Palette.surface, false) # TODO
+        color: "#141318"
+        // color: Palette.surface # FIXME
         visible: false
     }
 

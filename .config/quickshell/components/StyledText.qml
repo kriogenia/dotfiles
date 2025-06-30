@@ -14,7 +14,7 @@ Text {
 
     renderType: Text.NativeRendering
     textFormat: Text.PlainText
-    color: Palette.onSurface
+    color: Palette.on_surface
     font.family: Appearance.font.family.sans
     font.pointSize: Appearance.font.size.smaller
 

@@ -3,7 +3,6 @@ pragma ComponentBehavior: Bound
 import "root:/components"
 import "root:/config"
 import "root:/services"
-import "workspaces"
 import QtQuick
 import QtQuick.Layouts
 

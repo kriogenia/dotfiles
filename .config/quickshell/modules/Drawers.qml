@@ -65,7 +65,7 @@ Variants {
                 anchors.fill: parent
                 // opacity: visibilities.session ? 0.5 : 0
                 opacity: 0
-                color: "#000000" // TODO
+                color: "#000000" // FIXME
                 // color: Palette.scrim
 
                 Behavior on opacity {
