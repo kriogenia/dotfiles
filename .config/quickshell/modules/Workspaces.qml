@@ -37,9 +37,8 @@ Item {
     }
 
     Loader {
-        // active: Config.bar.workspaces.occupiedBg
-        active: true
-        asynchronous: false
+        active: Config.bar.workspaces.occupiedBg
+        asynchronous: false // FIXME:
 
         z: -1
         anchors.fill: parent
@@ -50,5 +49,20 @@ Item {
             groupOffset: root.groupOffset
         }
     }
+
+    Loader {
+        active: Config.bar.workspaces.activeIndicator
+        asynchronous: false // FIXME:
+
+        sourceComponent: ActiveIndicator {
+            workspaces: root.workspaces
+            mask: layout
+            maskWidth: root.width
+            maskHeight: root.height
+            groupOffset: root.groupOffset
+        }
+    }
+
+
 
 }

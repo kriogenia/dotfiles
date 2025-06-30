@@ -39,10 +39,11 @@ Singleton {
 
         property JsonObject workspaces: JsonObject {
             property int shown: 5
-            property bool rounded: true
             property bool activeIndicator: true
-            property bool showWindows: true
             property bool activeTrail: false
+            property bool occupiedBg: false
+            property bool rounded: true
+            property bool showWindows: true
             property string label: "  "
             property string occupiedLabel: "󰮯 "
         }
