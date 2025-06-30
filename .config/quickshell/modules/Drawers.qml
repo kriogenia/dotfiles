@@ -3,6 +3,7 @@ pragma ComponentBehavior: Bound
 import "root:/config"
 import "root:/components"
 import "root:/modules"
+import "root:/services"
 import "drawers"
 import Quickshell
 import Quickshell.Wayland
@@ -48,8 +49,6 @@ Variants {
             Variants {
                 id: regions
 
-                // model: panels.children
-
                 Region {
                     required property Item modelData
 
@@ -63,10 +62,8 @@ Variants {
 
             StyledRect {
                 anchors.fill: parent
-                // opacity: visibilities.session ? 0.5 : 0
                 opacity: 0
-                color: "#000000" // FIXME
-                // color: Palette.scrim
+                color: Colours.palette.scrim
 
                 Behavior on opacity {
                     NumberAnimation {
@@ -102,7 +99,7 @@ Variants {
 
             Bar {
                 id: bar
-
+                
                 screen: scope.modelData
             }
         }
