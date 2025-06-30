@@ -19,6 +19,7 @@ Item {
 
         anchors.fill: parent
         color: Colours.palette.surface
+        // color: Colours.alpha(Colours.palette.surface, false)
         visible: false
     }
 

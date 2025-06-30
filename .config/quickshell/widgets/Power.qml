@@ -19,6 +19,9 @@ MaterialIcon {
 
         radius: Appearance.rounding.full
 
-        // TODO: add onclick
+        function onClicked(): void {
+            const v = Visibilities.screens[QsWindow.window.screen];
+            v.session = !v.session;
+        }
     }
 }
