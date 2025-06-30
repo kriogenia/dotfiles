@@ -36,4 +36,19 @@ Item {
         }
     }
 
+    Loader {
+        // active: Config.bar.workspaces.occupiedBg
+        active: true
+        asynchronous: false
+
+        z: -1
+        anchors.fill: parent
+
+        sourceComponent: OccupiedBg {
+            workspaces: root.workspaces
+            occupied: root.occupied
+            groupOffset: root.groupOffset
+        }
+    }
+
 }
