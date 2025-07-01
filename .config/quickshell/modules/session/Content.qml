@@ -25,18 +25,29 @@ Column {
         // command: ["loginctl", "terminate-user", ""] // doesn't work with my current SDDM use
         command: ["hyprctl", "dispatch", "exit", "0"]
 
+        KeyNavigation.down: shutdown
+
         Connections {
             target: root.visibilities
 
             function onSessionChanged(): void {
-                if (root.visibilities.session)
+              if (root.visibilities.session) {
                     logout.focus = true;
+              }
             }
         }
     }
 
-    // TODO: poweroff
-    // TODO: hibernate
+    SessionButton {
+        id: shutdown
+
+        icon: "power_settings_new"
+        command: ["systemctl", "poweroff"]
+
+        KeyNavigation.up: logout
+    }
+
+    // TODO: suspend
     // TODO: reboot
 
     component SessionButton: StyledRect {
