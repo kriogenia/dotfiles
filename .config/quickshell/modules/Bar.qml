@@ -55,6 +55,26 @@ Item {
 
         // TODO: add other components
 
+        StyledRect {
+            id: statusIcons
+
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: power.top
+            anchors.bottomMargin: Appearance.spacing.normal
+
+            radius: Appearance.rounding.full
+            color: Colours.palette.surface_container
+
+            implicitHeight: statusIconsInner.implicitHeight + Appearance.padding.normal * 2
+
+            StatusIcons {
+                id: statusIconsInner
+
+                anchors.centerIn: parent
+            }
+        }
+
         Power {
             id: power
 
