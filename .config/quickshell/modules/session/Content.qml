@@ -45,9 +45,18 @@ Column {
         command: ["systemctl", "poweroff"]
 
         KeyNavigation.up: logout
+        KeyNavigation.down: suspend
     }
 
-    // TODO: suspend
+    SessionButton {
+        id: suspend
+
+        icon: "downloading"
+        command: ["systemctl", "suspend"]
+
+        KeyNavigation.up: shutdown
+    }
+
     // TODO: reboot
 
     component SessionButton: StyledRect {
