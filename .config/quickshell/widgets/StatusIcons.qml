@@ -1,3 +1,4 @@
+import "root:/common"
 import "root:/components"
 import "root:/config"
 import "root:/services"
@@ -11,6 +12,7 @@ Item {
     property color colour: Colours.palette.secondary
 
     readonly property Item network: network
+    // TODO: keyboard layout indicator (localectl?)
     // TODO: bluetooth indicator
     // TODO: battery indicator
 
@@ -22,7 +24,7 @@ Item {
         id: network
 
         animate: true
-        text: "signal_wifi_4_bar"
+        text: Network.active ? Icons.getNetworkIcon(Network.active.strength ?? 0) : Icons.noWifi
         color: root.colour
 
         anchors.horizontalCenter: parent.horizontalCenter
