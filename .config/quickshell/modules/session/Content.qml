@@ -22,7 +22,8 @@ Column {
         id: logout
 
         icon: "logout"
-        command: ["loginctl", "terminate-user", ""]
+        // command: ["loginctl", "terminate-user", ""] // doesn't work with my current SDDM use
+        command: ["hyprctl", "dispatch", "exit", "0"]
 
         Connections {
             target: root.visibilities
