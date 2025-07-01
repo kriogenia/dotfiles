@@ -61,6 +61,14 @@ Variants {
                 }
             }
 
+            HyprlandFocusGrab {
+                active: visibilities.session
+                windows: [win]
+                onCleared: {
+                    visibilities.session = false;
+                }
+            }
+
             StyledRect {
                 anchors.fill: parent
                 opacity: 0
