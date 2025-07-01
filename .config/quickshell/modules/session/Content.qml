@@ -55,9 +55,17 @@ Column {
         command: ["systemctl", "suspend"]
 
         KeyNavigation.up: shutdown
+        KeyNavigation.down: reboot
     }
 
-    // TODO: reboot
+    SessionButton {
+        id: reboot
+
+        icon: "cached"
+        command: ["systemctl", "reboot"]
+
+        KeyNavigation.up: suspend
+    }
 
     component SessionButton: StyledRect {
         id: button
