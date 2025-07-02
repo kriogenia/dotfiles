@@ -55,6 +55,14 @@ Item {
 
         // TODO: add other components
 
+        Clock {
+            id: clock
+
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: statusIcons.top
+            anchors.bottomMargin: Appearance.spacing.normal
+        }
+
         StyledRect {
             id: statusIcons
 
