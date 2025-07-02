@@ -15,6 +15,7 @@ MouseArea {
     acceptedButtons: Qt.LeftButton | Qt.RightButton
     implicitWidth: Appearance.font.size.small * 2
     implicitHeight: Appearance.font.size.small * 2
+    visible: modelData.id != "nm-applet"; // hide wifi to evade duplicate icons
 
     onClicked: event => {
         if (event.button === Qt.LeftButton) {

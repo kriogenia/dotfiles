@@ -49,9 +49,7 @@ Item {
         Repeater {
             id: items
 
-            // TODO: filter out wifi icon (we don't want to duplicate it)
             model: SystemTray.items
-
             TrayItem {}
         }
     }
