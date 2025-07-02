@@ -55,6 +55,14 @@ Item {
 
         // TODO: add other components
 
+        Tray {
+            id: tray
+
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: clock.top
+            anchors.bottomMargin: Appearance.spacing.larger
+        }
+
         Clock {
             id: clock
 
