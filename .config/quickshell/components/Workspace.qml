@@ -1,4 +1,5 @@
 import "root:/components"
+import "root:/common"
 import "root:/config"
 import "root:/services"
 import Quickshell
@@ -83,7 +84,7 @@ Item {
                     required property var modelData
 
                     grade: 0
-                    text: "terminal" // TODO: icon based on window type
+                    text: Icons.getAppCategoryIcon(modelData.lastIpcObject.class, "window")
                     color: Colours.palette.on_surface_variant
                 }
             }

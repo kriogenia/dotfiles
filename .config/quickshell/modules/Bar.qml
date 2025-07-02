@@ -53,8 +53,6 @@ Item {
             }
         }
 
-        // TODO: add other components
-
         Tray {
             id: tray
 
