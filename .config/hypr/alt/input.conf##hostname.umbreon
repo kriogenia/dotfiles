@@ -5,3 +5,5 @@ input {
     kb_options =
     kb_rules =
 }
+
+$keyboard = keychron-keychron-v1-max
