@@ -72,7 +72,7 @@ Singleton {
         if (categories) {
             for (const [key, value] of Object.entries(categoryIcons)) {
                 if (categories.includes(key)) {
-                    console.log(name, categories, key, value);
+                    // console.log(name, categories, key, value);
                     return value;
                 }
             }

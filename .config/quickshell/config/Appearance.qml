@@ -20,6 +20,7 @@ Singleton {
     }
 
     component Spacing: QtObject {
+        readonly property int minimal: 0
         readonly property int small: 7
         readonly property int smaller: 10
         readonly property int normal: 12

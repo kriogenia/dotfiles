@@ -6,16 +6,16 @@ import QtQuick
 Column {
     id: root
 
-    property color colour: Colours.palette.tertiary
+    property color colour: Colours.palette.secondary
 
     spacing: Appearance.spacing.minimal
 
-    // TODO: on icon click open calendar
+    // TODO: on icon click open keyboard switcher
 
     MaterialIcon {
         id: icon
 
-        text: "calendar_month"
+        text: "keyboard"
         color: root.colour
 
         anchors.horizontalCenter: parent.horizontalCenter
@@ -27,7 +27,7 @@ Column {
         anchors.horizontalCenter: parent.horizontalCenter
 
         horizontalAlignment: StyledText.AlignHCenter
-        text: Time.format("hh\nmm")
+        text: Hyprland.activeLayout
         font.pointSize: Appearance.font.size.smaller
         font.family: Appearance.font.family.mono
         color: root.colour

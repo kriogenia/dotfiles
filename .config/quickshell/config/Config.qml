@@ -9,6 +9,7 @@ Singleton {
 
     property alias bar: adapter.bar
     property alias border: adapter.border
+    property alias keyboard: adapter.keyboard
     property alias session: adapter.session
 
     FileView {
@@ -22,6 +23,7 @@ Singleton {
 
             property JsonObject bar: BarConfig {}
             property JsonObject border: BorderConfig {}
+            property JsonObject keyboard: KeyboardConfig {}
             property JsonObject session: SessionConfig {}
         }
     }
@@ -49,6 +51,10 @@ Singleton {
             property string label: "  "
             property string occupiedLabel: "󰮯 "
         }
+    }
+
+    component KeyboardConfig: JsonObject {
+        property string name: "keychron-keychron-v1-max"
     }
 
     component SessionConfig: JsonObject {

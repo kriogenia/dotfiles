@@ -57,8 +57,16 @@ Item {
             id: tray
 
             anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottom: clock.top
+            anchors.bottom: keyboard.top
             anchors.bottomMargin: Appearance.spacing.larger
+        }
+
+        Keyboard {
+            id: keyboard
+
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: clock.top
+            anchors.bottomMargin: Appearance.spacing.normal
         }
 
         Clock {
