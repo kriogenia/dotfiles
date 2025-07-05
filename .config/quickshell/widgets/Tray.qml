@@ -49,7 +49,10 @@ Item {
         Repeater {
             id: items
 
-            model: SystemTray.items
+            // TODO: allow definition of ignored icons
+            model: SystemTray.items.values.filter((item) => {
+              return item.id !== "nm-applet";
+            })
             TrayItem {}
         }
     }
