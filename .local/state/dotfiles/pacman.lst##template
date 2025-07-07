@@ -1,0 +1,7 @@
+informant
+{% if yadm.class == "amd" %}
+mesa
+{% endif %}
+{% if yadm.hostname == "umbreon" %}
+nvidia
+{% endif %}
