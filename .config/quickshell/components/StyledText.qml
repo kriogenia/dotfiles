@@ -1,6 +1,7 @@
 pragma ComponentBehavior: Bound
 
 import "root:/config"
+import "root:/services"
 import QtQuick
 
 Text {
@@ -14,7 +15,7 @@ Text {
 
     renderType: Text.NativeRendering
     textFormat: Text.PlainText
-    color: Palette.on_surface
+    color: Colours.palette.on_surface
     font.family: Appearance.font.family.sans
     font.pointSize: Appearance.font.size.smaller
 

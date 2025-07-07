@@ -2,6 +2,7 @@ import "root:/components"
 import "root:/config"
 import "root:/services"
 import "root:/widgets"
+import "popouts" as Popouts
 import Quickshell
 import QtQuick
 
@@ -9,6 +10,22 @@ Item {
     id: root
 
     required property ShellScreen screen
+    required property Popouts.Wrapper popouts
+
+    function checkPopout(y: real): void {
+        const spacing = Appearance.spacing.small;
+
+        const n = statusIconsInner.network;
+        const ny = statusIcons.y + statusIconsInner.y + n.y - spacing / 2;
+
+        if (y >= ny && y <= ny + n.implicitHeight + spacing) {
+            popouts.currentName = "network";
+            popouts.currentCenter = Qt.binding(() => statusIcons.y + statusIconsInner.y + n.y + n.implicitHeight / 2);
+            popouts.hasCurrent = true;
+        } else {
+            popouts.hasCurrent = false;
+        }
+    }
 
     anchors.top: parent.top
     anchors.bottom: parent.bottom

@@ -1,4 +1,5 @@
 import "root:/config"
+import "popouts" as Popouts
 import "session" as Session
 import Quickshell
 import QtQuick
@@ -11,6 +12,7 @@ Item {
     required property Item bar
 
     readonly property Session.Wrapper session: session
+    readonly property Popouts.Wrapper popouts: popouts
 
     anchors.fill: parent
     anchors.margins: Config.border.thickness
@@ -23,6 +25,23 @@ Item {
 
         anchors.verticalCenter: parent.verticalCenter
         anchors.right: parent.right
+    }
+
+    Popouts.Wrapper {
+        id: popouts
+
+        screen: root.screen
+
+        x: isDetached ? (root.width - nonAnimWidth) / 2 : 0
+        y: {
+            if (isDetached) {
+                return (root.height - nonAnimHeight) / 2;
+            }
+
+            const off = currentCenter - Config.border.thickness - nonAnimHeight / 2;
+            const diff = root.height - Math.floor(off + nonAnimHeight);
+            return (diff < 0) ? off + diff : off;
+        }
     }
 
 }

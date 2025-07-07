@@ -1,5 +1,6 @@
 import "root:/config"
 import "root:/services"
+import "popouts" as Popouts
 import Quickshell
 import QtQuick
 
@@ -7,6 +8,7 @@ MouseArea {
     id: root
 
     required property ShellScreen screen
+    required property Popouts.Wrapper popouts
     required property PersistentProperties visibilities
     required property Panels panels
     required property Item bar
@@ -45,6 +47,17 @@ MouseArea {
               } else if (dragX > Config.session.dragThreshold) {
                 visibilities.session = false;
               }
+        }
+
+        const popout = panels.popouts;
+        if (x < bar.implicitWidth + popout.width) {
+            if (x < bar.implicitWidth) {
+                bar.checkPopout(y); // Handle like part of bar
+            } else {
+                popouts.hasCurrent = withinPanelHeight(popout, x, y);  // Keep on hover
+            }
+        } else {
+            popouts.hasCurrent = false;
         }
     }
 
