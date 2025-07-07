@@ -1,4 +1,5 @@
 import "root:/config"
+import "osd" as Osd
 import "popouts" as Popouts
 import "session" as Session
 import Quickshell
@@ -11,12 +12,25 @@ Item {
     required property PersistentProperties visibilities
     required property Item bar
 
+    readonly property Osd.Wrapper osd: osd
     readonly property Session.Wrapper session: session
     readonly property Popouts.Wrapper popouts: popouts
 
     anchors.fill: parent
     anchors.margins: Config.border.thickness
     anchors.leftMargin: bar.implicitWidth
+
+    Osd.Wrapper {
+        id: osd
+
+        clip: root.visibilities.session
+        screen: root.screen
+        visibility: root.visibilities.osd
+
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
+        anchors.rightMargin: session.width
+    }
 
     Session.Wrapper {
         id: session

@@ -110,6 +110,7 @@ Variants {
             PersistentProperties {
                 id: visibilities
 
+                property bool osd
                 property bool session
 
                 Component.onCompleted: Visibilities.screens[scope.modelData] = this

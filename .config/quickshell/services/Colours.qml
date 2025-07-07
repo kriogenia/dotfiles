@@ -72,6 +72,8 @@ Singleton {
         property color surface_container_high: "#2B292F"
         property color on_surface: "#E5E1E9"
         property color on_surface_variant: "#C9C5D0"
+        property color inverse_surface: "#E5E1E9"
+        property color inverse_on_surface: "#312F36"
 
         property color error: "#EA8DC1"
 

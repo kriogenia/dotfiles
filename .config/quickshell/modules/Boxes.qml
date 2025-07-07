@@ -1,5 +1,6 @@
 import "root:/config"
 import "root:/services"
+import "osd" as Osd
 import "popouts" as Popouts
 import "session" as Session
 import QtQuick
@@ -16,6 +17,13 @@ Shape {
     anchors.leftMargin: bar.implicitWidth
     preferredRendererType: Shape.CurveRenderer
     // opacity: Colours.transparency.enabled ? Colours.transparency.base : 1
+ 
+    Osd.Box {
+        wrapper: panels.osd
+
+        startX: root.width - panels.session.width
+        startY: (root.height - wrapper.height) / 2 - rounding
+    }
 
     Session.Box {
         wrapper: panels.session

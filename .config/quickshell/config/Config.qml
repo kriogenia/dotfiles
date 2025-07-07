@@ -10,6 +10,7 @@ Singleton {
     property alias bar: adapter.bar
     property alias border: adapter.border
     property alias keyboard: adapter.keyboard
+    property alias osd: adapter.osd
     property alias session: adapter.session
 
     FileView {
@@ -24,6 +25,7 @@ Singleton {
             property JsonObject bar: BarConfig {}
             property JsonObject border: BorderConfig {}
             property JsonObject keyboard: KeyboardConfig {}
+            property JsonObject osd: OsdConfig {}
             property JsonObject session: SessionConfig {}
         }
     }
@@ -55,6 +57,16 @@ Singleton {
 
     component KeyboardConfig: JsonObject {
         property string name: "keychron-keychron-v1-max"
+    }
+
+
+    component OsdConfig: JsonObject {
+        property int hideDelay: 2000
+
+        property JsonObject sizes: JsonObject {
+            property int sliderWidth: 30
+            property int sliderHeight: 150
+        }
     }
 
     component SessionConfig: JsonObject {
