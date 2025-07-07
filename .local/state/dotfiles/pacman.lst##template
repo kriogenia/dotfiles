@@ -1,3 +1,4 @@
+hyprland
 informant
 {% if yadm.class == "amd" %}
 mesa
