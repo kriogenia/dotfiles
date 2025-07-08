@@ -9,7 +9,7 @@ bat cache --build
 # TODO: divide in bootstrap.d scripts
 
 pkgs=$HOME/.local/state/dotfiles
-sudo pacman -S $(cat $pkgs/pacman.lst)
+sudo pacman --noconfirm -S $(cat $pkgs/pacman.lst)
 # TODO: install yay
 # sudo yay -S $(cat $pkgs/yay.lst)
 yes | sudo flatpak install $(cat $pkgs/flatpak.lst)
