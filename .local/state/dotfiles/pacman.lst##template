@@ -1,6 +1,7 @@
 base-devel
 flatpak
 git
+task
 
 {% if yadm.class == "hypr" %}
 hyprland
