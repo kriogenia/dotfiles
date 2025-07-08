@@ -9,7 +9,7 @@ bat cache --build
 # TODO: divide in bootstrap.d scripts
 
 pkgs=$HOME/.local/state/dotfiles
-if [ "$(awk -F'=' '/ID_LIKE/ {print $2}' /etc/os-release)" = "arch" ]; then
+if [ "$(awk -F'=' '/^ID/ {print $2}' /etc/os-release)" = "arch" ]; then
     echo "Found an ArchLinux distribution"
 
     echo "Installing Arch packages"
