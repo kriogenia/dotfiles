@@ -1,7 +1,7 @@
 source $__fish_config_dir/default.fish
 source $__fish_config_dir/override.fish
 
-pyenv init - | source
+pacman -Q pyenv; and pyenv init - | source
 
 status is-interactive; and begin
 
