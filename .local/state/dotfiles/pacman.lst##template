@@ -1,4 +1,6 @@
+base-devel
 flatpak
+git
 
 {% if yadm.class == "hypr" %}
 hyprland
