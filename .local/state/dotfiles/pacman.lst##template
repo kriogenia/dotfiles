@@ -2,6 +2,7 @@ flatpak
 
 {% if yadm.class == "hypr" %}
 hyprland
+rofi-wayland
 {% endif %}
 
 {% if yadm.class == "amd" %}
