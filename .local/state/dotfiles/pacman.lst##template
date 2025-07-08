@@ -2,11 +2,13 @@ base-devel
 flatpak
 git
 task
+ttf-firacode-nerd
 
 {% if yadm.class == "hypr" %}
 hyprland
 qt5-wayland
 qt6-wayland
+qt6-imageformats
 rofi-wayland
 uwsm
 {% endif %}
