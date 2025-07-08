@@ -12,7 +12,7 @@ pkgs=$HOME/.local/state/dotfiles
 sudo pacman --noconfirm -S $(cat $pkgs/pacman.lst)
 # TODO: install yay
 # sudo yay -S $(cat $pkgs/yay.lst)
-yes | sudo flatpak install $(cat $pkgs/flatpak.lst)
+sudo flatpak -y install $(cat $pkgs/flatpak.lst)
 
 echo "Installing fish plugins"
 fish -c "cat $HOME/.config/fish/fish_plugins | fisher install -"
