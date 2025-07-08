@@ -1,7 +1,7 @@
 function todo \
     --description "Wraps task ensuring automatic export"
 
-    if [ $argv[1] = push ] # 'push' rebases the content before pushing
+    if [ (count $argv) = 1 ]; and [ $argv[1] = push ] # `push` rebases the content before pushing
         git -C $notes rebase --autosquash origin/HEAD^
         git -C $notes push --force
         return
