@@ -13,12 +13,13 @@ if [ "$(awk -F'=' '/^ID/ {print $2}' /etc/os-release)" = "arch" ]; then
     echo "Found an ArchLinux distribution"
 
     echo "Installing Arch packages"
-    sudo pacman --noconfirm -S $(cat $pkgs/pacman.lst)
+    sudo pacman --noconfirm --needed -S $(cat $pkgs/pacman.lst)
 
     echo "Installing yay as AUR helper"
     git clone https://aur.archlinux.org/yay.git /tmp/yay
     cd /tmp/yay
-    makepkg -si
+    makepkg --noconfirm --needed -si
+    rm -rf /tmp/yay
 
     echo "Installing AUR packages"
     sudo yay --noconfirm -S $(cat $pkgs/yay.lst)
