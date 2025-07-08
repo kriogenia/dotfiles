@@ -1,0 +1,9 @@
+input {
+    kb_layout = es,us
+    kb_variant =
+    kb_model =
+    kb_options =
+    kb_rules =
+}
+
+$keyboard = at-translated-set-2-keyboard
