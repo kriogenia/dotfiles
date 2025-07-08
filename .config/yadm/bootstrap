@@ -3,10 +3,19 @@
 echo "Swapping the dotfiles repo to ssh"
 yadm remote set-url origin "git@github.com:kriogenia/dotfiles.git"
 
-# install/check required packages
-
 echo "Building bat cache"
 bat cache --build
 
+# TODO: divide in bootstrap.d scripts
+
+pkgs=$HOME/.local/state/dotfiles
+sudo pacman -S $(cat $pkgs/pacman.lst)
+# TODO: install yay
+# sudo yay -S $(cat $pkgs/yay.lst)
+sudo flatpak install $(cat $pkgs/flatpak.lst)
+
 echo "Installing fish plugins"
 fish -c "cat $HOME/.config/fish/fish_plugins | fisher install -"
+
+
+# if yadm config --get-all local.class | grep -q "class": then echo "do"; fi

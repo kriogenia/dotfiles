@@ -1,8 +1,13 @@
+flatpak
+
+{% if yadm.class == "hypr" %}
 hyprland
-informant
+{% endif %}
+
 {% if yadm.class == "amd" %}
 mesa
 {% endif %}
-{% if yadm.hostname == "umbreon" %}
+
+{% if yadm.class == "nvidia" %}
 nvidia
 {% endif %}
