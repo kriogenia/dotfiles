@@ -1,36 +1,25 @@
 #!/usr/bin/env bash
 
-echo "Swapping the dotfiles repo to ssh"
-yadm remote set-url origin "git@github.com:kriogenia/dotfiles.git"
+set -eu
 
-echo "Building bat cache"
-bat cache --build
+# Directory to look for bootstrap executables in
+BOOTSTRAP_D="${BASH_SOURCE[0]}.d"
 
-# TODO: divide in bootstrap.d scripts
-
-pkgs=$HOME/.local/state/dotfiles
-if [ "$(awk -F'=' '/^ID/ {print $2}' /etc/os-release)" = "arch" ]; then
-    echo "Found an ArchLinux distribution"
-
-    echo "Installing Arch packages"
-    sudo pacman --noconfirm --needed -S $(cat $pkgs/pacman.lst)
-
-    echo "Installing yay as AUR helper"
-    git clone https://aur.archlinux.org/yay.git /tmp/yay
-    cd /tmp/yay
-    makepkg --noconfirm --needed -si
-    rm -rf /tmp/yay
-
-    echo "Installing AUR packages"
-    yay --noconfirm -S $(cat $pkgs/yay.lst)
-
-    # TODO: this could be extracted to only required flatpak
-    echo "Installing flatpaks"
-    sudo flatpak -y install $(cat $pkgs/flatpak.lst)
+if [[ ! -d "$BOOTSTRAP_D" ]]; then
+    echo "Error: bootstrap directory '$BOOTSTRAP_D' not found" >&2
+    exit 1
 fi
 
-echo "Installing fish plugins"
-fish -c "cat $HOME/.config/fish/fish_plugins | fisher install -"
+declare -a bootstraps
+while IFS= read -r bootstrap; do
+    if [[ -x "$bootstrap" && ! "$bootstrap" =~ "##" && ! "$bootstrap" =~ ~$ ]]; then
+        bootstraps+=("$bootstrap")
+    fi
+done < <(find -L "$BOOTSTRAP_D" -type f | sort)
 
-
-# if yadm config --get-all local.class | grep -q "class": then echo "do"; fi
+for bootstrap in "${bootstraps[@]}"; do
+    if ! "$bootstrap"; then
+        echo "Error: bootstrap '$bootstrap' failed" >&2
+        exit 1
+    fi
+done
