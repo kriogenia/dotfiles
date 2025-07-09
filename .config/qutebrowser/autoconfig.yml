@@ -6,6 +6,8 @@
 
 config_version: 2
 settings:
+  auto_save.session:
+    global: true
   content.javascript.clipboard:
     https://github.com: access-paste
     https://wiki.hypr.land: access-paste
