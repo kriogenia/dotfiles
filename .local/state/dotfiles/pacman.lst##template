@@ -18,6 +18,11 @@ rofi-wayland
 uwsm
 {% endif %}
 
+{% if yadm.hostname == "espeon" %}
+power-profiles-daemon
+upower
+{% endif %}
+
 {% if yadm.class == "amd" %}
 mesa
 {% endif %}

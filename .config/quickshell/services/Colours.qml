@@ -76,6 +76,7 @@ Singleton {
         property color inverse_on_surface: "#312F36"
 
         property color error: "#EA8DC1"
+        property color on_error: "#690005"
 
         property color outline_variant: "#48454E"
 
