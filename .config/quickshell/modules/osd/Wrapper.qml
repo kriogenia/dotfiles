@@ -1,4 +1,5 @@
 import "root:/config"
+import "root:/services"
 import Quickshell
 import QtQuick
 
@@ -50,5 +51,7 @@ Item {
 
     Content {
         id: content
+
+        monitor: Brightness.getMonitorForScreen(root.screen)
     }
 }

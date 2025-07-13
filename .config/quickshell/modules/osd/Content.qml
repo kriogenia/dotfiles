@@ -6,7 +6,7 @@ import QtQuick
 Column {
     id: root
 
-    // TODO: add brightness display
+    required property Brightness.Monitor monitor
 
     padding: Appearance.padding.large
 
@@ -35,4 +35,12 @@ Column {
         implicitHeight: Config.osd.sizes.sliderHeight
     }
  
+    VerticalSlider {
+        icon: `brightness_${(Math.round(value * 6) + 1)}`
+        value: root.monitor?.brightness ?? 0
+        onMoved: root.monitor?.setBrightness(value)
+
+        implicitWidth: Config.osd.sizes.sliderWidth
+        implicitHeight: Config.osd.sizes.sliderHeight
+    }
 }
