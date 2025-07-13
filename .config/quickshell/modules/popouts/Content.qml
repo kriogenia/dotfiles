@@ -30,9 +30,13 @@ Item {
             name: "network"
             source: "Network.qml"
         }
+ 
+        Popout {
+            name: "battery"
+            source: "Battery.qml"
+        }
 
         // TODO: add bluetooth
-        // TODO: add battery
     }
 
     component Popout: Loader {

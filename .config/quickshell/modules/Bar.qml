@@ -12,15 +12,24 @@ Item {
     required property ShellScreen screen
     required property Popouts.Wrapper popouts
 
+    // TODO: break into different functions (use helper?)
     function checkPopout(y: real): void {
         const spacing = Appearance.spacing.small;
+        const baseY = statusIcons.y + statusIconsInner.y - spacing / 2;
 
         const n = statusIconsInner.network;
-        const ny = statusIcons.y + statusIconsInner.y + n.y - spacing / 2;
+        const ny = baseY + n.y;
+ 
+        const b = statusIconsInner.battery;
+        const by = baseY + b.y;
 
         if (y >= ny && y <= ny + n.implicitHeight + spacing) {
             popouts.currentName = "network";
             popouts.currentCenter = Qt.binding(() => statusIcons.y + statusIconsInner.y + n.y + n.implicitHeight / 2);
+            popouts.hasCurrent = true;
+        } else if (y >= by && y <= by + b.implicitHeight + spacing) {
+            popouts.currentName = "battery";
+            popouts.currentCenter = Qt.binding(() => statusIcons.y + statusIconsInner.y + b.y + b.implicitHeight / 2);
             popouts.hasCurrent = true;
         } else {
             popouts.hasCurrent = false;
