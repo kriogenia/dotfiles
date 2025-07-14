@@ -10,14 +10,15 @@ Item {
     id: root
 
     property color colour: Colours.palette.secondary
+    readonly property int spacing: Appearance.spacing.smaller / 2
 
     readonly property Item network: network
     readonly property Item battery: battery
-    // TODO: bluetooth indicator
+    readonly property Item bluetooth: bluetooth
 
     clip: true
     implicitWidth: Math.max(network.implicitWidth)
-    implicitHeight: network.implicitHeight + battery.implicitHeight
+    implicitHeight: network.implicitHeight + battery.implicitHeight + bluetooth.implicitHeight + spacing * 2
 
     MaterialIcon {
         id: network
@@ -34,7 +35,7 @@ Item {
 
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: network.bottom
-        anchors.topMargin: Appearance.spacing.smaller / 2
+        anchors.topMargin: spacing
 
         animate: true
         text: {
@@ -61,6 +62,18 @@ Item {
         }
         color: !UPower.onBattery || UPower.displayDevice.percentage > 0.2 ? root.colour : Colours.palette.error
         fill: 1
+    }
+
+    MaterialIcon {
+        id: bluetooth
+
+        anchors.horizontalCenter: network.horizontalCenter
+        anchors.top: battery.bottom
+        anchors.topMargin: spacing
+
+        animate: true
+        text: Bluetooth.powered ? "bluetooth" : "bluetooth_disabled"
+        color: root.colour
     }
 
     Behavior on implicitWidth {

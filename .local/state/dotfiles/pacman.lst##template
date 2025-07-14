@@ -19,6 +19,8 @@ uwsm
 {% endif %}
 
 {% if yadm.hostname == "espeon" %}
+bluez
+bluez-utils
 brightnessctl
 ddcutil
 power-profiles-daemon
