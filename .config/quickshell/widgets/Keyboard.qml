@@ -10,8 +10,6 @@ Column {
 
     spacing: Appearance.spacing.minimal
 
-    // TODO: on icon click open keyboard switcher
-
     MaterialIcon {
         id: icon
 
