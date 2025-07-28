@@ -15,7 +15,4 @@ if [ ! -f /usr/bin/yay ]; then
 fi
 
 echo "Installing AUR packages"
-yay --noconfirm -S $(cat $pkgs/yay.lst)
-
-
-
+yay --noconfirm -S $(cat $pkgs/aur.lst)

@@ -1,8 +1,13 @@
 base-devel
+bat
+eza
 flatpak
 git
+neovim
 task
+tmux
 ttf-firacode-nerd
+yq
 
 {% if yadm.class == "hypr" %}
 hyprland
