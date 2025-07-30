@@ -31,6 +31,6 @@ upower
 mesa
 {% endif %}
 
-{% if yadm.class == "nvidia" %}
+{% if yadm.class == "nvidia" and yadm.distro != "cachyos" %}
 nvidia
 {% endif %}
