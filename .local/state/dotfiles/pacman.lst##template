@@ -1,8 +1,10 @@
 base-devel
 bat
 eza
+fish
 flatpak
 git
+kitty
 neovim
 task
 tmux
