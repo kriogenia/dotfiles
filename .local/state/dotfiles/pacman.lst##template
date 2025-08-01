@@ -7,6 +7,7 @@ flatpak
 git
 kitty
 neovim
+pre-commit
 task
 tmux
 ttf-firacode-nerd
