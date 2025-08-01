@@ -11,6 +11,7 @@ task
 tmux
 ttf-firacode-nerd
 yq
+wl-clipboard
 
 {% if yadm.class == "hypr" %}
 hyprland
