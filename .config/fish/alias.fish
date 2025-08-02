@@ -10,6 +10,10 @@ alias ll="eza -l $EZA_OPTIONS"
 alias lt="eza -aT $EZA_OPTIONS"
 alias l..="eza -al $EZA_OPTIONS ../"
 
+# pbcopy / pbpaste
+alias pbcopy="wl-copy"
+alias pbpaste="wl-paste"
+
 # rg
 alias rg="rg -p"
 

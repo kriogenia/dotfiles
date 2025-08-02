@@ -1,0 +1,9 @@
+input {
+    kb_layout = us,es
+    kb_variant =
+    kb_model =
+    kb_options =
+    kb_rules =
+}
+
+$keyboard = keychron-keychron-v1-max

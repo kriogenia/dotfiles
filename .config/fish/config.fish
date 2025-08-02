@@ -1,14 +1,5 @@
-function read_os
-    test -d /mnt/c/ \
-        && echo win \
-        || cat /etc/os-release | rg "^ID=" | sed 's/ID=//'
-end
-
-set -f os_config $__fish_config_dir/(read_os).fish
-test -f $os_config; and source $os_config
-source $__fish_config_dir/common.fish
-
-pyenv init - | source
+source $__fish_config_dir/default.fish
+source $__fish_config_dir/override.fish
 
 status is-interactive; and begin
 
@@ -16,8 +7,12 @@ status is-interactive; and begin
     source $__fish_config_dir/abbr.fish
     set -x MANPAGER "nvim +Man!"
 
-    pyenv virtualenv-init - &>/dev/null
-    test $status = 0; and source (pyenv virtualenv-init -|psub)
+    if pacman -Q pyenv &>/dev/null
+        pyenv init - | source
+        if pyenv virtualenv-init - &>/dev/null
+            source (pyenv virtualenv-init -|psub)
+        end
+    end
 
     # CTRL-t = fzf select
     # CTRL-r = fzf history

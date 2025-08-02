@@ -1,7 +1,0 @@
-# Remove to improve performance evading unused completions
-#
-# List of previously stored completions:
-#   - rustup
-#   - pipx
-#   - vespa
-*.fish

@@ -1,0 +1,9 @@
+autofirma
+ca-certificates-fnmt
+informant
+jinja2-cli
+
+{% if yadm.class == "hypr" %}
+quickshell-git
+ttf-material-symbols-variable-git
+{% endif %}

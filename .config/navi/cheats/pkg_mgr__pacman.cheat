@@ -1,0 +1,4 @@
+% pacman
+
+# List externally installed packages (AUR)
+pacman -Qqm
