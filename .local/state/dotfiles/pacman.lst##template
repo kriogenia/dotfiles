@@ -8,12 +8,17 @@ git
 kitty
 neovim
 pre-commit
+qutebrowser
 task
 tmux
 ttf-firacode-nerd
 vlc
 yq
 wl-clipboard
+
+{% if yadm.distro == "cachyos" %}
+brave-bin
+{% endif %}
 
 {% if yadm.class == "hypr" %}
 hyprland
