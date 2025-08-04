@@ -6,10 +6,12 @@ fisher
 flatpak
 git
 kitty
+lf
 neovim
 pre-commit
 qutebrowser
 task
+thunar
 tmux
 ttf-firacode-nerd
 vlc
