@@ -1,7 +1,4 @@
-source = ~/.config/hypr/config/defaults.conf
-
 exec-once = swaybg -o \* -i /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png -m fill
-exec-once = waybar &
 exec-once = fcitx5 -d &
 exec-once = mako &
 exec-once = nm-applet --indicator &

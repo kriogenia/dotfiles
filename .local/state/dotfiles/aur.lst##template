@@ -3,6 +3,10 @@ ca-certificates-fnmt
 informant
 jinja2-cli
 
+{% if yadm.class == "nvidia" %}
+vk-hdr-layer-kwin6-git
+{% endif %}
+
 {% if yadm.class == "hypr" %}
 quickshell-git
 ttf-material-symbols-variable-git
