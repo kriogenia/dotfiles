@@ -18,6 +18,7 @@ ttf-firacode-nerd
 vlc
 yq
 wl-clipboard
+zen-browser-bin
 
 {% if yadm.distro == "cachyos" %}
 brave-bin
