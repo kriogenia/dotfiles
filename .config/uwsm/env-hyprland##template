@@ -10,5 +10,13 @@ export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 export XDG_SESSION_DESKTOP=Hyprland
 
+{% if yadm.class == "nvidia" %}
+# ####### NVIDIA requirements ######
+export LIBVA_DRIVER_NAME=nvidia
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+{% endif %}
+
 # ############# Others #############
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+
