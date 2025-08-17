@@ -1,0 +1,144 @@
+@import "theme.css";
+
+* {
+  font-family: "FiraCode Nerd Font Mono", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
+  font-size: 16px;
+}
+
+/* Transparent waybar  */
+#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  box-shadow: none;
+}
+
+tooltip {
+  border-radius: 8px;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tooltip label {
+  color: @text;
+  font-family: "FiraCode Nerd Font Mono", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
+  font-size: 14px;
+}
+
+#workspaces,
+#tray,
+#clock,
+#custom-power,
+#network,
+#custom-lock,
+#custom-reboot,
+#bluetooth,
+#battery,
+#pulseaudio,
+#backlight,
+#custom-temperature,
+#memory,
+#cpu,
+tooltip {
+  background-color: alpha(@base, 0.9);
+  color: @text;
+}
+
+#workspaces,
+#tray {
+  margin-top: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-radius: 10px;
+  border-width: 0px;
+}
+
+#workspaces {
+  padding: 4px 6px;
+}
+
+#tray {
+  padding: 4px 10px;
+}
+
+#clock,
+#custom-power {
+  margin-top: 6px;
+  margin-right: 6px;
+  padding: 4px 2px;
+  border-radius: 0 10px 10px 0;
+  border-width: 0px;
+}
+
+#network,
+#custom-lock {
+  margin-top: 6px;
+  margin-left: 6px;
+  padding: 4px 2px;
+  border-radius: 10px 0 0 10px;
+  border-width: 0px;
+}
+
+#custom-reboot,
+#bluetooth,
+#battery,
+#pulseaudio,
+#backlight,
+#custom-temperature,
+#memory,
+#cpu {
+  margin-top: 6px;
+  padding: 4px 2px;
+  border-width: 0px;
+}
+
+#custpm-temperature.critical,
+#pulseaudio.muted {
+  color: @red;
+  padding-top: 0;
+}
+
+/* mouse over to brighten */
+#bluetooth:hover,
+#network:hover,
+#tray:hover,
+#backlight:hover,
+#battery:hover,
+#pulseaudio:hover,
+#custom-temperature:hover,
+#memory:hover,
+#cpu:hover,
+#clock:hover,
+#custom-lock:hover,
+#custom-reboot:hover,
+#custom-power:hover,
+#window:hover {
+  background-color: alpha(@surface0, 0.9)
+}
+
+#workspaces button {
+  background: transparent;
+  border: none;
+  color: @text;
+  padding: 2px 8px;
+  margin: 0 2px;
+  font-weight: bold;
+}
+
+#workspaces button.empty {
+  color: @overlay0;
+}
+
+#workspaces button:hover {
+  background-color: alpha(@sapphire, 0.2);
+  padding: 2px 8px;
+  margin: 0 2px;
+  border-radius: 10px;
+}
+
+#workspaces button.active {
+  background-color: @sky;
+  color: @base;
+  padding: 2px 8px;
+  margin: 0 2px;
+  border-radius: 10px;
+}
