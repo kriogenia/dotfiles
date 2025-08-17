@@ -71,14 +71,15 @@ tooltip {
 }
 
 /* mouse over to brighten */
-#bluetooth:hover,
-#network:hover,
 #tray:hover,
+#language:hover,
+#network:hover,
+#pulseaudio:hover,
+#bluetooth:hover,
 #backlight:hover,
 #battery:hover,
-#pulseaudio:hover,
-#custom-temperature:hover,
 #memory:hover,
+#disk:hover,
 #cpu:hover,
 #clock:hover,
 #custom-lock:hover,

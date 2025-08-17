@@ -17,8 +17,8 @@
     "backlight",
     "bluetooth",
     "memory",
+    "disk",
     "cpu",
-    // TODO: disk
     // TODO: power-profiles-daemon
     "clock",
     // TODO: weather
@@ -51,7 +51,9 @@
   },
   "hyprland/language": {
     "format-en": "<span color='#f9e2af'> 󰌌 </span>en ",
-    "format-es": "<span color='#f9e2af'> 󰌌 </span>es "
+    "format-es": "<span color='#f9e2af'> 󰌌 </span>es ",
+    "tooltip": true,
+    "tooltip-format": "{}"
   },
   "network": {
     "format-wifi": "<span color='#94e2d5'> 󰤨 </span>{essid} ",
@@ -80,11 +82,17 @@
   "memory": {
     "format": "<span color='#cba6f7'>  </span>{used:0.1f}G ",
     "tooltip": true,
-    "tooltip-format": "RAM : {used:0.2f}G/{total:0.2f}G"
+    "tooltip-format": "RAM: {used:0.2f}G / {total:0.2f}G",
+    "on-click": "kitty btop"
+  },
+  "disk": {
+    "format": "<span color='#a6e3a1'>  </span>{free} ",
+    "on-click": "kitty btop"
   },
   "cpu": {
     "format": "<span color='#fab387'>  </span>{usage}% ",
-    "tooltip": true
+    "tooltip": true,
+    "on-click": "kitty btop"
   },
   "clock": {
     "interval": 60,
