@@ -6,8 +6,8 @@
   "modules-left": [
     // TODO: image with eye of the universe
     "hyprland/workspaces",
-    "tray"
-    // TODO: systemd-failed-units
+    "tray",
+    "systemd-failed-units"
   ],
   "modules-right": [
     "network",
@@ -45,6 +45,9 @@
   "tray": {
     "icon-size": 17,
     "spacing": 6
+  },
+  "systemd-failed-units": {
+    "format": "{nr_failed]"
   },
   "network": {
     "format-wifi": "<span color='#94e2d5'> 󰤨 </span>{essid} ",

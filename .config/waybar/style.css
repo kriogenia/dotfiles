@@ -144,6 +144,7 @@ tooltip {
   color: @maroon;
 }
 
+#systemd-failed-units,
 #custpm-temperature.critical,
 #network.disconnected,
 #pulseaudio.muted {
