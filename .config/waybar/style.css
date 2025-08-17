@@ -24,77 +24,46 @@ tooltip label {
   font-size: 14px;
 }
 
-#workspaces,
-#tray,
-#clock,
-#custom-power,
-#network,
-#custom-lock,
-#custom-reboot,
-#bluetooth,
-#battery,
-#pulseaudio,
-#backlight,
-#custom-temperature,
-#memory,
-#cpu,
+.module,
 tooltip {
   background-color: alpha(@base, 0.9);
   color: @text;
 }
 
+.module {
+  margin-top: 6px;
+  border-width: 0px;
+  padding: 4px 2px;
+}
+
+/* Left border */
+
 #workspaces,
-#tray {
-  margin-top: 6px;
-  margin-left: 6px;
-  margin-right: 6px;
-  border-radius: 10px;
-  border-width: 0px;
-}
-
-#workspaces {
-  padding: 4px 6px;
-}
-
-#tray {
-  padding: 4px 10px;
-}
-
-#clock,
-#custom-power {
-  margin-top: 6px;
-  margin-right: 6px;
-  padding: 4px 2px;
-  border-radius: 0 10px 10px 0;
-  border-width: 0px;
-}
-
+#tray,
 #network,
+#pulseaudio,
+#memory,
+#clock,
 #custom-lock {
-  margin-top: 6px;
   margin-left: 6px;
   padding: 4px 2px;
-  border-radius: 10px 0 0 10px;
-  border-width: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-#custom-reboot,
-#bluetooth,
-#battery,
+/* Right border */
+
+#workspaces,
+#tray,
+#network,
 #pulseaudio,
-#backlight,
-#custom-temperature,
-#memory,
-#cpu {
-  margin-top: 6px;
+#clock,
+#cpu,
+#custom-power {
+  margin-right: 6px;
   padding: 4px 2px;
-  border-width: 0px;
-}
-
-#custpm-temperature.critical,
-#pulseaudio.muted {
-  color: @red;
-  padding-top: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /* mouse over to brighten */
@@ -113,6 +82,17 @@ tooltip {
 #custom-power:hover,
 #window:hover {
   background-color: alpha(@surface0, 0.9)
+}
+
+#workspaces,
+#tray {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#workspaces {
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 #workspaces button {
@@ -142,3 +122,31 @@ tooltip {
   margin: 0 2px;
   border-radius: 10px;
 }
+
+#tray {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#bluetooth {
+  color: @blue;
+}
+
+#custom-lock {
+  color: @teal;
+}
+
+#custom-reboot {
+  color: @yellow;
+}
+
+#custom-power {
+  color: @maroon;
+}
+
+#custpm-temperature.critical,
+#network.disconnected,
+#pulseaudio.muted {
+  color: @red;
+}
+
