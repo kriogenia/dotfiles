@@ -40,6 +40,8 @@ tooltip {
 
 #workspaces,
 #tray,
+#systemd-failed-units,
+#language,
 #network,
 #pulseaudio,
 #memory,
@@ -55,6 +57,8 @@ tooltip {
 
 #workspaces,
 #tray,
+#systemd-failed-units,
+#language,
 #network,
 #pulseaudio,
 #clock,

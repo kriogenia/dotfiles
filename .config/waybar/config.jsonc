@@ -10,9 +10,9 @@
     "systemd-failed-units"
   ],
   "modules-right": [
+    "hyprland/language",
     "network",
     "pulseaudio",
-    // TODO: "hyprland/language",
     "battery",
     "backlight",
     "bluetooth",
@@ -48,6 +48,10 @@
   },
   "systemd-failed-units": {
     "format": "{nr_failed]"
+  },
+  "hyprland/language": {
+    "format-en": "<span color='#f9e2af'> 󰌌 </span>en ",
+    "format-es": "<span color='#f9e2af'> 󰌌 </span>es "
   },
   "network": {
     "format-wifi": "<span color='#94e2d5'> 󰤨 </span>{essid} ",
