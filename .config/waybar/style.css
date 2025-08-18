@@ -45,6 +45,7 @@ tooltip {
 #network,
 #pulseaudio,
 #memory,
+#power-profiles-daemon,
 #clock,
 #custom-lock {
   margin-left: 6px;
@@ -61,6 +62,7 @@ tooltip {
 #language,
 #network,
 #pulseaudio,
+#power-profiles-daemon,
 #clock,
 #cpu,
 #custom-power {
@@ -137,16 +139,22 @@ tooltip {
   color: @blue;
 }
 
+#power-profiles-daemon.balanced,
 #custom-lock {
   color: @teal;
 }
 
+#power-profiles-daemon.performance,
 #custom-reboot {
   color: @yellow;
 }
 
 #custom-power {
   color: @maroon;
+}
+
+#power-profiles-daemon.power-saver {
+  color: @green;
 }
 
 #systemd-failed-units,

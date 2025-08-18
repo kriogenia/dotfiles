@@ -19,7 +19,7 @@
     "memory",
     "disk",
     "cpu",
-    // TODO: power-profiles-daemon
+    "power-profiles-daemon",
     "clock",
     // TODO: weather
     // TODO: user for system uptime
@@ -93,6 +93,17 @@
     "format": "<span color='#fab387'>  </span>{usage}% ",
     "tooltip": true,
     "on-click": "kitty btop"
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "  ",
+      "performance": "  ",
+      "balanced": "  ",
+      "power-saver": "  "
+    }
   },
   "clock": {
     "interval": 60,
