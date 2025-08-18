@@ -12,6 +12,9 @@
     "systemd-failed-units",
     "custom/pacman"
   ],
+  "modules-center": [
+    "custom/weather"
+  ],
   "modules-right": [
     "hyprland/language",
     "network",
@@ -25,7 +28,6 @@
     "cpu",
     "power-profiles-daemon",
     "clock",
-    // TODO: weather (in middle)
     "group/power"
   ],
   "hyprland/workspaces": {
@@ -58,6 +60,13 @@
     },
     "exec-if": "which waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates --no-zero-output --tooltip-align-columns"
+  },
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --location Barcelona --nerd",
+    "return-type": "json"
   },
   "hyprland/language": {
     "format-en": "<span color='#f9e2af'> 󰌌 </span>en ",

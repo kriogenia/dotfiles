@@ -41,6 +41,7 @@ tooltip {
 #workspaces,
 #tray,
 #systemd-failed-units,
+#custom-weather,
 #custom-pacman,
 #language,
 #network,
@@ -62,6 +63,7 @@ tooltip {
 #workspaces,
 #tray,
 #systemd-failed-units,
+#custom-weather,
 #custom-pacman,
 #language,
 #network,
@@ -125,11 +127,13 @@ tooltip {
   border-radius: 10px;
 }
 
-#tray {
+#tray, 
+#custom-weather {
   padding-left: 10px;
   padding-right: 10px;
 }
 
+#custom-weather.rain,
 #bluetooth {
   color: @blue;
 }
@@ -143,6 +147,7 @@ tooltip {
   color: @teal;
 }
 
+#custom-weather.sunny,
 #custom-pacman,
 #power-profiles-daemon.performance,
 #custom-reboot {
@@ -158,7 +163,6 @@ tooltip {
 }
 
 #systemd-failed-units,
-#custpm-temperature.critical,
 #network.disconnected,
 #pulseaudio.muted {
   color: @red;
