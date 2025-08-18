@@ -3,10 +3,8 @@
   "position": "top",
   "height": 42,
   "spacing": 0,
-  // TODO: taskwarrior custom
-  // TODO: investigate ri
   "modules-left": [
-    // TODO: image with eye of the universe
+    // "image#eye-universe",
     "hyprland/workspaces",
     "tray",
     "systemd-failed-units",
@@ -30,6 +28,11 @@
     "clock",
     "group/power"
   ],
+  // "image#eye-universe": {
+  //   "path": "$HOME/.local/share/dotfiles/icons/eye.svg",
+  //   "interval": 32000,
+  //   "size": 32
+  // },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -132,14 +135,25 @@
       "power-saver": "  "
     }
   },
-  "clock": { // TODO: move moth with scroll wheel
+  "clock": {
     "interval": 60,
     "timezone": "Europe/Madrid",
     "format": "<span color='#f5e0dc'>  </span>{:%H:%M  %Y-%m-%d} ",
     "tooltip": true,
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
-      "mode": "month" // TODO: format
+      "mode": "month",
+      "mode-mon-col": 3,
+      "format": {
+        "months": "<span color='#f5e0dc'><b>{}</b></span>",
+        "weekdays": "<span color='#fab387'><b>{}</b></span>",
+        "today": "<span color='#a6e3a1'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
     }
   },
   "group/power": {
