@@ -78,23 +78,7 @@ tooltip {
 }
 
 /* mouse over to brighten */
-#tray:hover,
-#custom-pacman:hover,
-#language:hover,
-#network:hover,
-#pulseaudio:hover,
-#bluetooth:hover,
-#backlight:hover,
-#battery:hover,
-#memory:hover,
-#disk:hover,
-#cpu:hover,
-#clock:hover,
-#custom-suspend:hover,
-#custom-lock:hover,
-#custom-reboot:hover,
-#custom-power:hover,
-#window:hover {
+.module:hover {
   background-color: alpha(@surface0, 0.9)
 }
 
@@ -107,6 +91,10 @@ tooltip {
 #workspaces {
   padding-left: 6px;
   padding-right: 6px;
+}
+
+#workspaces:hover {
+  background-color: alpha(@base, 0.9);
 }
 
 #workspaces button {
