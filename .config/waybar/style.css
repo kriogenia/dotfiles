@@ -47,12 +47,14 @@ tooltip {
 #memory,
 #power-profiles-daemon,
 #clock,
-#custom-lock {
+#custom-power,
+#custom-reboot {
   margin-left: 6px;
   padding: 4px 2px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+
 
 /* Right border */
 
@@ -65,6 +67,7 @@ tooltip {
 #power-profiles-daemon,
 #clock,
 #cpu,
+#custom-suspend,
 #custom-power {
   margin-right: 6px;
   padding: 4px 2px;
@@ -84,6 +87,7 @@ tooltip {
 #disk:hover,
 #cpu:hover,
 #clock:hover,
+#custom-suspend:hover,
 #custom-lock:hover,
 #custom-reboot:hover,
 #custom-power:hover,
@@ -137,6 +141,10 @@ tooltip {
 
 #bluetooth {
   color: @blue;
+}
+
+#custom-suspend {
+  color: @mauve;
 }
 
 #power-profiles-daemon.balanced,

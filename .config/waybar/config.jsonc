@@ -10,6 +10,7 @@
     "systemd-failed-units"
   ],
   "modules-right": [
+    // TODO: pending update
     "hyprland/language",
     "network",
     "pulseaudio",
@@ -21,12 +22,13 @@
     "cpu",
     "power-profiles-daemon",
     "clock",
-    // TODO: weather
+    // TODO: weather (in middle)
     // TODO: user for system uptime
     // TODO: transform into group
-    "custom/lock",
-    "custom/reboot",
-    "custom/power"
+    "group/power"
+    // "custom/lock",
+    // "custom/reboot",
+    // "custom/power"
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -114,6 +116,24 @@
     "calendar": {
       "mode": "month" // TODO: format
     }
+  },
+  "group/power": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/power",
+      "custom/reboot",
+      "custom/lock",
+      "custom/suspend"
+    ],
+    "drawer": {
+      "transition-left-to-right": false
+    }
+  },
+  "custom/suspend": {
+    "format": "<span> 󰀠 </span>",
+    "on-click": "systemctl suspend",
+    "tooltip": true,
+    "tooltip-format": "Suspend"
   },
   "custom/lock": {
     "format": "<span>  </span>",
