@@ -1,7 +1,9 @@
 autofirma
+ca-certificates-dnie
 ca-certificates-fnmt
 informant
 jinja2-cli
+waybar-module-pacman-updates-git
 
 {% if yadm.class == "nvidia" %}
 vk-hdr-layer-kwin6-git

@@ -1,13 +1,15 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 32,
+  "height": 42,
   "spacing": 0,
+  // TODO: taskwarrior custom
   "modules-left": [
     // TODO: image with eye of the universe
     "hyprland/workspaces",
     "tray",
-    "systemd-failed-units"
+    "systemd-failed-units",
+    "custom/pacman"
   ],
   "modules-right": [
     // TODO: pending update
@@ -23,12 +25,7 @@
     "power-profiles-daemon",
     "clock",
     // TODO: weather (in middle)
-    // TODO: user for system uptime
-    // TODO: transform into group
     "group/power"
-    // "custom/lock",
-    // "custom/reboot",
-    // "custom/power"
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -50,6 +47,16 @@
   },
   "systemd-failed-units": {
     "format": "{nr_failed]"
+  },
+  "custom/pacman": {
+    "format": " {}{icon} ",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": " 󱍷",
+      "updated": ""
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --no-zero-output --tooltip-align-columns"
   },
   "hyprland/language": {
     "format-en": "<span color='#f9e2af'> 󰌌 </span>en ",
@@ -107,7 +114,7 @@
       "power-saver": "  "
     }
   },
-  "clock": {
+  "clock": { // TODO: move moth with scroll wheel
     "interval": 60,
     "timezone": "Europe/Madrid",
     "format": "<span color='#f5e0dc'>  </span>{:%H:%M  %Y-%m-%d} ",
