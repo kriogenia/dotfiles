@@ -1,5 +1,5 @@
 $d=[$hc|Brightness]
 # binddel = , XF86MonBrightnessUp,    $d increase brightness, global, quickshell:brightnessUp
 # binddel = , XF86MonBrightnessDown,  $d decrease brightness, global, quickshell:brightnessDown
-binddel = , XF86MonBrightnessUp,    $d increase brightness , exec, brightnessctl s +5%
-binddel = , XF86MonBrightnessDown,  $d decrease brightness , exec, brightnessctl s 5%-
+binddel = , XF86MonBrightnessUp,    Increase brightness , exec, brightnessctl s +5%
+binddel = , XF86MonBrightnessDown,  Decrease brightness , exec, brightnessctl s 5%-
