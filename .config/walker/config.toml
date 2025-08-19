@@ -4,3 +4,25 @@ force_keyboard_focus = true
 theme = "launcher"
 theme_base = []
 theme_location = ["~/.config/walker/themes/"]
+
+[list]
+max_entries = 100
+
+[search]
+placeholder = " Search..."
+
+# [builtins.hyprland_keybinds]
+# hidden = true
+
+[builtins.applications]
+launch_prefix = "uwsm app -- "
+placeholder = " Search..."
+prioritize_new = false
+context_aware = false
+show_sub_when_single = false
+history = false
+icon = ""
+hidden = true
+
+[builtins.applications.actions]
+hide_category = true
