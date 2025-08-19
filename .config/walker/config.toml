@@ -39,10 +39,6 @@ name = "Calculator"
 min_chars = 3
 prefix = "="
 
-# [builtins.windows]
-# switcher_only = true
-# hidden = true
-#
 # [builtins.clipboard]
 # hidden = false
 #
@@ -56,10 +52,6 @@ prefix = "="
 name = "Emojis"
 prefix = ":"
 
-[builtins.symbols]
-hidden = true
-after_copy = ""
-
 [builtins.finder]
 name = "Files"
 hidden = false
@@ -67,4 +59,44 @@ use_fd = true
 cmd_alt = "xdg-open $(dirname ~/%RESULT%)"
 preview_images = true
 prefix = "."
+
+[builtins.runner]
+switcher_only = true
+hidden = true
+shell_config = ""
+
+[builtins.ssh]
+hidden = true
+
+[builtins.symbols]
+hidden = true
+after_copy = ""
+
+[builtins.translation]
+hidden = true
+
+[builtins.websearch]
+# TODO: make it use qutebrowser
+switcher_only = true
+hidden = false
+
+# order goes from last to first
+
+[[builtins.websearch.entries]]
+name = "Google"
+url = "https://www.google.com/search?q=%TERM%"
+switcher_only = true
+
+[[builtins.websearch.entries]]
+name = "Arch Wiki"
+url = "https://wiki.archlinux.org/?search=%TERM"
+switcher_only = true
+
+[[builtins.websearch.entries]]
+name = "DuckDuckGo"
+url = "https://duckduckgo.com/?q=%TERM%"
+
+# [builtins.windows]
+# switcher_only = true
+# hidden = true
 
