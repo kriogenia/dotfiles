@@ -1,0 +1,6 @@
+close_when_open = true
+force_keyboard_focus = true
+
+theme = "launcher"
+theme_base = []
+theme_location = ["~/.config/walker/themes/"]

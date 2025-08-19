@@ -1,0 +1,155 @@
+/* from  https://github.com/basecamp/omarchy */
+
+@import url("file://~/.local/share/dotfiles/palette/current.css");
+
+@define-color selected-text @sky;
+@define-color border @sapphire;
+
+#window,
+#box,
+#search,
+#password,
+#input,
+#prompt,
+#clear,
+#typeahead,
+#list,
+child,
+scrollbar,
+slider,
+#item,
+#text,
+#label,
+#sub,
+#activationlabel {
+  all: unset;
+}
+
+* {
+  font-family: 'FiraCode Nerd Font';
+  font-size: 18px;
+}
+
+#window {
+  background: transparent;
+  color: @text;
+}
+
+#box {
+  background: alpha(@base, 0.95);
+  padding: 20px;
+  border: 2px solid @border;
+  border-radius: 15px;
+}
+
+#search {
+  background: @base;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+#prompt {
+  opacity: 0;
+  min-width: 0;
+  margin: 0;
+}
+
+#clear {
+  opacity: 0;
+  min-width: 0;
+}
+
+#input {
+  background: none;
+  color: @text;
+  padding: 0;
+}
+
+#input placeholder {
+  opacity: 0.5;
+  color: @text;
+}
+
+#typeahead {
+  opacity: 0;
+}
+
+#list {
+  background: transparent;
+}
+
+child {
+  padding: 0px 12px;
+  background: transparent;
+  border-radius: 0;
+}
+
+child:selected,
+child:hover {
+  background: transparent;
+}
+
+#item {
+  padding: 0;
+}
+
+#item.active {
+  font-style: italic;
+}
+
+#icon {
+  margin-right: 10px;
+  -gtk-icon-transform: scale(0.7);
+}
+
+#text {
+  color: @text;
+  padding: 14px 0;
+}
+
+#label {
+  font-weight: normal;
+}
+
+child:selected #text,
+child:selected #label,
+child:hover #text,
+child:hover #label {
+  color: @selected-text;
+}
+
+#sub {
+  opacity: 0;
+  font-size: 0;
+  min-height: 0;
+}
+
+#activationlabel {
+  opacity: 0;
+  min-width: 0;
+}
+
+scrollbar {
+  opacity: 0;
+}
+
+#spinner {
+  opacity: 0;
+}
+
+#aiScroll,
+#aiList,
+.aiItem {
+  opacity: 0;
+  min-height: 0;
+}
+
+#bar {
+  opacity: 0;
+  min-height: 0;
+}
+
+.barentry {
+  opacity: 0;
+}
+
