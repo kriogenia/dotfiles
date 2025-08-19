@@ -21,7 +21,6 @@ prioritize_new = false
 context_aware = false
 show_sub_when_single = false
 history = false
-icon = ""
 hidden = true
 
 [builtins.applications.actions]
@@ -56,3 +55,16 @@ prefix = "="
 [builtins.emojis]
 name = "Emojis"
 prefix = ":"
+
+[builtins.symbols]
+hidden = true
+after_copy = ""
+
+[builtins.finder]
+name = "Files"
+hidden = false
+use_fd = true
+cmd_alt = "xdg-open $(dirname ~/%RESULT%)"
+preview_images = true
+prefix = "."
+
