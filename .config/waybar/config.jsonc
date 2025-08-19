@@ -11,6 +11,7 @@
     "custom/pacman"
   ],
   "modules-center": [
+    "clock",
     "custom/weather"
   ],
   "modules-right": [
@@ -25,7 +26,6 @@
     "custom/gpu",
     "cpu",
     "power-profiles-daemon",
-    "clock",
     "group/power"
   ],
   // "image#eye-universe": {
@@ -62,7 +62,8 @@
       "updated": ""
     },
     "exec-if": "which waybar-module-pacman-updates",
-    "exec": "waybar-module-pacman-updates --no-zero-output --tooltip-align-columns"
+    "exec": "waybar-module-pacman-updates --no-zero-output --tooltip-align-columns",
+    "on-click": "kitty sudo pacman -Syyu"
   },
   "custom/weather": {
     "format": "{}°",
