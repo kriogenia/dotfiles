@@ -34,3 +34,8 @@ hidden = true
 label = "Kriogenia - Github"
 url = "https://github.com/kriogenia"
 keywords = ["kriogenia", "github"]
+
+[builtins.calc]
+name = "Calculator"
+min_chars = 3
+prefix = "="
