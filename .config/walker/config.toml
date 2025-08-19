@@ -26,3 +26,11 @@ hidden = true
 
 [builtins.applications.actions]
 hide_category = true
+
+[builtins.bookmarks]
+hidden = true
+
+[[builtins.bookmarks.entries]]
+label = "Kriogenia - Github"
+url = "https://github.com/kriogenia"
+keywords = ["kriogenia", "github"]
