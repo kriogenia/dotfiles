@@ -39,3 +39,20 @@ keywords = ["kriogenia", "github"]
 name = "Calculator"
 min_chars = 3
 prefix = "="
+
+# [builtins.windows]
+# switcher_only = true
+# hidden = true
+#
+# [builtins.clipboard]
+# hidden = false
+#
+# [builtins.commands]
+# hidden = true
+#
+# [builtins.custom_commands]
+# hidden = true
+
+[builtins.emojis]
+name = "Emojis"
+prefix = ":"
