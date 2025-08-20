@@ -23,10 +23,11 @@ vlc
 yq
 wiremix
 wl-clipboard
-zen-browser-bin
+zathurar
 
 {% if yadm.distro == "cachyos" %}
 brave-bin
+zen-browser-bin
 {% endif %}
 
 {% if yadm.class == "hypr" %}
