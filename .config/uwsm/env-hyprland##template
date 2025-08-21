@@ -11,6 +11,8 @@ export XDG_SESSION_TYPE=wayland
 export XDG_SESSION_DESKTOP=Hyprland
 
 {% if yadm.class == "nvidia" %}
+export GBM_BACKEND=nvidia-drm
+export EGL_PLATFORM=wayland
 # ####### NVIDIA requirements ######
 export LIBVA_DRIVER_NAME=nvidia
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
