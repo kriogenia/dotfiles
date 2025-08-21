@@ -16,13 +16,15 @@ pre-commit
 qbittorrent
 qutebrowser
 task
+thefuck
 thunar
 tmux
 ttf-firacode-nerd
 vlc
-yq
 wiremix
 wl-clipboard
+xdg-desktop-portal-gtk
+yq
 zathurar
 
 {% if yadm.distro == "cachyos" %}

@@ -12,7 +12,7 @@ status is-interactive; and begin
     # ALT-c  = fzf cd
     fzf --fish | source
 
-    test -e /usr/bin/thefuck; and thefuck --alias | source
+    pkg_installed thefuck; and thefuck --alias | source
 
     set fish_tmux_autoquit false
     set fish_tmux_autostart true

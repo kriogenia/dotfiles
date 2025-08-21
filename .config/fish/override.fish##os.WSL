@@ -5,5 +5,7 @@ set -g projects $HOME/projects
 set -g firefox /mnt/c/Program\x20Files/Mozilla\x20Firefox/firefox.exe
 set -g BROWSER $firefox
 
+set -g SDKMAN_DIR $HOME/.sdkman
+
 # Starts D-Bus to allow Zathura to open from nvim
 eval (dbus-launch --csh-syntax | head -1 | sed 's/setenv/set/')
