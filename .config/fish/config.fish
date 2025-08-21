@@ -7,13 +7,6 @@ status is-interactive; and begin
     source $__fish_config_dir/abbr.fish
     set -x MANPAGER "nvim +Man!"
 
-    if pacman -Q pyenv &>/dev/null
-        pyenv init - | source
-        if pyenv virtualenv-init - &>/dev/null
-            source (pyenv virtualenv-init -|psub)
-        end
-    end
-
     # CTRL-t = fzf select
     # CTRL-r = fzf history
     # ALT-c  = fzf cd
