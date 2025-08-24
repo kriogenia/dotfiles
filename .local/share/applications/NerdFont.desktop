@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Nerd Fonts
+Comment=Nerd Fonts Cheatsheet
+Exec=chromium --new-window --app="https://www.nerdfonts.com/cheat-sheet" --name="Nerd Fonts" --class="Nerd Fonts"
+Terminal=false
+Type=Application
+Icon=NerdFonts
+StartupNotify=true
