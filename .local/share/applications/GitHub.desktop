@@ -2,7 +2,7 @@
 Version=1.0
 Name=GitHub
 Comment=GitHub WebApp
-Exec=chromium --new-window --ozone-platform=wayland --app="https://github.com/" --name="GitHub" --class="GitHub"
+Exec=chromium --new-window --app="https://github.com/" --name="GitHub" --class="GitHub"
 Terminal=false
 Type=Application
 Icon=GitHub
