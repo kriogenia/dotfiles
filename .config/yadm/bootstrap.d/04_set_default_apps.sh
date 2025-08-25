@@ -19,9 +19,9 @@ fi
 
 if [ -f /usr/bin/qutebrowser ]; then
   echo "Setting qutebrowser as default web browser"
-  xdg-settings set default-web-browser qutebrowser.desktop
-  xdg-mime default qutebrowser.desktop x-scheme-handler/http
-  xdg-mime default qutebrowser.desktop x-scheme-handler/https
+  xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop
+  xdg-mime default org.qutebrowser.qutebrowser.desktop x-scheme-handler/http
+  xdg-mime default org.qutebrowser.qutebrowser.desktop x-scheme-handler/https
 fi
 
 if [ -f /usr/bin/mpv ]; then
