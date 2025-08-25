@@ -14,7 +14,7 @@ fi
 
 if [ -f /usr/bin/zathura ]; then
   echo "Setting zathura as default app for pdfs"
-  xdg-mime default zathura.desktop application/pdf
+  xdg-mime default org.pwmt.zathura.desktop application/pdf
 fi
 
 if [ -f /usr/bin/qutebrowser ]; then

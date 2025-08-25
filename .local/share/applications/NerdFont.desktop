@@ -2,7 +2,7 @@
 Version=1.0
 Name=Nerd Fonts
 Comment=Nerd Fonts Cheatsheet
-Exec=chromium --new-window --app="https://www.nerdfonts.com/cheat-sheet" --name="Nerd Fonts" --class="Nerd Fonts"
+Exec=chromium --new-window --app="https://www.nerdfonts.com/cheat-sheet" --name="NerdFonts" --class="NerdFonts"
 Terminal=false
 Type=Application
 Icon=NerdFonts

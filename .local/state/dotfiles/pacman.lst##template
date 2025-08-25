@@ -23,9 +23,9 @@ ttf-firacode-nerd
 vlc
 wiremix
 wl-clipboard
-xdg-desktop-portal-gtk
 yq
-zathurar
+zathura
+zathura-pdf-mupdf
 
 {% if yadm.distro == "cachyos" %}
 brave-bin
