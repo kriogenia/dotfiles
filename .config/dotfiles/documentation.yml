@@ -1,5 +1,21 @@
 placeholder: 󰈙 Open documentation
 options:
+  hyprland:
+    text:  Hyprland
+    type: url
+    url: https://wiki.hypr.land
+  lazyvim:
+    text:  LazyVim
+    type: url
+    url: http://www.lazyvim.org
+  nerdfonts:
+    text:  Nerd Fonts
+    type: url
+    url: https://www.nerdfonts.com/cheat-sheet
+  taskwarrior:
+    text:  Taskwarrior
+    type: url
+    url: https://taskwarrior.org/docs
   yadm:
     text:  yadm
     type: url
