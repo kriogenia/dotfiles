@@ -1,0 +1,55 @@
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+  font-family: FiraCode Nerd Font, monospace;
+  font-size: 12pt;
+	background-color: rgba(36, 39, 58, 0.90);
+}
+
+button {
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  font-size: 40px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-size: 60%;
+	color: #cad3f5;
+  text-shadow: none;
+  border-radius: 20px 20px 20px 20px;
+  background-color: rgba(1, 121, 111, 0);
+  margin: 1px;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+button:focus, button:active, button:hover {
+	background-color: rgb(53, 57, 75);
+	outline-style: none;
+}
+
+#lock {
+  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/lock.svg"));
+}
+
+#logout {
+  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/logout.svg"));
+}
+
+#suspend {
+  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/suspend.svg"));
+}
+
+#shutdown {
+  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/shutdown.svg"));
+}
+
+#reboot {
+  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/reboot.svg"));
+}
+
+#hibernate {
+  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/hibernate.svg"));
+}
