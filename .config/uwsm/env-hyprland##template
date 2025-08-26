@@ -1,11 +1,15 @@
-# ######## Toolkit backends ########
+# Toolkit backends
 export GDK_BACKEND='wayland,x11'
 export QT_QPA_PLATFORM='wayland;xcb'
 export SDL_VIDEODRIVER='wayland,x11'
 export CLUTTER_BACKEND='wayland'
 export ELECTRON_OZONE_PLATFORM_HINT='auto'
 
-# ####### XDG specifications #######
+# Cursor
+export HYPRCURSOR_THEME='catppuccin-macchiato-light-cursors'
+export HYPRCURSOR_SIZE='32'
+
+# XDG specifications
 export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_TYPE=wayland
 export XDG_SESSION_DESKTOP=Hyprland
@@ -13,12 +17,13 @@ export XDG_SESSION_DESKTOP=Hyprland
 {% if yadm.class == "nvidia" %}
 export GBM_BACKEND=nvidia-drm
 export EGL_PLATFORM=wayland
-# ####### NVIDIA requirements ######
+
+# NVIDIA requirements
 export LIBVA_DRIVER_NAME=nvidia
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 {% endif %}
 
-# ############# Others #############
+# Others
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 
