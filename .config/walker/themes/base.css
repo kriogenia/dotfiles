@@ -1,7 +1,9 @@
 /* from  https://github.com/basecamp/omarchy */
 
 @import url("file://~/.local/share/dotfiles/palette/current.css");
-@import url("file://~/.config/walker/themes/base.css");
+
+@define-color selected-text @sky;
+@define-color border @sapphire;
 
 #window,
 #box,

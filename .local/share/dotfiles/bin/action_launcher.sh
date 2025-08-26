@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-CONFIG_DIR=${XDG_CONFIG_HOME:-"${HOME}/.config"}/dotfiles
-LAUNCHER_FILE=$CONFIG_DIR/${1:-start}.yml
-PLACEHOLDER=$(yq -r ".placeholder" <"$LAUNCHER_FILE")
+config_dir=$XDG_CONFIG_HOME/dotfiles
+launcher_file=$config_dir/${1:-start}.yml
+placeholder=$(yq -r ".placeholder" <"$launcher_file")
 
-option=$(yq -r ".options.[].text" "$LAUNCHER_FILE" | walker --dmenu --placeholder "$PLACEHOLDER")
-content=$(yq ".options.[] | select(.text == \"$option\")" "$LAUNCHER_FILE")
+option=$(yq -r ".options.[].text" "$launcher_file" | walker --dmenu --width 250 --theme dmenu --placeholder "$placeholder")
+content=$(yq ".options.[] | select(.text == \"$option\")" "$launcher_file")
 
 launch() {
   "${XDG_DATA_HOME}"/dotfiles/bin/action_launcher.sh "$@"
@@ -16,12 +16,11 @@ run_app() {
 }
 
 get_prop() {
-  local prop=$1
-  echo "$content" | yq -r ".$prop"
+  echo "$content" | yq -r ".$1"
 }
 
 return_to_start() {
-  if [ "$(basename "$LAUNCHER_FILE")" != "start.yml" ]; then
+  if [ "$(basename "$launcher_file")" != "start.yml" ]; then
     launch
   fi
 }
