@@ -49,6 +49,7 @@ button:focus, button:active, button:hover {
 
 #reboot {
   background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/reboot.svg"));
+  background-size: 70%;
 }
 
 #hibernate {
