@@ -30,16 +30,17 @@ button:focus, button:active, button:hover {
 	outline-style: none;
 }
 
+#suspend {
+  background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/suspend.svg"));
+  background-size: 75%;
+}
+
 #lock {
   background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/lock.svg"));
 }
 
 #logout {
   background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/logout.svg"));
-}
-
-#suspend {
-  background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/suspend.svg"));
 }
 
 #shutdown {
