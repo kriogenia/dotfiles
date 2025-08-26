@@ -7,3 +7,8 @@ export XCURSOR_SIZE='24'
 
 # ###### app2unit Integration ######
 export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
+
+# Use for internal dotfile scripts
+export DOTFILES_BIN="$HOME/.local/share/dotfiles/bin"
+export DOTFILES_CONFIG="$HOME/.config/dotfiles"
+export DOTFILES_DATA="$HOME/.local/state/dotfiles"

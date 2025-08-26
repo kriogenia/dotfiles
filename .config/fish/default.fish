@@ -1,5 +1,3 @@
-set -g DOTFILE_DATA $XDG_DATA_HOME/dotfiles
-
 set -g BROWSER firefox
 
 set -g TMUX_WORKSPACES $XDG_CONFIG_HOME/tmux/workspaces

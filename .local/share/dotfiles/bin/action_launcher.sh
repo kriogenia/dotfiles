@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-config_dir=$XDG_CONFIG_HOME/dotfiles
-launcher_file=$config_dir/${1:-start}.yml
+launcher_file=$DOTFILES_CONFIG/${1:-start}.yml
+echo $launcher_file
 placeholder=$(yq -r ".placeholder" <"$launcher_file")
 
 option=$(yq -r ".options.[].text" "$launcher_file" | walker --dmenu --width 250 --theme dmenu --placeholder "$placeholder")
 content=$(yq ".options.[] | select(.text == \"$option\")" "$launcher_file")
 
 launch() {
-  "${XDG_DATA_HOME}"/dotfiles/bin/action_launcher.sh "$@"
+  "${DOTFILES_BIN}"/action_launcher.sh "$@"
 }
 
 run_app() {
