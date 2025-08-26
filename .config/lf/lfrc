@@ -119,3 +119,7 @@ cmd fzf_search ${{
         #--preview='~/.config/lf/cleaner; ~/.config/lf/previewer {1} "$FZF_PREVIEW_COLUMNS" "$FZF_PREVIEW_LINES" "$FZF_PREVIEW_LEFT" "$FZF_PREVIEW_TOP"'
 }}
 map gs :fzf_search
+
+cmd on-select &{{
+    lf -remote "send $id set statfmt \"$(eza -ld --color=always "$f" | sed 's/\\/\\\\/g;s/"/\\"/g')\""
+}}
