@@ -11,6 +11,7 @@ settings:
   colors.webpage.darkmode.enabled:
     global: true
   content.javascript.clipboard:
+    https://catppuccin.com: access-paste
     https://github.com: access-paste
     https://wiki.hypr.land: access-paste
   url.searchengines:
