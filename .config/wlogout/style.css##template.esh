@@ -31,25 +31,25 @@ button:focus, button:active, button:hover {
 }
 
 #lock {
-  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/lock.svg"));
+  background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/lock.svg"));
 }
 
 #logout {
-  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/logout.svg"));
+  background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/logout.svg"));
 }
 
 #suspend {
-  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/suspend.svg"));
+  background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/suspend.svg"));
 }
 
 #shutdown {
-  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/shutdown.svg"));
+  background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/shutdown.svg"));
 }
 
 #reboot {
-  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/reboot.svg"));
+  background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/reboot.svg"));
 }
 
 #hibernate {
-  background-image: image(url("/home/sotoestevez/.config/wlogout/icons/hibernate.svg"));
+  background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/hibernate.svg"));
 }
