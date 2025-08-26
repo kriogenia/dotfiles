@@ -41,6 +41,7 @@ button:focus, button:active, button:hover {
 
 #logout {
   background-image: image(url("<%= $XDG_CONFIG_HOME %>/wlogout/icons/logout.svg"));
+  background-size: 80%;
 }
 
 #shutdown {
