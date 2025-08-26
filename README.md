@@ -29,3 +29,4 @@ yadm clone https://github.com/kriogenia/dotfiles.git
 - The majority of theming is based on [Catppuccin](https://catppuccin.com/) Macchiato.
 - [HyDE](https://github.com/HyDE-Project/HyDE) was researched for the Hyprland set-up and config.
 - [Omarchy](https://github.com/basecamp/omarchy) served as inspiration for the Walker runner.
+- [kitty-pistol-preview](https://github.com/duganchen/kitty-pistol-previewer) for the video thumbnail script.

@@ -15,6 +15,9 @@ case "$(file -Lb --mime-type "$file")" in
   image/*)
     draw "$file"
     ;;
+  video/*)
+    draw "$("$DOTFILES_BIN"/video_thumbnail.sh "$file")"
+    ;;
   text/*)
     bat --color=always "$file"
     ;;
