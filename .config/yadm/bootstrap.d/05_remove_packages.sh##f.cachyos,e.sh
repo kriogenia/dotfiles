@@ -1,4 +1,4 @@
-# easier to do this than manually uncheck in the Calamres installer
+# easier to do this than manually uncheck in the Calamares installer
 echo "Removing packages bundled not wanted"
 sudo pacman -R --noconfirm \
   alacritty \
@@ -6,6 +6,7 @@ sudo pacman -R --noconfirm \
   cachyos-hyprland-settings \
   micro \
   nano \
+  swaylock-fancy-git \
   wofi \
   &>/dev/null
 
