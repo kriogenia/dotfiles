@@ -4,6 +4,7 @@ sudo pacman -R --noconfirm \
   alacritty \
   cachyos-alacritty-config \
   cachyos-hyprland-settings \
+  mako \
   micro \
   nano \
   swaylock-fancy-git \
