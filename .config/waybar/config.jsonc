@@ -4,20 +4,21 @@
   "height": 42,
   "spacing": 0,
   "modules-left": [
+    "image#sun",
     "image#eye-universe",
     "memory",
     "disk",
     "custom/gpu",
     "cpu",
     "power-profiles-daemon",
-    "image#brittle-hollow"
+    "image#hourglass-twins"
   ],
   "modules-center": [
     "image#timberhearth",
     "hyprland/workspaces",
     "tray",
     "custom/pacman",
-    "image#sun"
+    "image#brittle-hollow"
   ],
   "modules-right": [
     "image#giants-deep",
@@ -31,7 +32,8 @@
     "custom/weather",
     "systemd-failed-units",
     "custom/notification",
-    "group/power"
+    "group/power",
+    "image#dark-bramble"
   ],
   "image#eye-universe": {
     "path": "./.local/share/dotfiles/icons/eye.svg",
@@ -40,6 +42,11 @@
   },
   "image#brittle-hollow": {
     "path": "./.local/share/dotfiles/icons/brittle-hollow.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "image#hourglass-twins": {
+    "path": "./.local/share/dotfiles/icons/hourglass-twins.svg",
     "interval": 1000,
     "size": 24
   },
@@ -55,6 +62,11 @@
   },
   "image#giants-deep": {
     "path": "./.local/share/dotfiles/icons/giants-deep.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "image#dark-bramble": {
+    "path": "./.local/share/dotfiles/icons/dark-bramble.svg",
     "interval": 1000,
     "size": 24
   },
