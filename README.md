@@ -27,6 +27,7 @@ yadm clone https://github.com/kriogenia/dotfiles.git
 
 - All ASCII art was generated with [jp2a](https://github.com/cslarsen/jp2a).
 - The majority of theming is based on [Catppuccin](https://catppuccin.com/) Macchiato.
+- All the Outer Wilds SVGs are from [here](https://github.com/RiosDeterioratingMentalHealth/OuterWildsPlanetIcons).
 - [HyDE](https://github.com/HyDE-Project/HyDE) was researched for the Hyprland set-up and config.
 - [Omarchy](https://github.com/basecamp/omarchy) served as inspiration for the Walker runner.
 - [kitty-pistol-preview](https://github.com/duganchen/kitty-pistol-previewer) for the video thumbnail script.

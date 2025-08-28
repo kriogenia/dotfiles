@@ -4,19 +4,23 @@
   "height": 42,
   "spacing": 0,
   "modules-left": [
-    // "image#eye-universe",
+    "image#eye-universe",
     "memory",
     "disk",
     "custom/gpu",
     "cpu",
-    "power-profiles-daemon"
+    "power-profiles-daemon",
+    "image#brittle-hollow"
   ],
   "modules-center": [
+    "image#timberhearth",
     "hyprland/workspaces",
     "tray",
-    "custom/pacman"
+    "custom/pacman",
+    "image#sun"
   ],
   "modules-right": [
+    "image#giants-deep",
     "hyprland/language",
     "network",
     "pulseaudio",
@@ -29,11 +33,31 @@
     "custom/notification",
     "group/power"
   ],
-  // "image#eye-universe": {
-  //   "path": "$HOME/.local/share/dotfiles/icons/eye.svg",
-  //   "interval": 32000,
-  //   "size": 32
-  // },
+  "image#eye-universe": {
+    "path": "./.local/share/dotfiles/icons/eye.svg",
+    "interval": 10000,
+    "size": 32
+  },
+  "image#brittle-hollow": {
+    "path": "./.local/share/dotfiles/icons/brittle-hollow.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "image#timberhearth": {
+    "path": "./.local/share/dotfiles/icons/timberhearth.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "image#sun": {
+    "path": "./.local/share/dotfiles/icons/sun.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "image#giants-deep": {
+    "path": "./.local/share/dotfiles/icons/giants-deep.svg",
+    "interval": 1000,
+    "size": 24
+  },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
