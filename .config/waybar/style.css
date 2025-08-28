@@ -43,6 +43,7 @@ tooltip {
 #systemd-failed-units,
 #custom-weather,
 #custom-pacman,
+#custom-notification,
 #language,
 #network,
 #pulseaudio,
@@ -65,6 +66,7 @@ tooltip {
 #systemd-failed-units,
 #custom-weather,
 #custom-pacman,
+#custom-notification,
 #language,
 #network,
 #pulseaudio,
@@ -149,6 +151,7 @@ tooltip {
 
 #custom-weather.sunny,
 #custom-pacman,
+#custom-notification.notification,
 #power-profiles-daemon.performance,
 #custom-reboot {
   color: @yellow;
