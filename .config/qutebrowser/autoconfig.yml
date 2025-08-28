@@ -18,3 +18,4 @@ settings:
     global:
       DEFAULT: https://duckduckgo.com/?q={}
       arch: https://wiki.archlinux.org/?search={}
+      yt: https://www.youtube.com/results?search_query={}
