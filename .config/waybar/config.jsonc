@@ -5,14 +5,16 @@
   "spacing": 0,
   "modules-left": [
     // "image#eye-universe",
-    "hyprland/workspaces",
-    "tray",
-    "systemd-failed-units",
-    "custom/pacman"
+    "memory",
+    "disk",
+    "custom/gpu",
+    "cpu",
+    "power-profiles-daemon"
   ],
   "modules-center": [
-    "clock",
-    "custom/weather"
+    "hyprland/workspaces",
+    "tray",
+    "custom/pacman"
   ],
   "modules-right": [
     "hyprland/language",
@@ -21,11 +23,9 @@
     "battery",
     "backlight",
     "bluetooth",
-    "memory",
-    "disk",
-    "custom/gpu",
-    "cpu",
-    "power-profiles-daemon",
+    "clock",
+    "custom/weather",
+    "systemd-failed-units",
     "custom/notification",
     "group/power"
   ],
