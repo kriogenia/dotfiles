@@ -1,5 +1,3 @@
-/* TODO: see the predefined colors and reuse some naming conventions */
-
 :root {
   --red: #ed8796;
   --maroon: #ee99a0;
@@ -25,7 +23,7 @@
 
   --summary: var(--text);
   --title: var(--text);
-  --body: var(--subtext0)
+  --body: var(--subtext0);
   --time: var(--subtext0);
   --dnd: var(--subtext0);
   --low: var(--surface1);
@@ -44,12 +42,9 @@
 
 .floating-notifications > scrolledwindow,
 .control-center {
-  border-color: var(--bg-secondary);
-  border-width: 4px 0px 4px 4px;
-  border-style: solid;
-  border-radius: 12px 0px 0px 12px;
+  border-radius: 0px 0px 0px 12px;
   color: var(--text);
-  margin: 12px 0px;
+  margin: 0px 0px;
   background-color: var(--bg-primary);
 }
 
@@ -160,7 +155,6 @@
 
 .control-center .notification-background {
   border-radius: 6px 0 0 6px;
-  margin: 4px 0px;
 }
 
 .control-center .notification-background .notification.low {
