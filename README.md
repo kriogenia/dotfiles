@@ -6,14 +6,16 @@ Welcome to my new dotfiles. These are highly tailored to my specific needs and s
 
 - Window Manager: **Hyprland** via `uwsm`
 - Bar: **waybar**
-- Launcher: **walker** via the default app launcher and a custom dmenu runner
+- Launcher: **walker** via the default app launcher and a custom dmenu runner (planning to go back to rofi)
 - Browser: **qutebrowser**
 - Terminal: **kitty**
 - Shell: **fish** with custom `pure` prompt
 - Multiplexing: **tmux**
 - Editor: **nvim**, using `lazyvim`
-- Notifications: **mako** (for now)
+- Notifications: **swaync**
 - Other tools: `bat`, `eza`, `lazygit`, `task`, `mpv`, `thefuck`, `wlogout`, etc
+
+I also keep around the configurations of some tools I used in the past like `mako`, take that into account as not all configurations in this repo are in use.
 
 ## Installing
 

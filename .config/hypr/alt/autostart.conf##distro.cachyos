@@ -1,4 +1,3 @@
-exec-once = swaybg -o \* -i /usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png -m fill
 exec-once = fcitx5 -d &
 exec-once = nm-applet --indicator &
 exec-once = bash -c "mkfifo /tmp/$HYPRLAND_INSTANCE_SIGNATURE.wob && tail -f /tmp/$HYPRLAND_INSTANCE_SIGNATURE.wob | wob & disown" &
