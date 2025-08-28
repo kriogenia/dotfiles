@@ -5,7 +5,7 @@
   "spacing": 0,
   "modules-left": [
     "image#sun",
-    "image#eye-universe",
+    // "image#eye-universe",
     "memory",
     "disk",
     "custom/gpu",
