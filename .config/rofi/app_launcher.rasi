@@ -9,11 +9,6 @@ configuration {
 	modi:                       "drun,filebrowser,run";
 }
 
-* {
-  scroll-handle:               @accent;
-  placeholder:                 @text-dim;
-}
-
 window {
   location:                    south;
   x-offset:                    0px;
@@ -42,7 +37,6 @@ textbox-prompt-colon {
 entry {
   padding:                     5px 0px;
   cursor:                      text;
-  // placeholder:                 "Search...";
   placeholder:                 env(SEARCHBOX_PLACEHOLDER, "Search...");
   placeholder-color:           @placeholder;
 }
@@ -74,7 +68,6 @@ listview {
   reverse:                     false;
   fixed-height:                true;
   fixed-columns:               true;
-
   spacing:                     5px;
 }
 

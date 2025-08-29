@@ -15,4 +15,6 @@
   accent:             @peach;
   accent-dim:         @flamingo;
   urgent:             @red;
+  scroll-handle:      @accent;
+  placeholder:        @text-dim;
 }

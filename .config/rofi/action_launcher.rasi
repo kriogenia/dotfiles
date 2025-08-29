@@ -2,11 +2,11 @@
 @import "base"
 
 window {
-  location:                    south;
+  location:                    center;
   x-offset:                    0px;
   y-offset:                    0px;
-  width:                       1200px;
-  border-radius:               15px 15px 0 0;
+  width:                       250px;
+  border-radius:               15px;
 }
 
 mainbox {
@@ -16,10 +16,14 @@ mainbox {
 }
 
 inputbar {
-  enabled: false;
+  enabled:                     false;
+  case-sensitive:              false;
 }
 
 listview {
+  columns:                     1;
+  cycle:                       true;
+  dynamic:                     true;
   layout:                      vertical;
   reverse:                     false;
   fixed-height:                false;
@@ -28,8 +32,7 @@ listview {
 }
 
 element {
-  spacing:                     10px;
-  padding:                     5px 5px;
+  padding:                     10px 0px;
   border-radius:               10px;
   cursor:                      pointer;
 }
@@ -43,5 +46,5 @@ element-text {
   text-color:                  inherit;
   cursor:                      inherit;
   vertical-align:              0.5;
-  horizontal-align:            0.0;
+  horizontal-align:            0.5;
 }

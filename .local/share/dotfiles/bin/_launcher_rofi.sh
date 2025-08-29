@@ -7,7 +7,7 @@ rofi_configs=$HOME/.config/rofi
 dmenu() {
   local config=$1
   shift
-  rofi -dmenu -config "$rofi_configs"/"$config".rasi "$@"
+  rofi -dmenu -i -config "$rofi_configs"/"$config".rasi "$@"
 }
 
 app_launcher() {
@@ -15,7 +15,7 @@ app_launcher() {
 }
 
 dmenu_launcher() {
-  dmenu app_launcher "$@" # TODO: style make slim, exact number of items? two columns?
+  dmenu action_launcher "$@" # TODO: style make slim, exact number of items? two columns?
 }
 
 cliphist_launcher() {
