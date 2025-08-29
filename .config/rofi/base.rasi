@@ -1,0 +1,45 @@
+configuration {
+  show-icons:             true;
+
+  display-drun:           "";
+  display-run:            "";
+  display-filebrowser:    "";
+  display-window:         "";
+
+	drun-display-format:    "{name}";
+
+  // TODO: check
+  drun {
+    scan-desktop:         true;
+    parse-user:           true;
+  }
+
+}
+
+* {
+  font:                   "FiraCode Nerd Font 12";
+  background-color:       transparent;
+  text-color:             @text;
+}
+
+window {
+  enabled:              true;
+
+  anchor:               center;
+  fullscreen:           false;
+
+  cursor:               "default";
+
+  border-radius:        15px 15px 0 0;
+  background-color:     @background;
+  transparency:         "real";
+
+  /* Backgroud Image */
+  //background-image:          url("/path/to/image.png", none);
+  /* Simple Linear Gradient */
+  //background-image:          linear-gradient(red, orange, pink, purple);
+  /* Directional Linear Gradient */
+  //background-image:          linear-gradient(to bottom, pink, yellow, magenta);
+  /* Angle Linear Gradient */
+  //background-image:          linear-gradient(45, cyan, purple, indigo);
+}

@@ -30,7 +30,8 @@ yadm clone https://github.com/kriogenia/dotfiles.git
 - All ASCII art was generated with [jp2a](https://github.com/cslarsen/jp2a).
 - The majority of theming is based on [Catppuccin](https://catppuccin.com/) Macchiato.
 - The wallpaper was converted to the theme colors with [lutgen](https://github.com/ozwaldorf/lutgen-rs)
-- All the Outer Wilds SVGs are from [here](https://github.com/RiosDeterioratingMentalHealth/OuterWildsPlanetIcons), just changed the colors to match the theme.
+- All the Outer Wilds SVGs are made by [Rios](https://github.com/RiosDeterioratingMentalHealth/OuterWildsPlanetIcons), just changed the colors to match the theme.
 - [HyDE](https://github.com/HyDE-Project/HyDE) was researched for the Hyprland set-up and config.
 - [Omarchy](https://github.com/basecamp/omarchy) served as inspiration for the Walker runner.
 - [kitty-pistol-preview](https://github.com/duganchen/kitty-pistol-previewer) for the video thumbnail script.
+- My main inspiration while configuring rofi were the [adi1090x](https://github.com/adi1090x/rofi) examples.

@@ -1,0 +1,154 @@
+/**
+ * Modification of: https://github.com/adi1090x/rofi/blob/master/files/launchers/type-1/style-5.rasi
+ **/
+
+@theme "current"
+@import "base"
+
+configuration {
+	modi:                       "drun,filebrowser,run";
+}
+
+* {
+  scroll-handle:               @accent;
+  placeholder:                 @text-dim;
+}
+
+window {
+  location:                    south;
+  x-offset:                    0px;
+  y-offset:                    0px;
+  width:                       600px;
+  border-radius:               15px 15px 0 0;
+}
+
+mainbox {
+  spacing:                     20px;
+  padding:                     20px 20px;
+  children:                    [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+  spacing:                     10px;
+  children:                    [ "textbox-prompt-colon", "entry", "mode-switcher" ];
+}
+
+textbox-prompt-colon {
+  padding:                     5px;
+  expand:                      false;
+  str:                         "";
+}
+
+entry {
+  padding:                     5px 0px;
+  cursor:                      text;
+  placeholder:                 "Search...";
+  placeholder-color:           @placeholder;
+}
+
+num-filtered-rows {
+  expand:                      false;
+}
+
+textbox-num-sep {
+  expand:                      false;
+  str:                         "/";
+}
+
+num-rows {
+  expand:                      false;
+}
+
+case-indicator {
+  enabled:                     true;
+}
+
+listview {
+  columns:                     1;
+  lines:                       10;
+  cycle:                       true;
+  dynamic:                     true;
+  scrollbar:                   true;
+  layout:                      vertical;
+  reverse:                     false;
+  fixed-height:                true;
+  fixed-columns:               true;
+
+  spacing:                     5px;
+}
+
+scrollbar {
+  handle-width:                5px;
+  handle-color:                @scroll-handle;
+  border-radius:               10px;
+  background-color:            @background-alt;
+}
+
+element {
+  spacing:                     10px;
+  padding:                     10px 10px;
+  border-radius:               10px;
+  cursor:                      pointer;
+}
+
+element normal.urgent {
+  text-color:                  @urgent;
+}
+element normal.active {
+  text-color:                  @accent-dim;
+}
+
+element selected.normal,
+element selected.active {
+  background-color:            @accent;
+  text-color:                  @text-accent;
+}
+element selected.urgent {
+  background-color:            @urgent;
+  text-color:                  @text-accent;
+}
+
+element-icon {
+  size:                        24px;
+  cursor:                      inherit;
+}
+
+element-text {
+  text-color:                  inherit;
+  cursor:                      inherit;
+  vertical-align:              0.5;
+  horizontal-align:            0.0;
+}
+
+mode-switcher{
+  spacing:                     10px;
+}
+
+button {
+  padding:                     5px 13px 5px 10px;
+  border-radius:               10px;
+  background-color:            @background-alt;
+  cursor:                      pointer;
+}
+
+button selected {
+  background-color:            @accent;
+  text-color:                  @text-accent;
+}
+
+textbox {
+  padding:                     10px;
+  border-radius:               10px;
+  background-color:            @background-alt;
+  placeholder-color:           @placeholder;
+  blink:                       true;
+  markup:                      true;
+}
+
+error-message {
+  padding:                     10px;
+  border:                      2px solid;
+  border-color:                @urgent;
+  border-radius:               10px;
+  background-color:            @background-alt;
+}

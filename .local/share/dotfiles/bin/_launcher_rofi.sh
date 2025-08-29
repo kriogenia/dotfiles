@@ -5,5 +5,5 @@ set -euo pipefail
 rofi_configs=$HOME/.config/rofi
 
 app_launcher() {
-  rofi -show drun -config "$rofi_configs"/style.rasi
+  rofi -show drun -config "$rofi_configs"/app_launcher.rasi
 }
