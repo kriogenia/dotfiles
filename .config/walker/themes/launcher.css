@@ -3,49 +3,6 @@
 @import url("file://~/.local/share/dotfiles/palette/current.css");
 @import url("file://~/.config/walker/themes/base.css");
 
-#window,
-#box,
-#search,
-#password,
-#input,
-#prompt,
-#clear,
-#typeahead,
-#list,
-child,
-scrollbar,
-slider,
-#item,
-#text,
-#label,
-#sub,
-#activationlabel {
-  all: unset;
-}
-
-* {
-  font-family: 'FiraCode Nerd Font';
-  font-size: 18px;
-}
-
-#window {
-  background: transparent;
-  color: @text;
-}
-
-#box {
-  background: alpha(@base, 0.95);
-  padding: 20px;
-  border: 2px solid @border;
-  border-radius: 15px;
-}
-
-#search {
-  background: @base;
-  padding: 10px;
-  margin-bottom: 0;
-}
-
 #prompt {
   opacity: 0;
   min-width: 0;

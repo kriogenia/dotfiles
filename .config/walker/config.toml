@@ -8,6 +8,12 @@ theme_location = ["~/.config/walker/themes/"]
 [list]
 max_entries = 100
 
+[shell]
+anchor_top = true
+anchor_bottom = false
+anchor_left = true
+anchor_right = true
+
 [search]
 placeholder = " Search..."
 

@@ -3,7 +3,6 @@
 @import url("file://~/.local/share/dotfiles/palette/current.css");
 
 @define-color selected-text @sky;
-@define-color border @sapphire;
 
 #window,
 #box,
@@ -36,9 +35,9 @@ slider,
 }
 
 #box {
-  background: alpha(@base, 0.95);
+  background: @mantle;
   padding: 20px;
-  border: 2px solid @border;
+  /* border-radius: 0 0 15px 15px; */
   border-radius: 15px;
 }
 
@@ -46,6 +45,7 @@ slider,
   background: @base;
   padding: 10px;
   margin-bottom: 0;
+  border-radius: 10px;
 }
 
 #prompt {
