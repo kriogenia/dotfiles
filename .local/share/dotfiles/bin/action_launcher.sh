@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 launcher_file=$DOTFILES_CONFIG/${1:-start}.yml
-echo $launcher_file
 placeholder=$(yq -r ".placeholder" <"$launcher_file")
 
 option=$(yq -r ".options.[].text" "$launcher_file" | walker --dmenu --width 250 --theme dmenu --placeholder "$placeholder")
