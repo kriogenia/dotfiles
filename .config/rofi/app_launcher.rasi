@@ -36,13 +36,14 @@ inputbar {
 textbox-prompt-colon {
   padding:                     5px;
   expand:                      false;
-  str:                         "";
+  str:                         env(SEARCHBOX_ICON, "");
 }
 
 entry {
   padding:                     5px 0px;
   cursor:                      text;
-  placeholder:                 "Search...";
+  // placeholder:                 "Search...";
+  placeholder:                 env(SEARCHBOX_PLACEHOLDER, "Search...");
   placeholder-color:           @placeholder;
 }
 

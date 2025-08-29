@@ -1,9 +1,11 @@
-placeholder:  Action
+icon: 
+placeholder: Action
 options:
   applications:
     text:  Applications
-    type: app
-    exec: walker
+    type: script
+    name: launcher.sh
+    args: app
   documentation:
     text: 󰈙 Documentation
     type: launcher
