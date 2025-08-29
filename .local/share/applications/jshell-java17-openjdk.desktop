@@ -7,4 +7,5 @@ Terminal=true
 Type=Application
 Icon=java17-openjdk
 Categories=Application;System;
-Hidden=True
+Hidden=true
+

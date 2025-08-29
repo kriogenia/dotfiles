@@ -11,4 +11,5 @@ Terminal=false
 StartupNotify=false
 Categories=Qt;System;
 X-AppStream-Ignore=true
-Hidden=True
+Hidden=true
+

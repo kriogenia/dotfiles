@@ -77,4 +77,5 @@ Terminal=false
 Type=Application
 Categories=Settings;DesktopSettings;Qt;
 Keywords=settings;desktop;qt;qtsettings;qt5;
-Hidden=True
+Hidden=true
+

@@ -6,4 +6,5 @@ Terminal=false
 Exec=rofi -show
 Name=Rofi
 Icon=rofi
-Hidden=True
+Hidden=true
+

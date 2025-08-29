@@ -154,4 +154,5 @@ Terminal=false
 Type=Application
 Categories=XFCE;GTK;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings;
 StartupNotify=true
-Hidden=True
+Hidden=true
+

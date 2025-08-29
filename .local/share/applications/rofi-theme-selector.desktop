@@ -6,4 +6,5 @@ Terminal=false
 Exec=rofi-theme-selector
 Name=Rofi Theme Selector
 Icon=rofi
-Hidden=True
+Hidden=true
+

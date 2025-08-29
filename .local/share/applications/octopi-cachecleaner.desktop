@@ -9,4 +9,5 @@ Categories=GNOME;GTK;System;
 StartupNotify=true
 Version=1.5
 SingleMainWindow=true
-Hidden=True
+Hidden=true
+

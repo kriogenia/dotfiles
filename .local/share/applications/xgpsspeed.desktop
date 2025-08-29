@@ -8,4 +8,5 @@ Icon=/usr/share/gpsd/icons/gpsd-logo.png
 Terminal=false
 Type=Application
 Categories=Application;Maps;Utility;
-Hidden=True
+Hidden=true
+
