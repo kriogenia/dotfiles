@@ -1,0 +1,55 @@
+/**
+ * Modification of: https://github.com/adi1090x/rofi/blob/master/files/launchers/type-1/style-5.rasi
+ **/
+
+@theme "current"
+@import "base"
+
+* {
+  scroll-handle:               @accent;
+  placeholder:                 @text-dim;
+}
+
+window {
+  location:                    south;
+  x-offset:                    0px;
+  y-offset:                    0px;
+  width:                       1200px;
+  border-radius:               15px 15px 0 0;
+}
+
+mainbox {
+  spacing:                     20px;
+  padding:                     20px 20px;
+  children:                    [ "listview" ];
+}
+
+listview {
+  columns:                     1;
+  lines:                       5;
+  layout:                      vertical;
+  reverse:                     false;
+  fixed-height:                true;
+  fixed-columns:               true;
+
+  spacing:                     5px;
+}
+
+element {
+  spacing:                     10px;
+  padding:                     5px 5px;
+  border-radius:               10px;
+  cursor:                      pointer;
+}
+
+element selected.normal {
+  background-color:            @accent;
+  text-color:                  @text-accent;
+}
+
+element-text {
+  text-color:                  inherit;
+  cursor:                      inherit;
+  vertical-align:              0.5;
+  horizontal-align:            0.0;
+}

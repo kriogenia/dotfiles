@@ -84,6 +84,9 @@ app)
 action)
   action_launcher
   ;;
+clipboard)
+  cliphist list | cliphist_launcher | cliphist decode | wl-copy
+  ;;
 -h | --help | help)
   print_help
   ;;

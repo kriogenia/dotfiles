@@ -6,6 +6,11 @@ options:
     type: script
     name: launcher.sh
     args: app
+  clipboard:
+    text:  Clipboard
+    type: script
+    name: launcher.sh
+    args: clipboard
   documentation:
     text: 󰈙 Documentation
     type: launcher
