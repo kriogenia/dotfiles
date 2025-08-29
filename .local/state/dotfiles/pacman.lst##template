@@ -15,6 +15,7 @@ npm
 pre-commit
 qbittorrent
 qutebrowser
+rofi-wayland
 swaync
 task
 thefuck
@@ -38,7 +39,6 @@ hyprland
 qt5-wayland
 qt6-wayland
 qt6-imageformats
-rofi-wayland
 uwsm
 {% endif %}
 
