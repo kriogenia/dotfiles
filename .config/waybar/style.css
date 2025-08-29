@@ -35,9 +35,10 @@
 }
 
 tooltip {
+  background-color: @mantle;
   border-radius: 8px;
   font-weight: bold;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
 }
 
 tooltip label {
@@ -46,9 +47,8 @@ tooltip label {
   font-size: 14px;
 }
 
-.module,
-tooltip {
-  background-color: alpha(@base, 0.9);
+.module {
+  background-color: @base;
   color: @text;
 }
 
