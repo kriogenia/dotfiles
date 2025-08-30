@@ -1,6 +1,5 @@
 base-devel
 bat
-chromium
 cliphist
 esh
 eza
@@ -8,39 +7,50 @@ fish
 fisher
 flatpak
 git
-imv
-kitty
 lf
 neovim
 npm
 pre-commit
-qbittorrent
-qutebrowser
-rofi-wayland
-swaync
 task
 thefuck
-thunar
 tmux
 ttf-firacode-nerd
-vlc
 wiremix
-wl-clipboard
 yq
-zathura
-zathura-pdf-mupdf
 
 {% if yadm.distro == "cachyos" %}
 brave-bin
 zen-browser-bin
 {% endif %}
 
-{% if yadm.class == "hypr" %}
+{% if yadm.class == "de" %}
+chromium
+imv
+kitty
+mpv
+power-profiles-daemon
+qbittorrent
+qutebrowser
+thunar
+vlc
+waybar
+zathura
+zathura-pdf-mupdf
+{% endif %}
+
+{% if yadm.class == "hyprland" %}
+hypridle
 hyprland
 qt5-wayland
 qt6-wayland
 qt6-imageformats
+rofi-wayland
+swaybg
+swaylock
+swaync
+tela-circle-icon-theme-green
 uwsm
+wl-clipboard
 {% endif %}
 
 {% if yadm.hostname == "espeon" %}
@@ -48,7 +58,6 @@ bluez
 bluez-utils
 brightnessctl
 ddcutil
-power-profiles-daemon
 upower
 {% endif %}
 

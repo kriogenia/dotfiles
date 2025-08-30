@@ -1,17 +1,20 @@
+informant
+jinja2-cli
+
+{% if yadm.class == "de" %}
 autofirma
 ca-certificates-dnie
 ca-certificates-fnmt
 catppuccin-cursors-macchiato
-informant
-jinja2-cli
 waybar-module-pacman-updates-git
 wttrbar
+{% endif %}
 
 {% if yadm.class == "nvidia" %}
 vk-hdr-layer-kwin6-git
 {% endif %}
 
-{% if yadm.class == "hypr" %}
+{% if yadm.class == "hyprland" %}
 quickshell-git
 ttf-material-symbols-variable-git
 {% endif %}

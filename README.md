@@ -25,6 +25,18 @@ Just clone the repo with yadm, maybe you get some conflicts. Evaluate the script
 yadm clone https://github.com/kriogenia/dotfiles.git
 ```
 
+The dotfiles are structure in a way were certain configurations are tailored for specific systems of mine and will be applied based on the hostnames I use. There's also a heavy use of classes, mainly regarding the dependencies to install.
+These classes should be enabled before bootstrapping. For example, for my current desktop Nvidia PC with a full desktop environment using Hyprland I would do:
+
+```
+yadm config --add local.class nvidia
+yadm config --add local.class hyprland
+yadm config --add local.class de
+yadm bootstrap
+```
+
+While to just pull my CLI dotfiles in any system or a bare terminal Arch I would simply just run the bootstrap.
+
 ## Acknowledgments
 
 - All ASCII art was generated with [jp2a](https://github.com/cslarsen/jp2a).
