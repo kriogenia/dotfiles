@@ -1,6 +1,6 @@
 {
     "label" : "suspend",
-    "action" : "systemctl suspend",
+    "action" : "sleep 1; systemctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
