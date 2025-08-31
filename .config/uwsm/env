@@ -10,6 +10,7 @@ export XCURSOR_SIZE='32'
 export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
 
 # Use for internal dotfile scripts
-export DOTFILES_BIN="$HOME/.local/share/dotfiles/bin"
+export DOTFILES_DATA="$HOME/.local/share/dotfiles"
+export DOTFILES_BIN="$DOTFILES_DATA/bin"
 export DOTFILES_CONFIG="$HOME/.config/dotfiles"
-export DOTFILES_DATA="$HOME/.local/state/dotfiles"
+export DOTFILES_STATE="$HOME/.local/state/dotfiles"

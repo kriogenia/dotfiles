@@ -6,3 +6,5 @@ set -g docs $HOME/Documents
 set -g dwn $HOME/Downloads
 set -g notes $docs/notes
 set -g projects $HOME/projects
+
+set -g DOTFILES_PALETTE $DOTFILES_DATA/palette/current.css
