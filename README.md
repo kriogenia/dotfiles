@@ -13,7 +13,7 @@ Welcome to my new dotfiles. These are highly tailored to my specific needs and s
 - Multiplexing: **tmux**
 - Editor: **nvim**, using `lazyvim`
 - Notifications: **swaync**
-- Other tools: `bat`, `eza`, `lazygit`, `task`, `mpv`, `thefuck`, `wlogout`, etc
+- Other tools: `bat`, `eza`, `lazygit`, `task`, `mpv`, `sddm`, `wlogout`, etc
 
 I also keep around the configurations of some tools I used in the past like `mako`, take that into account as not all configurations in this repo are in use.
 
@@ -47,3 +47,4 @@ While to just pull my CLI dotfiles in any system or a bare terminal Arch I would
 - [Omarchy](https://github.com/basecamp/omarchy) served as inspiration for the Walker runner.
 - [kitty-pistol-preview](https://github.com/duganchen/kitty-pistol-previewer) for the video thumbnail script.
 - My main inspiration while configuring rofi were the [adi1090x](https://github.com/adi1090x/rofi) examples.
+- The user icon author is [Roman Novikov](https://www.artstation.com/artwork/B13o0k) if my reverse search is correct.
