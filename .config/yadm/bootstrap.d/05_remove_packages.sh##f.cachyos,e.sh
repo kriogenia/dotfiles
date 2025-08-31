@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # easier to do this than manually uncheck in the Calamares installer
 echo "Removing packages bundled not wanted"
 sudo pacman -R --noconfirm \

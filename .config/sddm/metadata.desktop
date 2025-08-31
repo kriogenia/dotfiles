@@ -1,0 +1,16 @@
+; https://github.com/uiriansan/SilentSDDM
+
+[SddmGreeterTheme]
+Name=Silent Universe
+Type=sddm-theme
+Description=A Outer Wilds SDDM theme based on Silent.
+License=GPL-3.0-or-later
+Version=1.0.0
+Theme-Id=silent
+Theme-API=2.0
+MainScript=Main.qml
+Screenshot=docs/previews/default.png
+TranslationsDirectory=translations
+QtVersion=6
+
+ConfigFile=configs/hearthian.conf

@@ -6,6 +6,7 @@ autofirma
 ca-certificates-dnie
 ca-certificates-fnmt
 catppuccin-cursors-macchiato
+sddm-silent-theme
 waybar-module-pacman-updates-git
 wttrbar
 {% endif %}
