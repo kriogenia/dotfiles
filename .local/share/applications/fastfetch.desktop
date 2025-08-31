@@ -1,10 +1,10 @@
 [Desktop Entry]
 Version=1.0
-Name=About
+Name=Ship Log
 Comment=System information from fastfetch
 Exec=kitty --class fastfetch --title About sh -c 'fastfetch; read -n 1 -s'
 Terminal=false
 Type=Application
-Icon=Arch
+Icon=Ventures
 Categories=GTK;
 StartupNotify=false
