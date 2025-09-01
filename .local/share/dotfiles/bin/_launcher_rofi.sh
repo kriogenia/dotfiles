@@ -10,6 +10,13 @@ dmenu() {
   rofi -dmenu -i -config "$rofi_configs"/"$config".rasi "$@"
 }
 
+mode() {
+  local mode=$1
+  local config=$2
+  shift 2
+  rofi -show "$mode" -modes "$mode" -config "$rofi_configs"/"$config".rasi "$@"
+}
+
 app_launcher() {
   rofi -show drun -config "$rofi_configs"/app_launcher.rasi
 }
@@ -20,4 +27,8 @@ dmenu_launcher() {
 
 cliphist_launcher() {
   dmenu cliphistory -display-columns 2 # TODO: try to put title
+}
+
+theme_launcher() {
+  mode theme theme
 }

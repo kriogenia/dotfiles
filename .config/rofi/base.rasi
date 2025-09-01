@@ -9,7 +9,6 @@ configuration {
 
 	drun-display-format:    "{name}";
 
-  // TODO: check
   drun {
     scan-desktop:         true;
     parse-user:           true;
@@ -43,4 +42,8 @@ window {
   //background-image:          linear-gradient(to bottom, pink, yellow, magenta);
   /* Angle Linear Gradient */
   //background-image:          linear-gradient(45, cyan, purple, indigo);
+}
+
+element-text {
+  highlight:                    bold;
 }

@@ -19,3 +19,7 @@ dmenu_launcher() {
 cliphist_launcher() {
   not_implemented "Clipboard History"
 }
+
+theme_launcher() {
+  not_implemented "Theme Color Picker"
+}

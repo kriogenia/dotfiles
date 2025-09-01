@@ -15,3 +15,8 @@ options:
     text: 󰈙 Documentation
     type: launcher
     name: documentation
+  theme:
+    text: 󰃣 Theme
+    type: script
+    name: launcher.sh
+    args: theme

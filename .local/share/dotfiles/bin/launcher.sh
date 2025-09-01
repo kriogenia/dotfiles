@@ -23,8 +23,8 @@ Environment variables:
 
 Examples:
   $0 app
+  $0 action documentation
   DOTFILES_LAUNCHER=walker $0 action
-  DOTFILES_LAUNCHER=walker $0 action documentation
 EOF
 }
 
@@ -86,6 +86,9 @@ action)
   ;;
 clipboard)
   cliphist list | cliphist_launcher | cliphist decode | wl-copy
+  ;;
+theme)
+  theme_launcher
   ;;
 -h | --help | help)
   print_help
