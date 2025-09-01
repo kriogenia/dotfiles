@@ -3,11 +3,11 @@
 @import "widgets/title"
 
 window {
-  location:                    south;
+  location:                    west;
   x-offset:                    0px;
   y-offset:                    0px;
-  width:                       1200px;
-  border-radius:               15px 15px 0 0;
+  width:                       25%;
+  border-radius:               15px;
 }
 
 mainbox {
@@ -17,31 +17,36 @@ mainbox {
 }
 
 textbox-title {
-  content:                     " Clipboard history";
+  content:                     "󰃣 Current theme";
 }
 
 inputbar {
-  enabled: false;
+  enabled:                     false;
+  case-sensitive:              false;
 }
 
 listview {
+  columns:                     4;
+  lines:                       7;
+  cycle:                       true;
+  dynamic:                     true;
   layout:                      vertical;
   reverse:                     false;
   fixed-height:                false;
-  fixed-columns:               true;
+  fixed-columns:               false;
   spacing:                     5px;
 }
 
 element {
-  spacing:                     10px;
-  padding:                     5px 5px;
+  padding:                     10px 0px;
   border-radius:               10px;
   cursor:                      pointer;
+  show-icons:                  false;
 }
 
 element selected.normal {
-  background-color:            @accent;
-  text-color:                  @text-accent;
+  background-color:            @text-accent;
+  text-color:                  @accent;
 }
 
 element-text {

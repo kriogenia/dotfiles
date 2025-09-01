@@ -20,6 +20,8 @@ configuration {
   font:                   "FiraCode Nerd Font 12";
   background-color:       transparent;
   text-color:             @text;
+
+  title-font:             "FiraCode Nerd Font 14";
 }
 
 window {
