@@ -7,7 +7,7 @@ window {
   x-offset:                    0px;
   y-offset:                    0px;
   width:                       25%;
-  border-radius:               15px;
+  border-radius:               0 15px 15px 0;
 }
 
 mainbox {
