@@ -20,6 +20,7 @@ yq
 
 {% if yadm.distro == "cachyos" %}
 brave-bin
+obs-vaapi
 zen-browser-bin
 {% endif %}
 
@@ -28,6 +29,7 @@ chromium
 imv
 kitty
 mpv
+obs-studio
 power-profiles-daemon
 qbittorrent
 qutebrowser
