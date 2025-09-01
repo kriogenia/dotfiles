@@ -2,7 +2,7 @@
 Version=1.0
 Name=Ship Log
 Comment=System information from fastfetch
-Exec=kitty --class fastfetch --title About sh -c 'fastfetch; read -n 1 -s'
+Exec=kitty --class fastfetch --title "Ship Log" --override cursor=#1e2030 --override cursor_shape=beam --override cursor_blink_interval=0 sh -c 'fastfetch; read -n 1 -s'
 Terminal=false
 Type=Application
 Icon=Ventures
