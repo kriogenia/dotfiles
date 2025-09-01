@@ -14,12 +14,16 @@ Commands:
   action [submenu]    Launches the actions runner
                       Optionally takes the name of a submenu from $DOTFILES_CONFIG to run
   app                 Launches the app launcher
+  clipboard           Launches a clipboard history
   help                Show this help message
+  theme               Launches a color picker from the current theme
+
   -h, --help          Same as 'help'
 
 Environment variables:
   DOTFILES_LAUNCHER   Controls which launcher to use.
                       Supported options: [rofi|walker]. By default: 'rofi'.
+                      The only launcher with all commands implemented is rofi.
 
 Examples:
   $0 app
