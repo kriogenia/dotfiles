@@ -18,13 +18,15 @@ datestr=%a, %x
 
 hide-keyboard-layout
 
+color=24273a
+bs-hl-color=f4dbd6
+key-hl-color=f5a97f
+
 inside-color=1e2030dd
 inside-clear-color=00000000
 inside-caps-lock-color=00000000
 inside-ver-color=00000000
 inside-wrong-color=00000000
-
-key-hl-color=f5a97f
 
 layout-bg-color=00000000
 layout-border-color=00000000
