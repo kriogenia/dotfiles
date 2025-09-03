@@ -234,7 +234,7 @@
   },
   "custom/lock": {
     "format": "<span>  </span>",
-    "on-click": "hyprlock",
+    "on-click": "swaylock",
     "tooltip": true,
     "tooltip-format": "Lock Screen"
   },
