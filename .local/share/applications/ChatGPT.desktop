@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=ChatGPT
+Comment=ChatGPT WebApp
+Exec=chromium --new-window --app="https://chatgpt.com" --name="ChatGPT" --class="ChatGPT"
+Terminal=false
+Type=Application
+Icon=ChatGPT
+StartupNotify=true
+#https://dashboardicons.com
