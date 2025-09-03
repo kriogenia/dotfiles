@@ -9,4 +9,4 @@ echo -en "\0markup-rows\x1ftrue\n"
 
 while IFS='=' read -r name value; do
   printf "%s\0meta\x1f%s\x1fdisplay\x1f<span foreground=\"%s\"></span> %s\n" "$value" "$name" "$value" "$name"
-done <"$DOTFILES_THEME"
+done <"$DOTFILES_THEME/palette"
