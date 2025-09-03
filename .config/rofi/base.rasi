@@ -30,7 +30,7 @@ window {
   anchor:               center;
   fullscreen:           false;
 
-  cursor:               "default";
+  cursor:               default;
 
   border-radius:        15px 15px 0 0;
   background-color:     @background;

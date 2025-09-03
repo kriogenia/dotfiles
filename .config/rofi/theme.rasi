@@ -27,10 +27,10 @@ inputbar {
 
 listview {
   columns:                     4;
-  lines:                       7;
+  lines:                       8; // TODO: find why the last line is not being used
   cycle:                       true;
   dynamic:                     true;
-  layout:                      vertical;
+  flow:                        vertical;
   reverse:                     false;
   fixed-height:                false;
   fixed-columns:               false;
@@ -45,8 +45,8 @@ element {
 }
 
 element selected.normal {
-  background-color:            @text-accent;
   text-color:                  @accent;
+  text-outline-color:          @accent;
 }
 
 element-text {
@@ -54,4 +54,6 @@ element-text {
   cursor:                      inherit;
   vertical-align:              0.5;
   horizontal-align:            0.0;
+  text-outline:                true;
+  text-outline-color:          inherit;
 }
