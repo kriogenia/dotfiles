@@ -20,8 +20,15 @@ yq
 
 {% if yadm.distro == "cachyos" %}
 brave-bin
+cachy-update
+cachyos-gaming-applications
+cachyos-gaming-meta
 obs-vaapi
 zen-browser-bin
+{% endif %}
+
+{% if yadm.distro == "cachyos" %}
+arch-update
 {% endif %}
 
 {% if yadm.class == "de" %}
