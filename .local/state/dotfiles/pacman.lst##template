@@ -27,7 +27,7 @@ obs-vaapi
 zen-browser-bin
 {% endif %}
 
-{% if yadm.distro == "cachyos" %}
+{% if yadm.distro != "cachyos" %}
 arch-update
 {% endif %}
 
