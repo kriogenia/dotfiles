@@ -32,6 +32,7 @@ arch-update
 {% endif %}
 
 {% if yadm.class == "de" %}
+bitwarden
 chromium
 imv
 kitty
@@ -53,13 +54,18 @@ hyprland
 qt5-wayland
 qt6-wayland
 qt6-imageformats
-rofi-wayland
 swaybg
 swaylock
 swaync
 tela-circle-icon-theme-green
 uwsm
 wl-clipboard
+{% if yadm.distro == "cachyos" %}
+rofi
+{% endif %}
+{% if yadm.distro != "cachyos" %}
+rofi-wayland
+{% endif %}
 {% endif %}
 
 {% if yadm.hostname == "espeon" %}
