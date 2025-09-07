@@ -1,0 +1,196 @@
+@import "theme.css";
+
+* {
+  font-family: "FiraCode Nerd Font Mono", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
+  font-size: 16px;
+}
+
+#waybar, #image {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  box-shadow: none;
+}
+
+#image {
+  margin: 4px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background-color: @mantle;
+  padding: 0 4px;
+}
+
+.modules-left {
+  border-radius: 0 0 8px 0;
+}
+
+.modules-center {
+  border-radius: 0 0 8px 8px;
+}
+
+.modules-right {
+  border-radius: 0 0 0 8px;
+}
+
+tooltip {
+  background-color: @mantle;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+}
+
+tooltip label {
+  color: @text;
+  font-family: "FiraCode Nerd Font Mono", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
+  font-size: 14px;
+}
+
+.module {
+  background-color: @base;
+  color: @text;
+}
+
+.module {
+  margin-top: 6px;
+  margin-bottom: 8px;
+  border-width: 0px;
+  padding: 4px 2px;
+}
+
+/* Left border */
+
+#workspaces,
+#tray,
+#systemd-failed-units,
+#custom-weather,
+#custom-pacman,
+#custom-notification,
+#language,
+#network,
+#pulseaudio,
+#memory,
+#power-profiles-daemon,
+#clock,
+#custom-power,
+#custom-reboot {
+  margin-left: 6px;
+  padding: 4px 2px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
+/* Right border */
+
+#workspaces,
+#tray,
+#systemd-failed-units,
+#custom-weather,
+#custom-pacman,
+#custom-notification,
+#language,
+#network,
+#pulseaudio,
+#power-profiles-daemon,
+#clock,
+#cpu,
+#custom-suspend,
+#custom-power {
+  margin-right: 6px;
+  padding: 4px 2px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* mouse over to brighten */
+.module:hover {
+  background-color: alpha(@surface0, 0.9)
+}
+
+#workspaces,
+#tray {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#workspaces {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#workspaces:hover {
+  background-color: alpha(@base, 0.9);
+}
+
+#workspaces button {
+  background: transparent;
+  border: none;
+  color: @text;
+  padding: 2px 8px;
+  margin: 0 2px;
+  font-weight: bold;
+}
+
+#workspaces button.empty {
+  color: @overlay0;
+}
+
+#workspaces button:hover {
+  background-color: alpha(@sapphire, 0.2);
+  padding: 2px 8px;
+  margin: 0 2px;
+  border-radius: 10px;
+}
+
+#workspaces button.active {
+  background-color: @sky;
+  color: @base;
+  padding: 2px 8px;
+  margin: 0 2px;
+  border-radius: 10px;
+}
+
+#tray, 
+#custom-weather {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#custom-weather.rain,
+#bluetooth {
+  color: @blue;
+}
+
+#custom-suspend {
+  color: @mauve;
+}
+
+#power-profiles-daemon.balanced,
+#custom-lock {
+  color: @teal;
+}
+
+#custom-weather.sunny,
+#custom-pacman,
+#custom-notification.notification,
+#power-profiles-daemon.performance,
+#custom-reboot {
+  color: @yellow;
+}
+
+#custom-power {
+  color: @maroon;
+}
+
+#power-profiles-daemon.power-saver {
+  color: @green;
+}
+
+#systemd-failed-units,
+#network.disconnected,
+#pulseaudio.muted {
+  color: @red;
+}
+
