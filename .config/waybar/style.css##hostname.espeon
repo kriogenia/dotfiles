@@ -48,8 +48,8 @@ tooltip label {
 
 #workspaces,
 #tray {
-  padding-top: 0.15em;
-  padding-bottom: 0.15em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 
 #workspaces {
@@ -68,6 +68,7 @@ tooltip label {
   font-weight: bold;
   margin: 0 0.15em;
   border-radius: 0.5em;
+  padding: 0.15em 0.25em;
 }
 
 #workspaces button.empty {
@@ -107,11 +108,13 @@ tooltip label {
 #custom-pacman,
 #custom-notification.notification,
 #power-profiles-daemon.performance,
+#battery.warning,
 #custom-reboot {
   color: @yellow;
 }
 
-#custom-power {
+#custom-power,
+#battery.critical {
   color: @maroon;
 }
 
