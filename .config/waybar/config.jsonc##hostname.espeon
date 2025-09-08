@@ -1,0 +1,280 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 0,
+  "modules-left": [
+    "hyprland/workspaces",
+    "tray",
+    "custom/pacman",
+    "power-profiles-daemon",
+    "hyprland/language"
+  ],
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "battery",
+    "backlight",
+    "bluetooth",
+    "clock",
+    "custom/weather",
+    "systemd-failed-units",
+    "custom/notification",
+    "group/power",
+  ],
+  "image#eye-universe": {
+    "path": "./.local/share/dotfiles/icons/eye.svg",
+    "interval": 10000,
+    "size": 32
+  },
+  "image#brittle-hollow": {
+    "path": "./.local/share/dotfiles/icons/brittle-hollow.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "image#hourglass-twins": {
+    "path": "./.local/share/dotfiles/icons/hourglass-twins.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "image#timberhearth": {
+    "path": "./.local/share/dotfiles/icons/timberhearth.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "image#sun": {
+    "path": "./.local/share/dotfiles/icons/sun.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "image#giants-deep": {
+    "path": "./.local/share/dotfiles/icons/giants-deep.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "image#dark-bramble": {
+    "path": "./.local/share/dotfiles/icons/dark-bramble.svg",
+    "interval": 1000,
+    "size": 24
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{id}",
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "tray": {
+    "icon-size": 17,
+    "spacing": 6
+  },
+  "systemd-failed-units": {
+    "format": "{nr_failed]"
+  },
+  "custom/pacman": {
+    "format": " {}{icon} ",
+    "return-type": "json",
+    "format-icons": {
+      "has-updates": " 󰮯",
+      "updated": ""
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --no-zero-output --tooltip-align-columns",
+    "on-click": "kitty sudo pacman -Syyu"
+  },
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --location Barcelona --nerd",
+    "return-type": "json"
+  },
+  "hyprland/language": {
+    "format-en": "<span color='#f9e2af'> 󰌌 </span>en ",
+    "format-es": "<span color='#f9e2af'> 󰌌 </span>es ",
+    "tooltip": true,
+    "tooltip-format": "{}"
+  },
+  "network": {
+    "format-wifi": "<span color='#94e2d5'> 󰤨 </span>{essid} ",
+    "format-ethernet": "<span color='#94e2d5'>  </span>",
+    "tooltip-format": "<span> 󰅧 </span>{bandwidthUpBytes}\n<span > 󰅢 </span>{bandwidthDownBytes}",
+    "format-linked": "<span> 󱘖 </span>{ifname} ",
+    "format-disconnected": "<span>  </span> ",
+    "format-alt": "<span color='#94e2d5'> 󰤨 </span>{signalStrength}% ",
+    "interval": 1
+  },
+  "pulseaudio": {
+    "format": "<span>{icon}</span>{volume}% ",
+    "format-muted": "<span> 󰖁 </span>0% ",
+    "format-icons": {
+      "default": [
+        "<span color='#bac2de'>  </span>",
+        "<span color='#b4befe'>  </span>",
+        "<span color='#89b4fa'>  </span>"
+      ]
+    },
+    "on-click-right": "pavucontrol -t 3",
+    "on-click": "pactl -- set-sink-mute 0 toggle",
+    "tooltip": true,
+    "tooltip-format": "Volume: {volume}%"
+  },
+  "memory": {
+    "format": "<span color='#cba6f7'>  </span>{used:0.1f}G ",
+    "tooltip": true,
+    "tooltip-format": "RAM: {used:0.2f}G used out of {total:0.2f}G",
+    "on-click": "kitty btop"
+  },
+  "disk": {
+    "format": "<span color='#89dceb'>  </span>{free} ",
+    "on-click": "kitty btop"
+  },
+  "custom/gpu": {
+    "exec": "printf '%+2s' $(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)",
+    "format": "<span color='#a6e3a1'> 󰾲 </span>{}% ",
+    "tooltip-format": "GPU: {}%",
+    "return-type": "",
+    "on-click": "kitty btop",
+    "interval": 15
+  },
+  "cpu": {
+    "format": "<span color='#fab387'>  </span>{usage}% ",
+    "tooltip": true,
+    "on-click": "kitty btop"
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "  ",
+      "performance": "  ",
+      "balanced": " ⭘ ",
+      "power-saver": "  "
+    }
+  },
+  "clock": {
+    "interval": 60,
+    "timezone": "Europe/Madrid",
+    "format": "<span color='#f5e0dc'>  </span>{:%H:%M  %Y-%m-%d} ",
+    "tooltip": true,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "format": {
+        "months": "<span color='#f5e0dc'><b>{}</b></span>",
+        "weekdays": "<span color='#fab387'><b>{}</b></span>",
+        "today": "<span color='#a6e3a1'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "custom/notification": {
+    "tooltip": true,
+    "format": " {icon} ",
+    "format-icons": {
+      "notification": "",
+      "none": "",
+      "dnd-notification": "",
+      "dnd-none": "",
+      "inhibited-notification": "",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "group/power": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/power",
+      "custom/reboot",
+      "custom/lock",
+      "custom/suspend"
+    ],
+    "drawer": {
+      "transition-left-to-right": false
+    }
+  },
+  "custom/suspend": {
+    "format": "<span> 󰀠 </span>",
+    "on-click": "systemctl suspend",
+    "tooltip": true,
+    "tooltip-format": "Suspend"
+  },
+  "custom/lock": {
+    "format": "<span>  </span>",
+    "on-click": "swaylock",
+    "tooltip": true,
+    "tooltip-format": "Lock Screen"
+  },
+  "custom/reboot": {
+    "format": "<span>  </span>",
+    "on-click": "systemctl reboot",
+    "tooltip": true,
+    "tooltip-format": "Restart"
+  },
+  "custom/power": {
+    "format": "<span>  </span>",
+    "on-click": "systemctl poweroff",
+    "tooltip": true,
+    "tooltip-format": "Shutdown"
+  },
+  // TODO: check in laptop
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span> {icon} </span>{capacity}% ",
+    "format-charging": " 󱐋{capacity}%",
+    "interval": 1,
+    "format-icons": [
+      "󰂎",
+      "󰁼",
+      "󰁿",
+      "󰂁",
+      "󰁹"
+    ],
+    "tooltip": true
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "<span color='#FFD700'>{icon}</span>{percent}% ",
+    "tooltip": true,
+    "tooltip-format": "Current Screen Brightness: {percent}%",
+    "format-icons": [
+      "<span color='#696969'> 󰃞 </span>",
+      "<span color='#A9A9A9'> 󰃝 </span>",
+      "<span color='#FFFF66'> 󰃟 </span>",
+      "<span color='#FFD700'> 󰃠 </span>"
+    ]
+  },
+  "bluetooth": {
+    "format": "<span>  </span>{status} ",
+    "format-no-controller": "",
+    "format-connected": "<span>  </span>{device_alias} ",
+    "format-connected-battery": "<span>  </span>{device_alias}{device_battery_percentage}% ",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  }
+}

@@ -2,41 +2,25 @@
 
 * {
   font-family: "FiraCode Nerd Font Mono", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
-  font-size: 16px;
+  font-size: 12px;
 }
 
 #waybar, #image {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: @mantle;
   border: none;
   box-shadow: none;
-}
-
-#image {
-  margin: 4px;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
   background-color: @mantle;
-  padding: 0 4px;
-}
-
-.modules-left {
-  border-radius: 0 0 8px 0;
-}
-
-.modules-center {
-  border-radius: 0 0 8px 8px;
-}
-
-.modules-right {
-  border-radius: 0 0 0 8px;
+  padding: 0 1em;
 }
 
 tooltip {
   background-color: @mantle;
-  border-radius: 8px;
+  border-radius: 4px;
   font-weight: bold;
   border: none;
 }
@@ -44,64 +28,17 @@ tooltip {
 tooltip label {
   color: @text;
   font-family: "FiraCode Nerd Font Mono", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .module {
-  background-color: @base;
   color: @text;
 }
 
 .module {
-  margin-top: 6px;
-  margin-bottom: 8px;
+  border-radius: 1em;
   border-width: 0px;
-  padding: 4px 2px;
-}
-
-/* Left border */
-
-#workspaces,
-#tray,
-#systemd-failed-units,
-#custom-weather,
-#custom-pacman,
-#custom-notification,
-#language,
-#network,
-#pulseaudio,
-#memory,
-#power-profiles-daemon,
-#clock,
-#custom-power,
-#custom-reboot {
-  margin-left: 6px;
-  padding: 4px 2px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-
-/* Right border */
-
-#workspaces,
-#tray,
-#systemd-failed-units,
-#custom-weather,
-#custom-pacman,
-#custom-notification,
-#language,
-#network,
-#pulseaudio,
-#power-profiles-daemon,
-#clock,
-#cpu,
-#custom-suspend,
-#custom-power {
-  margin-right: 6px;
-  padding: 4px 2px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding: 0 0.25em;
 }
 
 /* mouse over to brighten */
@@ -111,13 +48,13 @@ tooltip label {
 
 #workspaces,
 #tray {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 0.15em;
+  padding-bottom: 0.15em;
 }
 
 #workspaces {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
 }
 
 #workspaces:hover {
@@ -128,9 +65,9 @@ tooltip label {
   background: transparent;
   border: none;
   color: @text;
-  padding: 2px 8px;
-  margin: 0 2px;
   font-weight: bold;
+  margin: 0 0.15em;
+  border-radius: 0.5em;
 }
 
 #workspaces button.empty {
@@ -139,20 +76,14 @@ tooltip label {
 
 #workspaces button:hover {
   background-color: alpha(@sapphire, 0.2);
-  padding: 2px 8px;
-  margin: 0 2px;
-  border-radius: 10px;
 }
 
 #workspaces button.active {
   background-color: @sky;
   color: @base;
-  padding: 2px 8px;
-  margin: 0 2px;
-  border-radius: 10px;
 }
 
-#tray, 
+#tray,
 #custom-weather {
   padding-left: 10px;
   padding-right: 10px;
