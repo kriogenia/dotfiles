@@ -2,6 +2,8 @@ source $__fish_config_dir/default.fish
 source $__fish_config_dir/override.fish
 
 status is-interactive; and begin
+    set -g fish_greeting
+    source $__fish_config_dir/themes/theme.fish
 
     source $__fish_config_dir/alias.fish
     source $__fish_config_dir/abbr.fish
