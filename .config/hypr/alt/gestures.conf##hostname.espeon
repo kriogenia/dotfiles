@@ -1,7 +1,4 @@
 gestures {
-     workspace_swipe = true
-     workspace_swipe_fingers = 4
-     workspace_swipe_distance = 250
-     workspace_swipe_min_speed_to_force = 15
-     workspace_swipe_create_new = false
+  gesture = 3, horizontal, workspace
+  gesture = 3, vertical, special, communication
 }
