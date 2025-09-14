@@ -6,16 +6,23 @@
 }
 
 #waybar, #image {
-  background-color: @mantle;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   box-shadow: none;
 }
 
 .modules-left,
-.modules-center,
 .modules-right {
   background-color: @mantle;
   padding: 0 1em;
+}
+
+.modules-left {
+  border-bottom-right-radius: 1em;
+}
+
+.modules-right {
+  border-bottom-left-radius: 1em;
 }
 
 tooltip {
@@ -45,6 +52,7 @@ tooltip label {
 .module:hover {
   background-color: alpha(@surface0, 0.9)
 }
+
 
 #workspaces,
 #tray {
