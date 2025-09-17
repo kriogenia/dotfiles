@@ -13,6 +13,7 @@ npm
 pre-commit
 task
 thefuck
+tree-sitter-cli
 tmux
 ttf-firacode-nerd
 wiremix
