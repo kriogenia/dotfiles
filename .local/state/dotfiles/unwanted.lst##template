@@ -1,0 +1,17 @@
+{% if yadm.distro == "cachyos" %}
+alacritty
+cachyos-alacritty-config
+cachyos-fish-config
+cachyos-hyprland-settings
+mako
+micro
+nano
+nano-syntax-highlighting
+rofi-emoji
+swaylock-fancy-git
+wofi
+{% endif %}
+
+{% if yadm.hostname == "umbreon" %}
+brightnessctl
+{% endif %}
