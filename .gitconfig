@@ -7,3 +7,5 @@
 	defaultBranch = main
 [gpg]
 	format = ssh
+[advice]
+	skippedCherryPicks = false
