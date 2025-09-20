@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+source functions
+
 update-desktop-database ~/.local/share/applications
 
-if [ -f /usr/bin/imv ]; then
+if (pkg_installed imv); then
   echo "Setting imv as default app for images"
   xdg-mime default imv.desktop image/png
   xdg-mime default imv.desktop image/jpeg
@@ -12,19 +14,19 @@ if [ -f /usr/bin/imv ]; then
   xdg-mime default imv.desktop image/tiff
 fi
 
-if [ -f /usr/bin/zathura ]; then
+if (pkg_installed zathura); then
   echo "Setting zathura as default app for pdfs"
   xdg-mime default org.pwmt.zathura.desktop application/pdf
 fi
 
-if [ -f /usr/bin/qutebrowser ]; then
+if (pkg_installed qutebrowser); then
   echo "Setting qutebrowser as default web browser"
   xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop
   xdg-mime default org.qutebrowser.qutebrowser.desktop x-scheme-handler/http
   xdg-mime default org.qutebrowser.qutebrowser.desktop x-scheme-handler/https
 fi
 
-if [ -f /usr/bin/mpv ]; then
+if (pkg_installed mpv); then
   echo "Setting mpv as default app for videos"
   xdg-mime default mpv.desktop video/mp4
   xdg-mime default mpv.desktop video/x-msvideo
