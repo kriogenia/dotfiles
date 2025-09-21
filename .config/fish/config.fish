@@ -22,7 +22,7 @@ status is-interactive; and begin
     set fish_tmux_autostart true
 
     # always start a notes session in the background
-    source "$TMUX_WORKSPACES/notes.fish" -d
+    # FIXME: source "$TMUX_WORKSPACES/notes.fish" -d
 
 end
 

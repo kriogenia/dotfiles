@@ -1,0 +1,15 @@
+[core]
+	editor = nvim
+[gpg]
+	format = ssh
+[advice]
+	skippedCherryPicks = false
+{% if yadm.class != "work" %}
+[user]
+	email = ricardo@sotoestevez.dev
+	name = SotoEstevez
+[init]
+	defaultBranch = main
+{% else %}
+{% include "work.gitconfig" %}
+{% endif %}
