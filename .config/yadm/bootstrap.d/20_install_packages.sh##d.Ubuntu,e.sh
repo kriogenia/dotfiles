@@ -11,3 +11,10 @@ while IFS= read -r line || [ -n "$line" ]; do
   [[ -z "$line" || "$line" =~ ^# ]] && continue
   sudo snap install "$line"
 done <"$pkgs/snap.lst"
+
+if [ ! -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
+  echo "Hombrew not found, installing"
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+xargs -a "$pkgs/brew.lst" sudo brew install
