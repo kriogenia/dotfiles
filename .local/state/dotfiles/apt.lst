@@ -7,6 +7,7 @@ gnome-software-plugin-flatpak
 kitty
 npm
 pipx
+ripgrep
 tmux
 vim
 wl-clipboard

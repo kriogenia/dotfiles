@@ -17,4 +17,11 @@ if [ ! -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
   bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-xargs -a "$pkgs/brew.lst" sudo brew install
+echo "Installing brews"
+brew install fzf
+
+echo "Installing Python CLIs using pipx"
+pipx install poetry
+
+echo "Installing crates"
+cargo install tree-sitter-cli
