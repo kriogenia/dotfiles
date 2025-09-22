@@ -9,8 +9,6 @@ status is-interactive; and begin
     source $__fish_config_dir/abbr.fish
     set -x MANPAGER "nvim +Man!"
 
-    fish_add_path ~/.local/bin ~/.cargo/bin
-
     # CTRL-t = fzf select
     # CTRL-r = fzf history
     # ALT-c  = fzf cd

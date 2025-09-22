@@ -11,3 +11,5 @@ set -g projects $HOME/projects
 set -g DOTFILES_PALETTE $DOTFILES_DATA/palette/current.css
 
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --border=bold --border=rounded --margin=3% --color=dark"
+
+fish_add_path ~/.local/bin ~/.cargo/bin

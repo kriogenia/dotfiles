@@ -1,2 +1,2 @@
 /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
-alias bat="batcat"
+poetry completions fish >~/.config/fish/completions/poetry.fish
