@@ -1,0 +1,6 @@
+{% if yadm.class != "work" %}
+dev.vencord.Vesktop
+{% endif %}
+{% if yadm.distro == "Ubuntu" %}
+app.zen_browser.zen
+{% endif %}
