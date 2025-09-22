@@ -18,9 +18,10 @@ if [ ! -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
 fi
 
 echo "Installing brews"
-brew install fzf
+brew install fzf pyenv
 
-echo "Installing Python CLIs using pipx"
+echo "Installing Python versions and CLIs"
+pyenv install 3.11.4
 pipx install poetry
 
 echo "Installing crates"
