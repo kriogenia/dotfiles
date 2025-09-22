@@ -25,3 +25,5 @@ pipx install poetry
 
 echo "Installing crates"
 cargo install tree-sitter-cli
+
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
