@@ -18,7 +18,7 @@ if [ ! -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
 fi
 
 echo "Installing brews"
-brew install fzf pyenv
+brew install fzf pyenv vespa-cli
 
 echo "Installing Python versions and CLIs"
 pyenv install 3.11.4
@@ -28,3 +28,6 @@ echo "Installing crates"
 cargo install tree-sitter-cli
 
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
+curl -s "https://get.sdkman.io" | bash
+
+sudo apt autoremove

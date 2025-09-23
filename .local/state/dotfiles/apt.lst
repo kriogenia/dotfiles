@@ -1,7 +1,10 @@
+apt-transport-https
 bat
 build-essential
+ca-certificates
 chromium
 eza
+fd-find
 fish
 flatpak
 gnome-software-plugin-flatpak
@@ -19,6 +22,8 @@ make
 npm
 pipx
 ripgrep
+software-properties-common
+taskwarrior
 tk-dev
 tmux
 vim

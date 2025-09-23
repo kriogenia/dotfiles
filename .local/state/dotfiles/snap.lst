@@ -1,3 +1,5 @@
+ghostty --classic
 just --edge --classic
 nvim --classic
+obsidian --classic
 rustup --classic
