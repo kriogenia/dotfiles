@@ -25,12 +25,10 @@
     "hyprland/language",
     "network",
     "pulseaudio",
-    "battery",
-    "backlight",
     "bluetooth",
     "clock",
     "custom/weather",
-    "systemd-failed-units",
+    // "systemd-failed-units",
     "custom/notification",
     "group/power",
     "image#dark-bramble"
@@ -173,6 +171,16 @@
       "power-saver": "  "
     }
   },
+  "bluetooth": {
+    "format": "<span>  </span>",
+    "format-no-controller": "",
+    "format-connected": "<span> </span> {device_alias} ",
+    "format-connected-battery": "<span> </span> {device_alias} {device_battery_percentage}% ",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  },
   "clock": {
     "interval": 60,
     "timezone": "Europe/Madrid",
@@ -249,45 +257,5 @@
     "on-click": "systemctl poweroff",
     "tooltip": true,
     "tooltip-format": "Shutdown"
-  },
-  // TODO: check in laptop
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "<span> {icon} </span>{capacity}% ",
-    "format-charging": " 󱐋{capacity}%",
-    "interval": 1,
-    "format-icons": [
-      "󰂎",
-      "󰁼",
-      "󰁿",
-      "󰂁",
-      "󰁹"
-    ],
-    "tooltip": true
-  },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "<span color='#FFD700'>{icon}</span>{percent}% ",
-    "tooltip": true,
-    "tooltip-format": "Current Screen Brightness: {percent}%",
-    "format-icons": [
-      "<span color='#696969'> 󰃞 </span>",
-      "<span color='#A9A9A9'> 󰃝 </span>",
-      "<span color='#FFFF66'> 󰃟 </span>",
-      "<span color='#FFD700'> 󰃠 </span>"
-    ]
-  },
-  "bluetooth": {
-    "format": "<span>  </span>{status} ",
-    "format-no-controller": "",
-    "format-connected": "<span>  </span>{device_alias} ",
-    "format-connected-battery": "<span>  </span>{device_alias}{device_battery_percentage}% ",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
   }
 }
