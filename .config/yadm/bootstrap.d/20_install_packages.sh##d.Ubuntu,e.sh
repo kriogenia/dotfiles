@@ -3,6 +3,10 @@
 echo "Found Ubuntu"
 pkgs=$HOME/.local/state/dotfiles
 
+echo "Adding additional repositories"
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+
 echo "Installing APT packages"
 xargs -a "$pkgs/apt.lst" sudo apt install -y
 

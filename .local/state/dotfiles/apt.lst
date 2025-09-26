@@ -3,6 +3,7 @@ bat
 build-essential
 ca-certificates
 chromium
+dkms
 eza
 fd-find
 fish
@@ -20,6 +21,7 @@ libssl-dev
 llvm
 make
 npm
+nvidia-driver-580
 pipx
 ripgrep
 software-properties-common
