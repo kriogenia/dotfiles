@@ -53,11 +53,11 @@ zathura-pdf-mupdf
 {% if yadm.class == "hyprland" %}
 hypridle
 hyprland
+hyprlock
 qt5-wayland
 qt6-wayland
 qt6-imageformats
 swaybg
-swaylock-effects
 swaync
 tela-circle-icon-theme-green
 uwsm
