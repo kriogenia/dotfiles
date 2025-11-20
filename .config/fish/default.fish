@@ -9,6 +9,7 @@ set -g notes $docs/notes
 set -g projects $HOME/projects
 
 set -g DOTFILES_PALETTE $DOTFILES_DATA/palette/current.css
+set -g ASCII_ART $DOTFILES_DATA/ascii
 
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --border=bold --border=rounded --margin=3% --color=dark"
 
