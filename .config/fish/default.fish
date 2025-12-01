@@ -1,7 +1,7 @@
-set -g BROWSER firefox
-set -g EDITOR nvim
+set -gx BROWSER firefox
+set -gx EDITOR nvim
 
-set -g TMUX_WORKSPACES $XDG_CONFIG_HOME/tmux/workspaces
+set -gx TMUX_WORKSPACES $XDG_CONFIG_HOME/tmux/workspaces
 
 set -g docs $HOME/Documents
 set -g dwn $HOME/Downloads
