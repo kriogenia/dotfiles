@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
 echo "Building bat cache"
 bat cache --build
 
 echo "Installing fish plugins"
-fish -c "cat $HOME/.config/fish/fish_plugins | fisher install -"
+fish -C "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && cat $HOME/.config/fish/fish_plugins | fisher install -"

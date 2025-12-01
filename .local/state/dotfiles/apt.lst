@@ -8,6 +8,7 @@ eza
 fd-find
 fish
 flatpak
+gcc
 gnome-software-plugin-flatpak
 kitty
 libbz2-dev
@@ -20,6 +21,7 @@ libsqlite3-dev
 libssl-dev
 llvm
 make
+moreutils
 npm
 nvidia-driver-580
 pipx
