@@ -11,6 +11,7 @@ flatpak
 gcc
 gnome-software-plugin-flatpak
 kitty
+imagemagick
 libbz2-dev
 libffi-dev
 liblzma-dev
