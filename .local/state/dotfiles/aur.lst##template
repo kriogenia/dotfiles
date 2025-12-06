@@ -14,8 +14,3 @@ wttrbar
 {% if yadm.class == "nvidia" %}
 vk-hdr-layer-kwin6-git
 {% endif %}
-
-{% if yadm.class == "hyprland" %}
-quickshell-git
-ttf-material-symbols-variable-git
-{% endif %}
