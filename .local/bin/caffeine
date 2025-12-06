@@ -1,15 +1,20 @@
 #!/usr/bin/env bash
 
-FLAG=$HOME/.caffeine_active
+# TODO: change notification params
 
-if [[ -e "$FLAG" ]]; then
-  echo "caffeine off"
-  rm "$FLAG"
-  killall hypridle
+case "$1" in
+on)
+  killall hypridle 2>/dev/null
+  hypridle -c "$XDG_CONFIG_HOME/hypr/caffeine.conf" >/dev/null &
+  notify-send "☕ time!"
+  ;;
+off)
+  killall hypridle 2>/dev/null
   hypridle >/dev/null &
-else
-  echo "☕ TIME"
-  touch "$FLAG"
-  killall hypridle
-  hypridle -c "$XDG_CONFIG_HOME"/hypr/caffeine.conf >/dev/null &
-fi
+  notify-send "💤 back to dread"
+  ;;
+*)
+  echo "Usage: $0 {on|off}"
+  exit 1
+  ;;
+esac

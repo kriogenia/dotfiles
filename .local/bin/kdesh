@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Little shell to ease definition of KDE commands from the phone
+
+set -euo pipefail
+
+echoback="kdeconnect-cli -d $(kdeconnect-cli -a --id-only) --ping-msg"
+
+case "$1" in
+plex)
+  "$HOME"/.local/bin/caffeine "$2"
+  case "$2" in
+  on)
+    sudo systemctl start plexmediaserver.service
+    $echoback "Plex started"
+    ;;
+  off)
+    sudo systemctl stop plexmediaserver.service
+    $echoback "Plex closed"
+    ;;
+  esac
+  ;;
+*)
+  echo "Usage: $0 {plex}"
+  exit 1
+  ;;
+esac
