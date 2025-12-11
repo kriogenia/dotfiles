@@ -7,3 +7,5 @@ input {
 }
 
 $keyboard = at-translated-set-2-keyboard
+
+$discordws = masculine # º
