@@ -2,8 +2,8 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
 -- Tab to cycle between, you know, tabs
-vim.keymap.set("n", "<Tab>", ":bnext<cr>", { desc = "Next buffer" })
-vim.keymap.set("n", "<S-Tab>", ":bprevious<cr>", { desc = "Previous buffer" })
+-- vim.keymap.set("n", "<Tab>", ":bnext<cr>", { desc = "Next buffer" })
+-- vim.keymap.set("n", "<S-Tab>", ":bprevious<cr>", { desc = "Previous buffer" })
 
 -- Don't copy overridden text
 vim.keymap.set("x", "p", function()
