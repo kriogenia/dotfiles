@@ -5,15 +5,20 @@ abbr -a -- nv nvim
 # bat
 abbr -a --position anywhere -- --help '--help | bat -plhelp'
 abbr -a --position anywhere -- -h '-h | bat -plhelp'
+abbr -a -- jqb 'jq | bat -l json'
 
 # git
 abbr -a -- ga 'git add'
+abbr -a -- gbd 'git branch -D'
 abbr -a --set-cursor=% -- gcmsg 'git commit -m "%"'
 abbr -a -- gca 'git commit --amend'
 abbr -a -- gcfu 'git commit --fixup HEAD'
 abbr -a -- gco 'git checkout'
+abbr -a -- gcb 'git checkout -b'
 abbr -a -- gp 'git push'
 abbr -a -- gpf 'git push --force'
+abbr -a -- gpo 'git push -u origin'
+abbr -a -- grc 'git rebase --continue'
 abbr -a -- grfu 'git rebase -i --autosquash HEAD^^'
 abbr -a -- gs 'git status'
 abbr -a -- gss 'git status --short'
