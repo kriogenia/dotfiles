@@ -1,0 +1,56 @@
+#!/bin/env bash
+
+if [[ -z "$TORRENT_DIR" || -z "$MEDIA_SERIES" ]]; then
+  echo "Error: TORRENT_DIR and MEDIA_SERIES must be set."
+  exit 1
+fi
+
+REGEX=$1
+TEMPLATE=$2
+DRY_RUN=false
+
+for arg in "$@"; do
+  [[ "$arg" == "--dry-run" ]] && DRY_RUN=true
+done
+
+if [[ -z "$REGEX" || -z "$TEMPLATE" ]]; then
+  echo "Usage: $0 '<regex>' '<template>' [--dry-run]"
+  echo "Example: $0 ' - ([0-9]+)' 'Digimon (2024)/Season 1/s01e%%.mkv' --dry-run"
+  exit 1
+fi
+
+[[ "$DRY_RUN" = true ]] && echo "--- DRY RUN MODE ---"
+
+cd "$TORRENT_DIR" || exit
+
+for file in *; do
+  if [[ -f "$file" && "$file" =~ $REGEX ]]; then
+    NEW_PATH="$TEMPLATE"
+
+    for i in "${!BASH_REMATCH[@]}"; do
+      if [[ $i -gt 0 ]]; then
+        # Format number to 2 digits (e.g., 1 -> 01)
+        VAL=$(printf "%02d" "$((10#${BASH_REMATCH[$i]}))")
+
+        # Replace %i% (e.g., %1%) or the generic %% with the value
+        # Using %% as a shortcut for the first capture group
+        if [[ $i -eq 1 ]]; then
+          NEW_PATH="${NEW_PATH//%%/$VAL}"
+        fi
+        NEW_PATH="${NEW_PATH//%$i%/$VAL}"
+      fi
+    done
+
+    FULL_DEST="$MEDIA_SERIES/$NEW_PATH"
+    DEST_DIR=$(dirname "$FULL_DEST")
+
+    if [[ "$DRY_RUN" = true ]]; then
+      echo "[DRY-RUN] Would move: '$file'"
+      echo "          To:         '$FULL_DEST'"
+    else
+      mkdir -p "$DEST_DIR"
+      mv "$file" "$FULL_DEST"
+      echo "Moved: $file"
+    fi
+  fi
+done
