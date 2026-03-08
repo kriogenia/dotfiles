@@ -14,3 +14,9 @@ if status is-interactive
         source (pyenv virtualenv-init -|psub)
     end
 end
+
+# pbcopy / pbpaste
+alias pbcopy="xclip -i -selection clipboard"
+alias pbpaste="xclip -o"
+
+set -gx TMUX_WORKSPACES $HOME/.config/tmux/workspaces

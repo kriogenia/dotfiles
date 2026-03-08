@@ -2,6 +2,7 @@ set -gx BROWSER firefox
 set -gx EDITOR nvim
 
 set -gx TMUX_WORKSPACES $XDG_CONFIG_HOME/tmux/workspaces
+set -gx POSTING_PATH $HOME/posting
 
 set -g docs $HOME/Documents
 set -g dwn $HOME/Downloads
@@ -14,3 +15,7 @@ set -g ASCII_ART $DOTFILES_DATA/ascii
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --border=bold --border=rounded --margin=3% --color=dark"
 
 fish_add_path ~/.local/bin ~/.cargo/bin
+
+# pbcopy / pbpaste
+alias pbcopy="wl-copy"
+alias pbpaste="wl-paste"
