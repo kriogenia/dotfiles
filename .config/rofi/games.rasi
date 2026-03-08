@@ -1,0 +1,94 @@
+@theme "current"
+@import "base"
+
+configuration {
+    show-icons:                     true;
+}
+
+window {
+    height:                      78%;
+    width:                       80%;
+    background-image:            url("~/.local/share/dotfiles/wallpapers/steamdeck.png", width);
+}
+
+mainbox {
+    children:                    [inputbar-box, listview];
+    padding:                     50px 0px;
+}
+
+listview {
+    layout:                      vertical;
+    dynamic:                     true;
+    columns:                     4;
+    padding:                     0px 600px 60px;
+}
+
+inputbar-box {
+    children:                    [dummy, inputbar, dummy];
+    orientation:                 horizontal;
+    expand:                      false;
+}
+
+inputbar {
+    children:                    [textbox-prompt, entry];
+    background-color:            @background;
+    border-radius:               8px;
+    margin:                      20px 0px 10px 0px;
+}
+
+textbox-prompt {
+    text-color:                  @text;
+    horizontal-align:            0.5;
+    vertical-align:              0.5;
+    expand:                      false;
+    str:                         "";
+    padding:                     0px 10px;
+}
+
+entry {
+    expand:                      false;
+    padding:                     8px;
+    margin:                      -6px;
+    horizontal-align:            0;
+    width:                       300;
+    background-color:            @background;
+    border:                      6px;
+    border-radius:               8px;
+    cursor:                      text;
+}
+
+element {
+    children:                    [dummy, element-box, dummy];
+}
+
+element-box {
+    children:                    [element-icon, element-text];
+    orientation:                 vertical;
+    expand:                      false;
+    cursor:                      pointer;
+    spacing:                     -5px;
+    padding:                     5px;
+}
+
+element-box selected {
+    border-radius:               8px;
+    background-color:            @accent;
+}
+
+element-icon {
+    padding:                     0px 10px;
+    cursor:                      inherit;
+    size:                        12%;
+    margin:                      10px;
+}
+
+element-text {
+    horizontal-align:            0.5;
+    cursor:                      inherit;
+    text-color:                  @text-accent;
+}
+
+element-text selected {
+    text-color:                  @text-accent;
+}
+
