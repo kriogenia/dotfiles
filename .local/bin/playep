@@ -1,0 +1,23 @@
+#!/bin/bash
+
+export MEDIA_SERIES="${MEDIA_SERIES:-/srv/media/series}"
+
+if [ ! -d "$MEDIA_SERIES" ]; then
+  echo "Directory not found: $MEDIA_SERIES"
+  read -r -p "Press enter to exit"
+  exit 1
+fi
+
+SELECTED_FILE=$(find "$MEDIA_SERIES" -type f \( -name "*.mkv" -o -name "*.mp4" -o -name "*.avi" \) |
+  fzf --height 100% \
+    --reverse \
+    --prompt="Select Episode > " \
+    --preview 'ls -lh {}' \
+    --preview-window=bottom:3:wrap)
+
+if [[ -n "$SELECTED_FILE" ]]; then
+  echo "Playing: $(basename "$SELECTED_FILE")"
+  # Use mpv directly instead of 'open' to keep the process attached
+  # This prevents the kitty window from closing instantly
+  mpv "$SELECTED_FILE"
+fi

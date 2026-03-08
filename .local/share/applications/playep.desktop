@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Play Episode
+Comment=Launches a series episode
+Exec=kitty --class playep --title "Play Episode" --override cursor=#1e2030 --override cursor_shape=beam --override cursor_blink_interval=0 playep
+Terminal=false
+Terminal=false
+Type=Application
+Icon=mpv
+Categories=GTK;
+StartupNotify=false
