@@ -20,17 +20,18 @@ done <"$pkgs/snap.lst"
 if [ ! -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
   echo "Hombrew not found, installing"
   bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  echo >> $HOME/.bashrc
-  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.bashrc
+  echo >>$HOME/.bashrc
+  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>$HOME/.bashrc
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
 echo "Installing brews"
-xargs brew install < "$pkgs/brew.lst"
+xargs brew install <"$pkgs/brew.lst"
 
 echo "Installing Python versions and CLIs"
 pyenv install 3.11.4
 pipx install poetry
+pipx install pre-commit
 
 echo "Installing crates"
 cargo install tree-sitter-cli

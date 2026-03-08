@@ -1,5 +1,4 @@
 /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
-poetry completions fish >~/.config/fish/completions/poetry.fish
 
 function _check_pkg_installed -d "OS specific package installation check" \
     -a package
@@ -7,6 +6,8 @@ function _check_pkg_installed -d "OS specific package installation check" \
 end
 
 if status is-interactive
+    poetry completions fish >~/.config/fish/completions/poetry.fish
+
     set -g PYENV_ROOT /home/linuxbrew/.linuxbrew/bin/pyenv
     fish_add_path -p $PYENV_ROOT/bin
     pyenv init - | source

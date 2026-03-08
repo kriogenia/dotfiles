@@ -15,6 +15,7 @@ status is-interactive; and begin
     fzf --fish | source
 
     pkg_installed thefuck; and thefuck --alias | source
+    nvm use lts >/dev/null
 
     set fish_tmux_autoquit false
     set fish_tmux_autostart true
