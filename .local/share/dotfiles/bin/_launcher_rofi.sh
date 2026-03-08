@@ -27,6 +27,10 @@ cliphist_launcher() {
   dmenu cliphistory -display-columns 2
 }
 
+game_launcher() {
+  mode games games
+}
+
 theme_launcher() {
   mode theme theme
 }
