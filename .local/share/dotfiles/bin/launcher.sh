@@ -15,6 +15,7 @@ Commands:
                       Optionally takes the name of a submenu from $DOTFILES_CONFIG to run
   app                 Launches the app launcher
   clipboard           Launches a clipboard history
+  emoji               Launches a emoji selector
   games               Launches the game launcher
   help                Show this help message
   theme               Launches a color picker from the current theme
@@ -91,6 +92,9 @@ action)
   ;;
 clipboard)
   cliphist list | cliphist_launcher | cliphist decode | wl-copy
+  ;;
+emoji)
+  emoji_launcher
   ;;
 games)
   game_launcher

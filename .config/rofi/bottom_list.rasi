@@ -17,7 +17,7 @@ mainbox {
 }
 
 textbox-title {
-  content:                     " Clipboard history";
+  content:                     ${LIST_TITLE};
 }
 
 inputbar {

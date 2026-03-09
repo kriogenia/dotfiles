@@ -24,7 +24,13 @@ dmenu_launcher() {
 }
 
 cliphist_launcher() {
-  dmenu cliphistory -display-columns 2
+  export LIST_TITLE='" Clipboard history"'
+  dmenu bottom_list -display-columns 2
+}
+
+emoji_launcher() {
+  export LIST_TITLE='"󰞅 Emoji selector"'
+  rofi -modi emoji -show emoji -config bottom_list
 }
 
 game_launcher() {

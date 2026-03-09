@@ -15,6 +15,16 @@ options:
     text: 󰈙 Documentation
     type: launcher
     name: documentation
+  emojis:
+    text: 󰞅 Emojis
+    type: script
+    name: launcher.sh
+    args: emoji
+  games:
+    text: 󱎓 Games
+    type: script
+    name: launcher.sh
+    args: games
   theme:
     text: 󰃣 Theme
     type: script

@@ -2,13 +2,14 @@
 @import "base"
 
 configuration {
-    show-icons:                     true;
+    show-icons:                  true;
 }
 
 window {
-    height:                      78%;
-    width:                       80%;
-    background-image:            url("~/.local/share/dotfiles/wallpapers/steamdeck.png", width);
+    height:                      75%;
+    width:                       79.5%;
+    background-color:            transparent;
+    background-image:            url("~/.local/share/dotfiles/wallpapers/steamdeck.png", height);
 }
 
 mainbox {

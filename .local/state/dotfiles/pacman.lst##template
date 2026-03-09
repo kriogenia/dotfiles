@@ -65,6 +65,7 @@ uwsm
 wl-clipboard
 {% if yadm.distro == "cachyos" %}
 rofi
+rofi-emoji
 {% endif %}
 {% if yadm.distro != "cachyos" %}
 rofi-wayland
