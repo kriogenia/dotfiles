@@ -1,5 +1,0 @@
-return {
-  { "blink-copilot", enabled = false },
-  { "copilot.lua", enabled = false },
-  { "CopilotChat.nvim", enabled = false },
-}
