@@ -1,0 +1,11 @@
+hl.bind(
+	mainMod .. "XF86MonBrightnessUp",
+	hl.dsp.exec_cmd("brightnessctl s +5%"),
+	{ locked = true, repeating = true, description = "Increase brightness" }
+)
+
+hl.bind(
+	mainMod .. "XF86MonBrightnessDown",
+	hl.dsp.exec_cmd("brightnessctl s 5%-"),
+	{ locked = true, repeating = true, description = "Decrease brightness" }
+)
