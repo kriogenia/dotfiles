@@ -7,6 +7,7 @@ hl.monitor({
 	mode = "3440x1440@164.90",
 	position = "0x0",
 	scale = 1,
+
 	bitdepth = 10,
 	supports_wide_color = 1,
 	supports_hdr = 1,
