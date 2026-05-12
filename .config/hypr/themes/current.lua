@@ -1,0 +1,1 @@
+/home/sotoestevez/.config/hypr/themes/hearthian.lua

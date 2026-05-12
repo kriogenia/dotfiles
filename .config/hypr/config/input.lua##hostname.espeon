@@ -1,0 +1,7 @@
+hl.config({
+	input = {
+		kb_layout = "es,us",
+	},
+})
+
+local keyboard = "at-translated-set-2-keyboard"

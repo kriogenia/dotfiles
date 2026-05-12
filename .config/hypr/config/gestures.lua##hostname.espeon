@@ -1,0 +1,12 @@
+hl.gestures({
+	fingers = 3,
+	direction = "horizontal",
+	action = "workspace",
+})
+
+hl.gestures({
+	fingers = 3,
+	direction = "vertical",
+	action = "special",
+	workspace_name = "communication",
+})
