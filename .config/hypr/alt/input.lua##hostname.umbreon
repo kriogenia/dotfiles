@@ -1,8 +1,0 @@
-hl.config({
-	input = {
-		kb_layout = "us,es",
-		kb_options = "caps:escape",
-	},
-})
-
-local keyboard = "keychron-keychron-v1-max"
