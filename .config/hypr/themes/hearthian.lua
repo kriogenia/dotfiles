@@ -68,3 +68,9 @@ local mantleAlpha = "#091b22"
 
 local crust = "#010303"
 local crustAlpha = "#010303"
+
+-- Style
+
+local border_active_top_left = peach
+local border_active_bottom_right = peach
+local border_inactive = mantle

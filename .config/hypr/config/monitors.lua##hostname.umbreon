@@ -1,5 +1,7 @@
-hl.render({
-	cm_auto_hdr = 2,
+hl.config({
+	render = {
+		cm_auto_hdr = 2,
+	},
 })
 
 hl.monitor({

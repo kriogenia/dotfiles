@@ -1,1 +1,1 @@
-/home/sotoestevez/.config/hypr/themes/hearthian.lua
+/home/sotoestevez/.config/hypr/themes/macchiato.lua

@@ -5,4 +5,4 @@ hl.config({
 	},
 })
 
-local keyboard = "keychron-keychron-v1-max"
+KEYBOARD = "keychron-keychron-v1-max"
