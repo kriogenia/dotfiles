@@ -218,7 +218,7 @@ hl.workspace_rule({
 
 hl.workspace_rule({
 	workspace = "special:communication",
-	on_created_empty = "uwsm app -- discord.desktop",
+	on_created_empty = RUN .. "discord.desktop",
 })
 
 -- Layer Rules

@@ -2,29 +2,23 @@ local mainMod = "SUPER"
 
 -- Apps
 
-local run = "uwsm app --"
-
-local terminal = run .. " kitty"
-
 local bar = "$DOTFILES_BIN/waybar.sh"
-local browser = run .. "  qutebrowser"
-local editor = terminal .. " nvim"
-local explorer = terminal .. " lf"
-local idle_handler = "hypridle"
+local browser = RUN .. "qutebrowser"
+local editor = TERMINAL .. " nvim"
+local explorer = TERMINAL .. " lf"
 local lock_screen = "hyprlock"
-local notification_daemon = "swaync"
 local notification_panel = "swaync-client -t -sw"
 
 local launcher = "$DOTFILES_BIN/launcher.sh"
 
-local altbrowser = run .. " zen-browser"
-local altexplorer = run .. "  thunar"
+local altbrowser = RUN .. "zen-browser"
+local altexplorer = RUN .. "thunar"
 
 local screenshot = 'grim -g "$(slurp)" - | swappy -f -'
 
 -- Window Management
 
-hl.bind(mainMod .. " + Q", hl.dsp.window.kill(), { description = "Close focused window" })
+hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { description = "Close focused window" })
 hl.bind("ALT + F4", hl.dsp.exec_cmd("hyprctl dispatch killactive"), { description = "Close focused window" })
 
 hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("uwsm stop"), { description = "Kill Hyprland session" })
@@ -33,7 +27,7 @@ hl.bind(mainMod .. " + W", hl.dsp.window.float({ action = "toggle" }), { descrip
 hl.bind("SHIFT + F11", hl.dsp.window.fullscreen({ action = "toggle" }), { description = "Toggle fullscreen" })
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"), { description = "Toggle split" })
 
-directions = { "left", "right", "up", "down" }
+local directions = { "left", "right", "up", "down" }
 for i = 1, #directions, 1 do
 	d = directions[i]
 	hl.bind(mainMod .. " + " .. d, hl.dsp.focus({ direction = d }), { description = "Focus " .. d })
@@ -42,7 +36,7 @@ end
 
 hl.bind("ALT + Tab", hl.dsp.layout("cyclenext"), { description = "Cycle focus" })
 
-hl.bind(mainMod .. " + R", hl.dsp.submap("resize"), { description = "Activates windows resizing submap" })
+hl.bind(mainMod .. " + P", hl.dsp.submap("resize"), { description = "Activates windows resizing submap" })
 hl.define_submap("resize", function()
 	hl.bind("right", hl.dsp.window.resize({ x = 15, y = 0, relative = true }), { repeating = true })
 	hl.bind("left", hl.dsp.window.resize({ x = -15, y = 0, relative = true }), { repeating = true })
@@ -65,7 +59,7 @@ hl.bind("CONTROL + ALT + Delete", hl.dsp.exec_cmd("wlogout -b 6"), { description
 -- Desktop Environment
 
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(bar), { description = "Toggle shell" })
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal), { description = "Terminal emulator" })
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(TERMINAL), { description = "Terminal emulator" })
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(explorer), { description = "File explorer" })
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(altexplorer), { description = "Visual file explorer" })
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser), { description = "Web browser" })
