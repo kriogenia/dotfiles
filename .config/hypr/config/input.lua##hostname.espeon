@@ -4,4 +4,4 @@ hl.config({
 	},
 })
 
-local keyboard = "at-translated-set-2-keyboard"
+KEYBOARD = "at-translated-set-2-keyboard"
