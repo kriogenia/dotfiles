@@ -3,7 +3,7 @@ alias ...='cd ../..'
 alias .3=='cd ../../..'
 
 # ls
-set EZA_OPTIONS "--color=always --group-directories-first --icons"
+set EZA_OPTIONS "--color=always --group-directories-first --icons=always"
 alias ls="eza $EZA_OPTIONS"
 alias la="eza -al $EZA_OPTIONS"
 alias ll="eza -l $EZA_OPTIONS"
