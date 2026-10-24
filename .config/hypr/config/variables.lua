@@ -6,6 +6,6 @@ fontsize = 16
 
 RUN = "uwsm app -- "
 
-IDLE_HANDLER = "hypridle"
+IDLE_HANDLER = "systemctl --user enable --now hypridle.service"
 NOTIFICATION_DAEMON = "swaync"
 TERMINAL = RUN .. "kitty"
