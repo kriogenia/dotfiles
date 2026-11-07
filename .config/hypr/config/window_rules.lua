@@ -216,10 +216,18 @@ hl.workspace_rule({
 	gaps_out = 5,
 })
 
-hl.workspace_rule({
-	workspace = "special:communication",
-	on_created_empty = RUN .. "discord.desktop",
-})
+for _, name in ipairs({ "special:special", "special:communication" }) do
+	hl.workspace_rule({
+		workspace = name,
+		layout_opts = { special_scale_factor = 0.95 },
+	})
+end
+
+hl.on("workspace.created", function(ws)
+	if ws.name == "special:communication" and ws.is_empty then
+		hl.exec_cmd(RUN .. "discord.desktop")
+	end
+end)
 
 -- Layer Rules
 
